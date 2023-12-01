@@ -90,7 +90,7 @@ Threat them as a reference book, not serious academic learning material.
 </details>
 
 
-### Cryptography
+### 🔒 Cryptography
 
 - [basic info](https://www.fortinet.com/resources/cyberglossary/what-is-cryptography)
 - [theory cheat sheet](https://gist.github.com/dimosr/317629577c71c376946f8a31a4c2b069)
@@ -115,7 +115,7 @@ Threat them as a reference book, not serious academic learning material.
 ## 🏗️ Infrastructure
 
 ### 📖 Docker
-Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. <br>
+Docker is a set of platform-as-a-service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. <br>
 
 >Note: Please, use docker compose and do periodical [cleanups](https://docs.docker.com/config/pruning/). <br>
 
@@ -132,7 +132,7 @@ Docker is a set of platform as a service (PaaS) products that use OS-level virtu
 </details>
 
 ### 📖 Bash
-Bash is an sh-compatible command language interpreter that executes commands read from the standard input or from a file.
+Bash is a sh-compatible command language interpreter that executes commands read from the standard input or a file.
 
 <details>
 <summary>References</summary>
@@ -311,7 +311,7 @@ Tmux is a terminal multiplexer: it enables a number of terminals to be created, 
 
 #### 📖 Nano
 
-GNU nano (or nano) is a text editor which aims to introduce a simple interface and intuitive command options to console based text editing. 
+GNU nano (or nano) is a text editor which aims to introduce a simple interface and intuitive command options to console-based text editing. 
 
 <details>
 <summary>References</summary>
@@ -359,7 +359,7 @@ OpenSSL is an open-source implementation of the SSL and TLS protocols, designed 
 
 #### 📖 Nmap
 
-Nmap (“Network Mapper”) is an open source tool for network exploration and security auditing.
+Nmap (“Network Mapper”) is an open-source tool for network exploration and security auditing.
 
 <details>
 <summary>References</summary>
@@ -377,7 +377,7 @@ Nmap (“Network Mapper”) is an open source tool for network exploration and s
 
 #### 📖 Masscan
 
-Masscan is an Internet-scale port scanner, useful for large scale surveys of the Internet, or of internal networks.
+Masscan is an Internet-scale port scanner, useful for large-scale surveys of the Internet, or of internal networks.
 
 >🚩 Warning: Unless you are scanning a giant internal network, please, keep those --rates at ~1000-10000, <b>do not flood public networks</b>. <br>
 >Keep it sane.
@@ -402,7 +402,7 @@ Commons:
 - start with `--ssl-insecure` to ignore certificate verification;
 - After the first run certificate will be created in `~/.mitmproxy`. Import them to the external client (search instructions for your browser/tool) <br>
 check [concepts-certificates](https://docs.mitmproxy.org/stable/concepts-certificates/) for additional info.
-- If you want to use BurpSuite with this - use `Burp -> Settings -> Network -> Connections -> Add proxy`. Boom, now you have best from both worlds.
+- If you want to use BurpSuite with this - use `Burp -> Settings -> Network -> Connections -> Add proxy`. Boom, now you have the best of both worlds.
 
 <details>
 <summary>References</summary>
