@@ -6,6 +6,14 @@ pacman -S --noconfirm nmap \
 	  	      		  masscan \
 	  	      		  mitmproxy \
 	  	      		  nuclei \
-					  dalfox
+					  dalfox \
+                      sqlmap \
+					  commix \
+	              	  hydra \
+					  hashcat \
+					  metasploit \
+					  john \
+					  katana-pd \
+					  gobuster
 
 pipx install wapiti3
