@@ -20,18 +20,18 @@ Be responsible and conscious.</b> <br>
 1. Start containers from the project directory: `"sudo docker compose up -d"`
 2. Open [CyberChief](#🧑‍🍳-cyberchief)
 3. Put data in the mounted directory
-4. Connect with [ssh](#openssh): `"ssh -p 120(mapped port) root@localhost"`
-5. Open [tmux](#tmux)
-6. Connect to [vpn](#openvpn): `"openvpn /path/to/config"`
-7. Start [proxy](#mitmproxy)
+4. Connect with [ssh](#📙-openssh): `"ssh -p 120(mapped port) root@localhost"`
+5. Open [tmux](#📙-tmux)
+6. Connect to [vpn](#📙-openvpn): `"openvpn /path/to/config"`
+7. Start [proxy](#📙-mitmproxy)
 8. <b>Do some pentesting</b>
     - Install task-specific tool:
-      - [arch](#arch-linux) packages `"pacman -S <package_name>"`
-      - [python](#python) packages `"pipx install <pacakge_name>"`
+      - [arch](#📙-arch-linux) packages `"pacman -S <package_name>"`
+      - [python](#📙-python) packages `"pipx install <pacakge_name>"`
 9. Exit from a container (by typing `"exit"` or by killing the connection/terminal)
 10. Get data from the mounted directory
 11. Remove containers: `"sudo docker compose down"`( add -v to clean <b>all</b> related volumes)
-12. [Clean docker data](#docker) if needed
+12. [Clean docker data](#📙-docker) if needed
 
 </details>
 
@@ -114,7 +114,7 @@ Threat them as a reference book, not serious academic learning material.
 
 ## 🏗️ Infrastructure
 
-### 📖 Docker
+### 📙 Docker
 Docker is a set of platform-as-a-service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. <br>
 
 >Note: Please, use docker compose and do periodical [cleanups](https://docs.docker.com/config/pruning/). <br>
@@ -131,7 +131,7 @@ Docker is a set of platform-as-a-service (PaaS) products that use OS-level virtu
 
 </details>
 
-### 📖 Bash
+### 📙 Bash
 Bash is a sh-compatible command language interpreter that executes commands read from the standard input or a file.
 
 <details>
@@ -143,7 +143,7 @@ Bash is a sh-compatible command language interpreter that executes commands read
 
 </details>
 
-### 📖 Linux
+### 📙 Linux
 
 Linux is a family of open-source Unix-like operating systems based on the Linux kernel.
 
@@ -157,7 +157,7 @@ Linux is a family of open-source Unix-like operating systems based on the Linux 
 
 </details>
 
-### 📖 Arch Linux
+### 📙 Arch Linux
 
 Arch Linux is minimal, an independently developed, x86-64 general-purpose Linux distribution that strives to provide the latest stable versions of most software by following a rolling-release model.<br>
 
@@ -173,7 +173,7 @@ Arch Linux is minimal, an independently developed, x86-64 general-purpose Linux 
 
 </details>
 
-### 📖 BlackArch
+### 📙 BlackArch
 
 BlackArch is a penetration testing distribution based on Arch Linux that provides a large number of security tools.
 
@@ -188,7 +188,7 @@ BlackArch is a penetration testing distribution based on Arch Linux that provide
 
 </details>
 
-### 📖 PowerShell
+### 📙 PowerShell
 PowerShell is a task automation and configuration management program from Microsoft, consisting of a command-line shell and the associated scripting language.
 
 <details>
@@ -200,7 +200,7 @@ PowerShell is a task automation and configuration management program from Micros
 
 </details>
 
-### 📖 Microsoft Windows
+### 📙 Microsoft Windows
 
 Microsoft Windows is a group of several proprietary graphical operating system families developed and marketed by Microsoft.
 
@@ -239,7 +239,7 @@ To connect - open the browser and type `localhost:8000(mapped port)`
 
 Essential tools.
 
-#### 📖 Git
+#### 📙 Git
 
 Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.
 
@@ -254,7 +254,7 @@ Git is a fast, scalable, distributed revision control system with an unusually r
 
 </details>
 
-#### 📖 Curl
+#### 📙 Curl
 
 Curl is a tool for transferring data from or to a server using URLs.
 <details>
@@ -268,7 +268,7 @@ Curl is a tool for transferring data from or to a server using URLs.
 
 </details>
 
-#### 📖 Python
+#### 📙 Python
 
 Python is a high-level, general-purpose programming language.
 >Note: To install/uninstall python-specific apps - use [pipx](https://pypa.github.io/pipx/)
@@ -283,7 +283,7 @@ Python is a high-level, general-purpose programming language.
 
 </details>
 
-#### 📖 Openvpn
+#### 📙 Openvpn
 OpenVPN is a virtual private network (VPN) system that implements techniques to create secure point-to-point or site-to-site connections in routed or bridged configurations and remote access facilities. It implements both client and server applications. 
 <details>
 <summary>References</summary>
@@ -296,7 +296,7 @@ OpenVPN is a virtual private network (VPN) system that implements techniques to 
 
 </details>
 
-#### 📖 Tmux
+#### 📙 Tmux
 
 Tmux is a terminal multiplexer: it enables a number of terminals to be created, accessed, and controlled from a single screen. Tmux may be detached from a screen and continue running in the background, then later reattached.
 <details>
@@ -309,7 +309,7 @@ Tmux is a terminal multiplexer: it enables a number of terminals to be created, 
 - [cheat sheet](https://tmuxcheatsheet.com/)
 </details>
 
-#### 📖 Nano
+#### 📙 Nano
 
 GNU nano (or nano) is a text editor which aims to introduce a simple interface and intuitive command options to console-based text editing. 
 
@@ -324,7 +324,7 @@ GNU nano (or nano) is a text editor which aims to introduce a simple interface a
 
 </details>
 
-#### 📖 Openssh
+#### 📙 Openssh
 
 OpenSSH (OpenBSD Secure Shell) is a set of computer programs providing encrypted communication sessions over a computer network using the Secure Shell (SSH) protocol.
 
@@ -340,7 +340,7 @@ OpenSSH (OpenBSD Secure Shell) is a set of computer programs providing encrypted
 
 </details>
 
-#### 📖 Openssl
+#### 📙 Openssl
 
 OpenSSL is an open-source implementation of the SSL and TLS protocols, designed to be as flexible as possible.
 
@@ -357,7 +357,7 @@ OpenSSL is an open-source implementation of the SSL and TLS protocols, designed 
 
 ### 👁️ Scanners
 
-#### 📖 Nmap
+#### 📙 Nmap
 
 Nmap (“Network Mapper”) is an open-source tool for network exploration and security auditing.
 
@@ -375,7 +375,7 @@ Nmap (“Network Mapper”) is an open-source tool for network exploration and s
 
 </details>
 
-#### 📖 Masscan
+#### 📙 Masscan
 
 Masscan is an Internet-scale port scanner, useful for large-scale surveys of the Internet, or of internal networks.
 
@@ -392,7 +392,7 @@ Masscan is an Internet-scale port scanner, useful for large-scale surveys of the
 
 </details>
 
-#### 📖 Mitmproxy
+#### 📙 Mitmproxy
 Mitmproxy is an interactive, SSL/TLS-capable intercepting proxy with a console interface for HTTP/1, HTTP/2, and WebSockets.
 
 Intercepting proxy can be used with any client that allows proxy. <br>
@@ -403,6 +403,7 @@ Commons:
 - After the first run certificate will be created in `~/.mitmproxy`. Import them to the external client (search instructions for your browser/tool) <br>
 check [concepts-certificates](https://docs.mitmproxy.org/stable/concepts-certificates/) for additional info.
 - If you want to use BurpSuite with this - use `Burp -> Settings -> Network -> Connections -> Add proxy`. Boom, now you have the best of both worlds.
+- Use (mitmproxy2swagger)[https://github.com/alufers/mitmproxy2swagger] to build api scheeme. Pairs well with [katana](#📙-katana)
 
 <details>
 <summary>References</summary>
@@ -415,7 +416,7 @@ check [concepts-certificates](https://docs.mitmproxy.org/stable/concepts-certifi
 
 </details>
 
-#### 📖 Nuclei
+#### 📙 Nuclei
 
 Nuclei is used to send requests across targets based on a template, leading to zero false positives and providing fast scanning on a large number of hosts. 
 
@@ -430,7 +431,7 @@ Nuclei is used to send requests across targets based on a template, leading to z
 
 </details>
 
-#### 📖 Wapiti
+#### 📙 Wapiti
 
 Wapiti allows you to audit the security of your web applications.
 It performs "black-box" scans, i.e. it does not study the source code of the application but will scans the webpages of the deployed webapp, looking for scripts and forms where it can inject data. 
@@ -445,7 +446,7 @@ It performs "black-box" scans, i.e. it does not study the source code of the app
 
 </details>
 
-#### 📖 Dalfox
+#### 📙 Dalfox
 
 DalFox is a powerful open-source tool that focuses on automation, making it ideal for quickly scanning for XSS flaws and analyzing parameters. Its advanced testing engine and niche features are designed to streamline the process of detecting and verifying vulnerabilities.
 
@@ -460,7 +461,7 @@ DalFox is a powerful open-source tool that focuses on automation, making it idea
 
 </details>
 
-#### 📖 Katana
+#### 📙 Katana
 
 A next-generation crawling and spidering framework. 
 
@@ -473,7 +474,7 @@ A next-generation crawling and spidering framework.
 
 </details>
 
-#### 📖 Gobuster
+#### 📙 Gobuster
 
 Directory/File, DNS and VHost busting tool written in Go 
 
@@ -491,7 +492,7 @@ Gobuster, a record scanner written in Go Language,
 
 ### 🗡️ Exploiters
 
-#### 📖 Sqlmap
+#### 📙 Sqlmap
 
 Sqlmap is an open source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over of database servers.
 
@@ -507,7 +508,7 @@ Sqlmap is an open source penetration testing tool that automates the process of 
 
 </details>
 
-#### 📖 Metasploit 
+#### 📙 Metasploit 
 
 The Metasploit Project is a computer security project that provides information about security vulnerabilities and aids in penetration testing and IDS signature development.
 
@@ -522,7 +523,7 @@ The Metasploit Project is a computer security project that provides information 
 
 </details>
 
-#### 📖 Hydra
+#### 📙 Hydra
 
 Hydra is a parallelized login cracker which supports numerous protocols to attack. New modules are easy to add, beside that, it is flexible and very fast.
 
@@ -537,7 +538,7 @@ Hydra is a parallelized login cracker which supports numerous protocols to attac
 
 </details>
 
-#### 📖 Commix
+#### 📙 Commix
 
 Commix  is an open source penetration testing tool, that automates the detection and exploitation of command injection vulnerabilities.
 
@@ -551,7 +552,7 @@ Commix  is an open source penetration testing tool, that automates the detection
 
 </details>
 
-#### 📖 Hashcat
+#### 📙 Hashcat
 
 Hashcat is the world's fastest and most advanced password recovery utility, supporting five unique modes of attack for over 300 highly-optimized hashing algorithms. 
 
@@ -566,7 +567,7 @@ Hashcat is the world's fastest and most advanced password recovery utility, supp
 
 </details>
 
-#### 📖 John the ripper
+#### 📙 John the ripper
 
 John the Ripper is an Open Source password security auditing and password recovery tool available for many operating systems.
 
