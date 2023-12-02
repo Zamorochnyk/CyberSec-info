@@ -82,7 +82,7 @@ Threat them as a reference book, not serious academic learning material.
 
 - [ping](https://man.archlinux.org/man/ping.8.en)
 - [traceroute](https://man.archlinux.org/man/core/traceroute/traceroute.8.en)
-- [netcat](https://man.archlinux.org/man/extra/gnu-netcat/netcat.1.en)
+- [netcat](https://man.archlinux.org/man/extra/openbsd-netcat/nc.1.en)
 - [whois](https://man.archlinux.org/man/whois.1)
 - [dig](https://man.archlinux.org/man/dig.1)
 - [host](https://man.archlinux.org/man/host.1)
