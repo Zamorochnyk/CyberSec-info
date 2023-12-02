@@ -18,20 +18,20 @@ Be responsible and conscious.</b> <br>
 <summary>🌊<b>Generic usage example</b></summary>
 
 1. Start containers from the project directory: `"sudo docker compose up -d"`
-2. Open [CyberChief](#🧑‍🍳-cyberchief)
+2. Open [CyberChief](#-cyberchief)
 3. Put data in the mounted directory
-4. Connect with [ssh](#📙-openssh): `"ssh -p 120(mapped port) root@localhost"`
-5. Open [tmux](#📙-tmux)
-6. Connect to [vpn](#📙-openvpn): `"openvpn /path/to/config"`
-7. Start [proxy](#📙-mitmproxy)
+4. Connect with [ssh](#-openssh): `"ssh -p 120(mapped port) root@localhost"`
+5. Open [tmux](#-tmux)
+6. Connect to [vpn](#-openvpn): `"openvpn /path/to/config"`
+7. Start [proxy](#-mitmproxy)
 8. <b>Do some pentesting</b>
     - Install task-specific tool:
-      - [arch](#📙-arch-linux) packages `"pacman -S <package_name>"`
-      - [python](#📙-python) packages `"pipx install <pacakge_name>"`
+      - [arch](#-arch-linux) packages `"pacman -S <package_name>"`
+      - [python](#-python) packages `"pipx install <pacakge_name>"`
 9. Exit from a container (by typing `"exit"` or by killing the connection/terminal)
 10. Get data from the mounted directory
 11. Remove containers: `"sudo docker compose down"`( add -v to clean <b>all</b> related volumes)
-12. [Clean docker data](#📙-docker) if needed
+12. [Clean docker data](#-docker) if needed
 
 </details>
 
@@ -403,7 +403,7 @@ Commons:
 - After the first run certificate will be created in `~/.mitmproxy`. Import them to the external client (search instructions for your browser/tool) <br>
 check [concepts-certificates](https://docs.mitmproxy.org/stable/concepts-certificates/) for additional info.
 - If you want to use BurpSuite with this - use `Burp -> Settings -> Network -> Connections -> Add proxy`. Boom, now you have the best of both worlds.
-- Use (mitmproxy2swagger)[https://github.com/alufers/mitmproxy2swagger] to build api scheeme. Pairs well with [katana](#📙-katana)
+- Use (mitmproxy2swagger)[https://github.com/alufers/mitmproxy2swagger] to build api scheeme. Pairs well with [katana](#-katana)
 
 <details>
 <summary>References</summary>
