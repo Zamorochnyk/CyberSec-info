@@ -61,10 +61,10 @@ Threat them as a reference book, not serious academic learning material.
 
 ### 📋 Regular expression
 
-[Docs](https://pubs.opengroup.org/onlinepubs/7908799/xbd/re.html)
-[generator](https://regex-generator.olafneumann.org)
-[patterns&sandbox](https://regexr.com/)
-[cheat sheet](https://quickref.me/regex.html)
+- [Docs](https://pubs.opengroup.org/onlinepubs/7908799/xbd/re.html)
+- [generator](https://regex-generator.olafneumann.org)
+- [patterns&sandbox](https://regexr.com/)
+- [cheat sheet](https://quickref.me/regex.html)
 
 ### 🌐 Network
 <details>
