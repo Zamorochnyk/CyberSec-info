@@ -49,8 +49,6 @@ Threat them as a reference book, not serious academic learning material.
 <details>
 <summary>Exploits</summary>
 
-<br>
-
 - [ExploitDB](https://www.exploit-db.com/)
 - [Rapid7](https://www.rapid7.com/db/)
 - [CVE](https://www.cve.org/)
@@ -70,8 +68,6 @@ Threat them as a reference book, not serious academic learning material.
 <details>
 <summary>Manuals</summary>
 
-<br>
-
 - [network configuration](https://wiki.archlinux.org/title/Network_configuration)
 - [dns](https://wiki.archlinux.org/title/Domain_name_resolution)
 - [proxy](https://wiki.archlinux.org/title/Proxy_server)
@@ -83,8 +79,6 @@ Threat them as a reference book, not serious academic learning material.
 
 <details>
 <summary>Tools</summary>
-
-<br>
 
 - [ping](https://man.archlinux.org/man/ping.8.en)
 - [traceroute](https://man.archlinux.org/man/core/traceroute/traceroute.8.en)
@@ -129,8 +123,6 @@ Docker is a set of platform-as-a-service (PaaS) products that use OS-level virtu
 <details>
 <summary>References</summary>
 
-<br>
-
 - [Docs](https://docs.docker.com/)
 - [Docker compose installation](https://docs.docker.com/compose/install/)
 - [Docker compose cli](https://docs.docker.com/compose/reference/)
@@ -157,8 +149,6 @@ Linux is a family of open-source Unix-like operating systems based on the Linux 
 <details>
 <summary>References</summary>
 
-<br>
-
 - [Сommands cheat sheet](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/)
 - [Docs](https://www.linux.org/)
 
@@ -170,8 +160,6 @@ Arch Linux is minimal, an independently developed, x86-64 general-purpose Linux 
 
 <details>
 <summary>References</summary>
-
-<br>
 
 - [Arch Linux](https://archlinux.org/)
 - [Docker image](https://hub.docker.com/_/archlinux/)
@@ -186,8 +174,6 @@ BlackArch is a penetration testing distribution based on Arch Linux that provide
 
 <details>
 <summary>References</summary>
-
-<br>
 
 - [BlackArch Linux](https://blackarch.org/)
 - [Guide](https://blackarch.org/guide.html)
@@ -214,8 +200,6 @@ Microsoft Windows is a group of several proprietary graphical operating system f
 <details>
 <summary>References</summary>
 
-<br>
-
 - [OS docs](https://learn.microsoft.com/en-us/windows/)
 - [Active Directory docs](https://learn.microsoft.com/en-us/troubleshoot/windows-server/identity/active-directory-overview)
 - [Server docs](https://learn.microsoft.com/en-us/windows-server/)
@@ -234,8 +218,6 @@ To connect - open the browser and type `localhost:8000(mapped port)`
 <details>
 <summary>References</summary>
 
-<br>
-
 - [Github](https://github.com/gchq/CyberChef)
 - [Web version](https://gchq.github.io/CyberChef/)
 - [Docker image](https://hub.docker.com/r/mpepping/cyberchef/)
@@ -253,8 +235,6 @@ Git is a fast, scalable, distributed revision control system with an unusually r
 <details>
 <summary>References</summary>
 
-<br>
-
 - [wiki](https://wiki.archlinux.org/title/git)
 - [man](https://man.archlinux.org/man/git.1)
 - [cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
@@ -266,8 +246,6 @@ Git is a fast, scalable, distributed revision control system with an unusually r
 Curl is a tool for transferring data from or to a server using URLs.
 <details>
 <summary>References</summary>
-
-<br>
 
 - [wiki](https://wiki.archlinux.org/title/CURL)
 - [man](https://man.archlinux.org/man/curl.1)
@@ -283,8 +261,6 @@ Python is a high-level, general-purpose programming language.
 <details>
 <summary>References</summary>
 
-<br>
-
 - [wiki](https://wiki.archlinux.org/title/python)
 - [cheat sheet](https://github.com/gto76/python-cheatsheet)
 
@@ -294,8 +270,6 @@ Python is a high-level, general-purpose programming language.
 OpenVPN is a virtual private network (VPN) system that implements techniques to create secure point-to-point or site-to-site connections in routed or bridged configurations and remote access facilities. It implements both client and server applications. 
 <details>
 <summary>References</summary>
-
-<br>
 
 - [docs](https://community.openvpn.net/openvpn)
 - [server](https://wiki.archlinux.org/title/OpenVPN)
@@ -309,8 +283,6 @@ Tmux is a terminal multiplexer: it enables a number of terminals to be created, 
 <details>
 <summary>References</summary>
 
-<br>
-
 - [wiki](https://wiki.archlinux.org/title/tmux)
 - [man](https://man.archlinux.org/man/tmux.1)
 - [cheat sheet](https://tmuxcheatsheet.com/)
@@ -322,8 +294,6 @@ GNU nano (or nano) is a text editor which aims to introduce a simple interface a
 
 <details>
 <summary>References</summary>
-
-<br>
 
 - [wiki](https://wiki.archlinux.org/title/nano)
 - [man](https://man.archlinux.org/man/nano.1)
@@ -337,8 +307,6 @@ OpenSSH (OpenBSD Secure Shell) is a set of computer programs providing encrypted
 
 <details>
 <summary>References</summary>
-
-<br>
 
 - [wiki](https://wiki.archlinux.org/title/OpenSSH)
 - [man](https://man.archlinux.org/man/core/openssh/ssh.1.en)
@@ -354,8 +322,6 @@ OpenSSL is an open-source implementation of the SSL and TLS protocols, designed 
 <details>
 <summary>References</summary>
 
-<br>
-
 - [wiki](https://wiki.archlinux.org/title/OpenSSL)
 - [man](https://man.archlinux.org/man/openssl.1ssl)
 - [cheat sheet](https://cheatography.com/albertx/cheat-sheets/openssl/)
@@ -370,8 +336,6 @@ Nmap (“Network Mapper”) is an open-source tool for network exploration and s
 
 <details>
 <summary>References</summary>
-
-<br>
 
 - [docs](https://nmap.org/docs.html)
 - [wiki](https://wiki.archlinux.org/title/nmap)
@@ -391,8 +355,6 @@ Masscan is an Internet-scale port scanner, useful for large-scale surveys of the
 
 <details>
 <summary>References</summary>
-
-<br>
 
 - [man](https://man.archlinux.org/man/masscan.8)
 - [cheat sheet](https://cheatsheet.haax.fr/network/port-scanning/masscan_cheatsheet/)
@@ -415,8 +377,6 @@ check [concepts-certificates](https://docs.mitmproxy.org/stable/concepts-certifi
 <details>
 <summary>References</summary>
 
-<br>
-
 - [github](https://github.com/mitmproxy/mitmproxy)
 - [docs](https://docs.mitmproxy.org/stable/)
 - [cheat sheet](https://quickref.me/mitmproxy.html)
@@ -429,8 +389,6 @@ Nuclei is used to send requests across targets based on a template, leading to z
 
 <details>
 <summary>References</summary>
-
-<br>
 
 - [github](https://github.com/projectdiscovery/nuclei)
 - [templates](https://github.com/projectdiscovery/nuclei-templates)
@@ -446,8 +404,6 @@ It performs "black-box" scans, i.e. it does not study the source code of the app
 <details>
 <summary>References</summary>
 
-<br>
-
 - [github](https://github.com/wapiti-scanner/wapiti)
 - [man](https://manpages.org/wapiti)
 
@@ -459,8 +415,6 @@ DalFox is a powerful open-source tool that focuses on automation, making it idea
 
 <details>
 <summary>References</summary>
-
-<br>
 
 - [github](https://github.com/hahwul/dalfox)
 - [docs](https://dalfox.hahwul.com/docs/home/)
@@ -475,8 +429,6 @@ A next-generation crawling and spidering framework.
 <details>
 <summary>References</summary>
 
-<br>
-
 - [github](https://github.com/projectdiscovery/katana)
 
 </details>
@@ -488,14 +440,10 @@ Directory/File, DNS and VHost busting tool written in Go
 <details>
 <summary>References</summary>
 
-<br>
-
 - [github](https://github.com/OJ/gobuster)
 - [cheat sheet](https://3os.org/penetration-testing/cheatsheets/gobuster-cheatsheet/)
 
 </details>
-
-Gobuster, a record scanner written in Go Language, 
 
 ### 🗡️ Exploiters
 
@@ -505,8 +453,6 @@ Sqlmap is an open source penetration testing tool that automates the process of 
 
 <details>
 <summary>References</summary>
-
-<br>
 
 - [github](https://github.com/sqlmapproject/sqlmap)
 - [wiki](https://github.com/sqlmapproject/sqlmap/wiki/Features)
@@ -522,8 +468,6 @@ The Metasploit Project is a computer security project that provides information 
 <details>
 <summary>References</summary>
 
-<br>
-
 - [wiki](https://wiki.archlinux.org/title/Metasploit_Framework)
 - [github](https://github.com/rapid7/metasploit-framework)
 - [docs](https://docs.metasploit.com/)
@@ -536,8 +480,6 @@ Hydra is a parallelized login cracker which supports numerous protocols to attac
 
 <details>
 <summary>References</summary>
-
-<br>
 
 - [man](https://man.archlinux.org/man/extra/hydra/hydra.1.en)
 - [github](https://github.com/vanhauser-thc/thc-hydra)
@@ -552,8 +494,6 @@ Commix  is an open source penetration testing tool, that automates the detection
 <details>
 <summary>References</summary>
 
-<br>
-
 - [github](https://github.com/commixproject/commix)
 - [docs](https://github.com/commixproject/commix/wiki/Usage)
 
@@ -565,8 +505,6 @@ Hashcat is the world's fastest and most advanced password recovery utility, supp
 
 <details>
 <summary>References</summary>
-
-<br>
 
 - [docs](https://hashcat.net/hashcat/)
 - [github](https://github.com/hashcat/hashcat)
