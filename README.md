@@ -140,7 +140,6 @@ Quick references for programming languages and other tools:
 ### 🤝 Awesome additional resources
 
 - [Offensive Security Cheatsheet](https://cheatsheet.haax.fr/)
-- [Pentest-Cheat-Sheets](https://github.com/Kitsun3Sec/Pentest-Cheat-Sheets)
 - [ired.team](https://www.ired.team/)
 - [RedTeam-Tools](https://github.com/A-poc/RedTeam-Tools)
 
