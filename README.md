@@ -56,8 +56,7 @@ Quick references for programming languages and other tools:
 
 </details>
 
-<details>
-<summary>Common db</summary>
+Common dbs
 
 - [Oracle](https://en.wikibooks.org/wiki/Oracle_Database/SQL_Cheatsheet)
 - [MySql](https://www.mysqltutorial.org/mysql-cheat-sheet.aspx)
@@ -65,8 +64,6 @@ Quick references for programming languages and other tools:
 - [MongoDB](https://www.mongodb.com/developer/products/mongodb/cheat-sheet/)
 - [Redis](https://developer.redis.com/howtos/quick-start/cheat-sheet/)
 - [SqlLite](https://www.sqlitetutorial.net/sqlite-cheat-sheet/)
-
-</details>
 
 ### 💾 CyberSec databases
 
@@ -109,8 +106,7 @@ Quick references for programming languages and other tools:
 
 </details>
 
-<details>
-<summary>Common tools</summary>
+Common tools
 
 - [ping](https://man.archlinux.org/man/ping.8.en)
 - [traceroute](https://man.archlinux.org/man/core/traceroute/traceroute.8.en)
@@ -119,8 +115,6 @@ Quick references for programming languages and other tools:
 - [dig](https://man.archlinux.org/man/dig.1)
 - [host](https://man.archlinux.org/man/host.1)
 - [nslookup](https://man.archlinux.org/man/extra/bind/nslookup.1.en)
-
-</details>
 
 ### 🔒 Cryptography
 
@@ -189,8 +183,7 @@ Linux is a family of open-source Unix-like operating systems based on the Linux 
 
 </details>
 
-<details>
-<summary>Common tools</summary>
+Common tools
     
 - [chmod](https://quickref.me/chmod)
 - [awk](https://quickref.me/awk)
@@ -198,8 +191,6 @@ Linux is a family of open-source Unix-like operating systems based on the Linux 
 - [sed](https://quickref.me/sed)
 - [grep](https://quickref.me/grep)
 - [netstat](https://quickref.me/netstat)
-
-</details>
 
 ### 📙 Arch Linux
 
