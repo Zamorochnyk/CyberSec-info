@@ -185,6 +185,7 @@ Linux is a family of open-source Unix-like operating systems based on the Linux 
 - [security](https://wiki.archlinux.org/title/Category:Security)
 - [networking](https://wiki.archlinux.org/title/Category:Networking)
 - [commands cheat sheet](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/)
+- [dir structure](https://www.tecmint.com/linux-directory-structure-and-important-files-paths-explained/)
 
 </details>
 
