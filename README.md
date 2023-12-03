@@ -3,8 +3,8 @@
 
 🐳 Cli pentesting tools, packaged in docker images. <br>
 🔨 Use this as a template to build your toolkits. <br>
-♻️ It is meant to be a simple, disposable, "minimal-out-of-the-box" tool. <br>
-🔓 It is <b>not</b> meant to be secure, stable, "all-in-one" tool. <br>
+♻️ It is meant to be a simple, disposable, "minimal-out-of-the-box" sandbox. <br>
+🔓 It is <b>not</b> meant to be secure, stable, "all-in-one" monolith. <br>
 
 > For more consistent experience - consider to build your images with [KaliLinux](https://hub.docker.com/r/kalilinux/kali-rolling) or [ParrotOs](https://hub.docker.com/r/parrotsec/core). <br>
 
