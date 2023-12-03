@@ -2,11 +2,11 @@
 📜 <b>ALL EXTERNAL RESOURCES BELONG TO THEIR RESPECTIVE OWNERS</b>
 
 🐳 Cli pentesting tools, packaged in docker images. <br>
-🔨 Use this as a template to build your own toolkits. <br>
-♻️ It is meant to be simple, disposable, "minimal-out-of-the-box" tool. <br>
+🔨 Use this as a template to build your toolkits. <br>
+♻️ It is meant to be a simple, disposable, "minimal-out-of-the-box" tool. <br>
 🔓 It is <b>not</b> meant to be secure, stable, "all-in-one" tool. <br>
 
-> For more consistent experience - consider to build your own images with [KaliLinux](https://hub.docker.com/r/kalilinux/kali-rolling) or [ParrotOs](https://hub.docker.com/r/parrotsec/core). <br>
+> For more consistent experience - consider to build your images with [KaliLinux](https://hub.docker.com/r/kalilinux/kali-rolling) or [ParrotOs](https://hub.docker.com/r/parrotsec/core). <br>
 
 🚩 <br>
 <b>Warning: this tools can do real damage.<br>
@@ -44,6 +44,30 @@ Quick references for programming languages and other tools:
 - [Learn x in y](https://learnxinyminutes.com/)
 - [QuickRef](https://quickref.me/)
 
+### 📀 Data management
+
+<details>
+<summary>Documentation</summary>
+
+- [wiki](https://wiki.archlinux.org/title/Category:Database_management_systems)
+- [data store models](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)
+- [relational db docs](https://www.digitalocean.com/community/tutorials/understanding-relational-databases)
+- [non-relational db docs](https://learn.microsoft.com/en-us/azure/architecture/data-guide/big-data/non-relational-data)
+
+</details>
+
+<details>
+<summary>Common db</summary>
+
+- [Oracle](https://en.wikibooks.org/wiki/Oracle_Database/SQL_Cheatsheet)
+- [MySql](https://www.mysqltutorial.org/mysql-cheat-sheet.aspx)
+- [PostgreSQL](https://www.postgresqltutorial.com/postgresql-cheat-sheet/)
+- [MongoDB](https://www.mongodb.com/developer/products/mongodb/cheat-sheet/)
+- [Redis](https://developer.redis.com/howtos/quick-start/cheat-sheet/)
+- [SqlLite](https://www.sqlitetutorial.net/sqlite-cheat-sheet/)
+
+</details>
+
 ### 💾 CyberSec databases
 
 <details>
@@ -74,7 +98,7 @@ Quick references for programming languages and other tools:
 
 ### 🌐 Network
 <details>
-<summary>Manuals</summary>
+<summary>Documentation</summary>
 
 - [network configuration](https://wiki.archlinux.org/title/Network_configuration)
 - [dns](https://wiki.archlinux.org/title/Domain_name_resolution)
@@ -90,7 +114,7 @@ Quick references for programming languages and other tools:
 
 - [ping](https://man.archlinux.org/man/ping.8.en)
 - [traceroute](https://man.archlinux.org/man/core/traceroute/traceroute.8.en)
-- [netcat man](https://man.archlinux.org/man/extra/openbsd-netcat/nc.1.en) [netcat cheatsheet](https://quickref.me/nc)
+- [netcat](https://man.archlinux.org/man/extra/openbsd-netcat/nc.1.en)
 - [whois](https://man.archlinux.org/man/whois.1)
 - [dig](https://man.archlinux.org/man/dig.1)
 - [host](https://man.archlinux.org/man/host.1)
@@ -113,7 +137,7 @@ Quick references for programming languages and other tools:
 - [HBH](https://hbh.sh/home)
 - [DefendTheWeb](https://defendtheweb.net/)
 
-### 🤝 More of awesome practical tools and info
+### 🤝 Awesome additional resources
 
 - [Offensive Security Cheatsheet](https://cheatsheet.haax.fr/)
 - [Pentest-Cheat-Sheets](https://github.com/Kitsun3Sec/Pentest-Cheat-Sheets)
@@ -154,11 +178,16 @@ Bash is a sh-compatible command language interpreter that executes commands read
 
 Linux is a family of open-source Unix-like operating systems based on the Linux kernel.
 
+<details>
+<summary>Documentation</summary>
+
 - [docs](https://www.linux.org/)
 - [system administration](https://wiki.archlinux.org/title/Category:System_administration)
 - [security](https://wiki.archlinux.org/title/Category:Security)
 - [networking](https://wiki.archlinux.org/title/Category:Networking)
 - [commands cheat sheet](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/)
+
+</details>
 
 <details>
 <summary>Common tools</summary>
@@ -393,7 +422,7 @@ Commons:
 - After the first run certificate will be created in `~/.mitmproxy`. Import them to the external client (search instructions for your browser/tool) <br>
 check [concepts-certificates](https://docs.mitmproxy.org/stable/concepts-certificates/) for additional info.
 - If you want to use BurpSuite with this - use `Burp -> Settings -> Network -> Connections -> Add proxy`. Boom, now you have the best of both worlds.
-- Use (mitmproxy2swagger)[https://github.com/alufers/mitmproxy2swagger] to build api scheeme. Pairs well with [katana](#-katana)
+- Use [mitmproxy2swagger](https://github.com/alufers/mitmproxy2swagger) to build api scheeme. Pairs well with [katana](#-katana)
 
 <details>
 <summary>References</summary>
@@ -497,7 +526,7 @@ The Metasploit Project is a computer security project that provides information 
 
 #### 📙 Hydra
 
-Hydra is a parallelized login cracker which supports numerous protocols to attack. New modules are easy to add, beside that, it is flexible and very fast.
+Hydra is a parallelized login cracker that supports numerous protocols to attack. New modules are easy to add, besides that, it is flexible and very fast.
 
 <details>
 <summary>References</summary>
@@ -510,7 +539,7 @@ Hydra is a parallelized login cracker which supports numerous protocols to attac
 
 #### 📙 Commix
 
-Commix  is an open source penetration testing tool, that automates the detection and exploitation of command injection vulnerabilities.
+Commix  is an open-source penetration testing tool, that automates the detection and exploitation of command injection vulnerabilities.
 
 <details>
 <summary>References</summary>
@@ -522,7 +551,7 @@ Commix  is an open source penetration testing tool, that automates the detection
 
 #### 📙 Hashcat
 
-Hashcat is the world's fastest and most advanced password recovery utility, supporting five unique modes of attack for over 300 highly-optimized hashing algorithms. 
+Hashcat is the world's fastest and most advanced password recovery utility, supporting five unique modes of attack for over 300 highly optimized hashing algorithms. 
 
 <details>
 <summary>References</summary>
@@ -533,7 +562,7 @@ Hashcat is the world's fastest and most advanced password recovery utility, supp
 
 </details>
 
-#### 📙 John the ripper
+#### 📙 John the Ripper
 
 John the Ripper is an Open Source password security auditing and password recovery tool available for many operating systems.
 
