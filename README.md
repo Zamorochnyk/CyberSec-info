@@ -41,12 +41,18 @@ Be responsible and conscious.</b> <br>
 Threat them as a reference book, not serious academic learning material.
 
 Quick references for programming languages and other tools:
-- [learn x in y](https://learnxinyminutes.com/)
+- [Learn x in y](https://learnxinyminutes.com/)
 - [QuickRef](https://quickref.me/)
 
-### 💾 Databases
+### 💾 CyberSec databases
 
-[SecLists](https://github.com/danielmiessler/SecLists/tree/master) - giant database of passwords/hashes/etc <br>(install what you need)
+<details>
+<summary>Passwords & Co</summary>
+    
+- [SecLists](https://github.com/danielmiessler/SecLists/tree/master)
+- [secrets-patterns-db](https://github.com/mazen160/secrets-patterns-db)
+
+</details>
 
 <details>
 <summary>Exploits</summary>
@@ -61,7 +67,7 @@ Quick references for programming languages and other tools:
 
 ### 📋 Regular expression
 
-- [Docs](https://pubs.opengroup.org/onlinepubs/7908799/xbd/re.html)
+- [docs](https://pubs.opengroup.org/onlinepubs/7908799/xbd/re.html)
 - [generator](https://regex-generator.olafneumann.org)
 - [patterns&sandbox](https://regexr.com/)
 - [cheat sheet](https://quickref.me/regex.html)
@@ -80,11 +86,11 @@ Quick references for programming languages and other tools:
 </details>
 
 <details>
-<summary>Tools</summary>
+<summary>Common tools</summary>
 
 - [ping](https://man.archlinux.org/man/ping.8.en)
 - [traceroute](https://man.archlinux.org/man/core/traceroute/traceroute.8.en)
-- [netcat](https://man.archlinux.org/man/extra/openbsd-netcat/nc.1.en)
+- [netcat man](https://man.archlinux.org/man/extra/openbsd-netcat/nc.1.en) [netcat cheatsheet](https://quickref.me/nc)
 - [whois](https://man.archlinux.org/man/whois.1)
 - [dig](https://man.archlinux.org/man/dig.1)
 - [host](https://man.archlinux.org/man/host.1)
@@ -92,10 +98,9 @@ Quick references for programming languages and other tools:
 
 </details>
 
-
 ### 🔒 Cryptography
 
-- [basic info](https://www.fortinet.com/resources/cyberglossary/what-is-cryptography)
+- [docs](https://www.fortinet.com/resources/cyberglossary/what-is-cryptography)
 - [theory cheat sheet](https://gist.github.com/dimosr/317629577c71c376946f8a31a4c2b069)
 - [commons cheat sheet](https://cheatography.com/ipsec/cheat-sheets/cryptography/)
 - [wiki](https://hashcat.net/wiki/)
@@ -125,10 +130,11 @@ Docker is a set of platform-as-a-service (PaaS) products that use OS-level virtu
 <details>
 <summary>References</summary>
 
-- [Docs](https://docs.docker.com/)
-- [Docker compose installation](https://docs.docker.com/compose/install/)
-- [Docker compose cli](https://docs.docker.com/compose/reference/)
-- [cheat sheet](https://devhints.io/docker-compose)
+- [docs](https://docs.docker.com/)
+- [docker compose installation](https://docs.docker.com/compose/install/)
+- [docker compose cli](https://docs.docker.com/compose/reference/)
+- [docker compose cheat sheet](https://devhints.io/docker-compose)
+- [docker cheat sheet](https://quickref.me/docker)
 
 </details>
 
@@ -148,11 +154,21 @@ Bash is a sh-compatible command language interpreter that executes commands read
 
 Linux is a family of open-source Unix-like operating systems based on the Linux kernel.
 
-<details>
-<summary>References</summary>
+- [docs](https://www.linux.org/)
+- [system administration](https://wiki.archlinux.org/title/Category:System_administration)
+- [security](https://wiki.archlinux.org/title/Category:Security)
+- [networking](https://wiki.archlinux.org/title/Category:Networking)
+- [commands cheat sheet](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/)
 
-- [Сommands cheat sheet](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/)
-- [Docs](https://www.linux.org/)
+<details>
+<summary>Common tools</summary>
+    
+- [chmod](https://quickref.me/chmod)
+- [awk](https://quickref.me/awk)
+- [cron](https://quickref.me/cron)
+- [sed](https://quickref.me/sed)
+- [grep](https://quickref.me/grep)
+- [netstat](https://quickref.me/netstat)
 
 </details>
 
@@ -164,13 +180,14 @@ Arch Linux is minimal, an independently developed, x86-64 general-purpose Linux 
 <summary>References</summary>
 
 - [Arch Linux](https://archlinux.org/)
-- [Docker image](https://hub.docker.com/_/archlinux/)
-- [Packages](https://archlinux.org/packages/)
-- [Wiki](https://wiki.archlinux.org/)
+- [docker image](https://hub.docker.com/_/archlinux/)
+- [packages](https://archlinux.org/packages/)
+- [wiki](https://wiki.archlinux.org/)
+- [man database](https://man.archlinux.org/)
 
 </details>
 
-### 📙 BlackArch
+### 📙 BlackArch Linux
 
 BlackArch is a penetration testing distribution based on Arch Linux that provides a large number of security tools.
 
@@ -178,8 +195,9 @@ BlackArch is a penetration testing distribution based on Arch Linux that provide
 <summary>References</summary>
 
 - [BlackArch Linux](https://blackarch.org/)
-- [Guide](https://blackarch.org/guide.html)
-- [Packages](https://blackarch.org/tools.html)
+- [guide](https://blackarch.org/guide.html)
+- [packages](https://blackarch.org/tools.html)
+- [github](https://github.com/BlackArch/blackarch)
 
 </details>
 
@@ -213,7 +231,7 @@ Microsoft Windows is a group of several proprietary graphical operating system f
 
 ### 🧑‍🍳 CyberChief
 
-CyberChef is a simple, intuitive web app for carrying out all manner of "cyber" operations within a web browser. 
+CyberChef is a simple, intuitive web app for carrying out all manner of "cyber" operations within a web browser. <br>
 For security reasons, please, use the local container version. <br>
 To connect - open the browser and type `localhost:8000(mapped port)`
 
@@ -239,7 +257,7 @@ Git is a fast, scalable, distributed revision control system with an unusually r
 
 - [wiki](https://wiki.archlinux.org/title/git)
 - [man](https://man.archlinux.org/man/git.1)
-- [cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+- [cheat sheet](https://quickref.me/git)
 
 </details>
 
@@ -251,7 +269,7 @@ Curl is a tool for transferring data from or to a server using URLs.
 
 - [wiki](https://wiki.archlinux.org/title/CURL)
 - [man](https://man.archlinux.org/man/curl.1)
-- [cheat sheet](https://devhints.io/curl)
+- [cheat sheet](https://quickref.me/curl)
 
 </details>
 
@@ -287,12 +305,13 @@ Tmux is a terminal multiplexer: it enables a number of terminals to be created, 
 
 - [wiki](https://wiki.archlinux.org/title/tmux)
 - [man](https://man.archlinux.org/man/tmux.1)
-- [cheat sheet](https://tmuxcheatsheet.com/)
+- [cheat sheet](https://quickref.me/tmux)
+
 </details>
 
 #### 📙 Nano
 
-GNU nano (or nano) is a text editor which aims to introduce a simple interface and intuitive command options to console-based text editing. 
+GNU nano (or nano) is a text editor that aims to introduce a simple interface and intuitive command options to console-based text editing. 
 
 <details>
 <summary>References</summary>
@@ -343,7 +362,7 @@ Nmap (“Network Mapper”) is an open-source tool for network exploration and s
 - [wiki](https://wiki.archlinux.org/title/nmap)
 - [scripts](https://nmap.org/nsedoc/scripts/)
 - [man](https://man.archlinux.org/man/nmap.1)
-- [vulscan](https://github.com/scipag/vulscan)
+- [vulscan addon](https://github.com/scipag/vulscan)
 - [cheat sheet](https://www.stationx.net/nmap-cheat-sheet/)
 
 </details>
@@ -437,7 +456,7 @@ A next-generation crawling and spidering framework.
 
 #### 📙 Gobuster
 
-Directory/File, DNS and VHost busting tool written in Go 
+Directory/File, DNS, and VHost busting tool written in Go 
 
 <details>
 <summary>References</summary>
@@ -451,7 +470,7 @@ Directory/File, DNS and VHost busting tool written in Go
 
 #### 📙 Sqlmap
 
-Sqlmap is an open source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over of database servers.
+Sqlmap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over of database servers.
 
 <details>
 <summary>References</summary>
