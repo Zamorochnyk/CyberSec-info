@@ -40,7 +40,9 @@ Be responsible and conscious.</b> <br>
 🎓 This and further paragraphs serve as a small, generic knowledge database. <br> 
 Threat them as a reference book, not serious academic learning material.
 
-[Quick reference for programming languages and other tools](https://learnxinyminutes.com/)
+Quick references for programming languages and other tools:
+- [learn x in y](https://learnxinyminutes.com/)
+- [QuickRef](https://quickref.me/)
 
 ### 💾 Databases
 
@@ -138,7 +140,7 @@ Bash is a sh-compatible command language interpreter that executes commands read
 
 - [wiki](https://wiki.archlinux.org/title/bash)
 - [man](https://man.archlinux.org/man/bash.1)
-- [cheat sheet](https://devhints.io/bash)
+- [cheat sheet](https://quickref.me/bash)
 
 </details>
 
