@@ -9,8 +9,8 @@ chmod +x strap.sh
 ./strap.sh
 sed -i 's/#[multilib]/[multilib]/' /etc/pacman.conf
 
-pacman --noconfirm -S reflector rsync
-reflector --latest 50 --sort rate --connection-timeout 1 --download-timeout 1 \
+pacman --noconfirm -Sy reflector rsync
+reflector --score 100 --sort rate --threads 10 --connection-timeout 1 --download-timeout 1 \
 									--protocol http,https --save /etc/pacman.d/mirrorlist
 pacman --noconfirm -R reflector rsync
 
@@ -21,7 +21,6 @@ pacman --noconfirm --needed -Syyu \
 							whois \
 							traceroute \
 							bind \
-							python \
 							python-pip \
 							python-pipx \
 							python-setuptools \

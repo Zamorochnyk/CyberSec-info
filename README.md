@@ -17,7 +17,8 @@ Be responsible and conscious.</b> <br>
 <details>
 <summary>🌊<b>Generic usage example</b></summary>
 
-1. Start containers from the project directory: `"sudo docker compose up -d"`
+1. Start containers from the project directory: `"sudo docker compose up -d"` <br>
+(if you are facing slow download speed - try to adjust [reflector](https://wiki.archlinux.org/title/reflector))
 2. Open [CyberChief](#-cyberchief)
 3. Put data in the mounted directory
 4. Connect with [ssh](#-openssh): `"ssh -p 120(mapped port) root@localhost"`
