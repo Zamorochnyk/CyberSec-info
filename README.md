@@ -192,7 +192,6 @@ Common tools
 - [cron](https://quickref.me/cron)
 - [sed](https://quickref.me/sed)
 - [grep](https://quickref.me/grep)
-- [netstat](https://quickref.me/netstat)
 
 ### 📙 Arch Linux
 
