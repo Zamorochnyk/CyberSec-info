@@ -137,6 +137,7 @@ Common tools
 - [Offensive Security Cheatsheet](https://cheatsheet.haax.fr/)
 - [ired.team](https://www.ired.team/)
 - [RedTeam-Tools](https://github.com/A-poc/RedTeam-Tools)
+- [tmpout](https://github.com/tmpout/awesome-elf)
 
 ## 🏗️ Infrastructure
 
