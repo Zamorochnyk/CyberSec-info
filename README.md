@@ -115,7 +115,7 @@ Common tools
 - [whois](https://man.archlinux.org/man/whois.1)
 - [dig](https://man.archlinux.org/man/dig.1)
 - [host](https://man.archlinux.org/man/host.1)
-- [nslookup](https://man.archlinux.org/man/extra/bind/nslookup.1.en)
+- [ss](https://man.archlinux.org/man/ss.8.en)
 
 ### 🔒 Cryptography
 
