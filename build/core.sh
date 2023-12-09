@@ -17,6 +17,7 @@ pacman --noconfirm -R reflector rsync
 # Install core tools
 pacman --noconfirm --needed -Syyu \
 							git \
+							wget \
 							openbsd-netcat \
 							whois \
 							traceroute \

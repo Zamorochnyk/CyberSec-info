@@ -2,7 +2,6 @@
 trap 'exit 1' ERR
 pacman --noconfirm --needed -Syyu \
 							nmap \
-							vulscan \
 							masscan \
 							mitmproxy \
 							nuclei \
@@ -18,3 +17,7 @@ pacman --noconfirm --needed -Syyu \
 
 pipx install wapiti3
 pipx install mitmproxy2swagger
+
+git clone https://github.com/scipag/vulscan /usr/share/nmap/scripts/vulscan
+chmod +x /usr/share/nmap/scripts/vulscan/update.sh
+/usr/share/nmap/scripts/vulscan/update.sh
