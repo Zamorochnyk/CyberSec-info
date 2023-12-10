@@ -283,15 +283,15 @@ Masscan is an Internet-scale port scanner, useful for large-scale surveys of the
 #### 📙 Mitmproxy
 Mitmproxy is an interactive, SSL/TLS-capable intercepting proxy with a console interface for HTTP/1, HTTP/2, and WebSockets.  
 
-To connect: set proxy as `localhost:8081` (search instructions for your browser/tool)
+To connect: set proxy as `localhost:8081`.
 > (Note: 8081 is example port from `docker-compose.yml`)
 
 Also can be used as the gateway to the internal docker network/vpn/etc.  
 Commons:
 - start with `--ssl-insecure` to ignore certificate verification;
-- After the first run certificate will be created in `~/.mitmproxy`. Import them to the external client (search instructions for your browser/tool)  
-  Check [concepts-certificates](https://docs.mitmproxy.org/stable/concepts-certificates/) for additional info.
-- To transfer traffic from `BurpSuite` - set proxy inside `Burp`: `Burp -> Settings -> Network -> Connections -> Add proxy`.
+- After the first run certificate will be created in `~/.mitmproxy`. Import them to the external client.  
+  (Check [About Certificates](https://docs.mitmproxy.org/stable/concepts-certificates/) for additional info.
+- To transfer traffic from `BurpSuite` - set proxy as: `Burp -> Settings -> Network -> Connections -> Add proxy`.
   > (Same logic applies to any tool like ZAP, Metasploit, etc)
 - Use [mitmproxy2swagger](https://github.com/alufers/mitmproxy2swagger) to build api scheeme. Pairs well with [katana](#-katana).  
 
