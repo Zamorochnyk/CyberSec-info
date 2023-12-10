@@ -75,6 +75,7 @@ Common dbs:
 Passwords/Enums/etc:
 - [SecLists](https://github.com/danielmiessler/SecLists/tree/master)
 - [Secrets-patterns-db](https://github.com/mazen160/secrets-patterns-db)
+- [WeakPass](https://weakpass.com/)
 
 Exploits:
 - [ExploitDB](https://www.exploit-db.com/)
