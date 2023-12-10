@@ -352,5 +352,5 @@ Hashcat is the world's fastest and most advanced password recovery utility, supp
 
 #### 📙 John the Ripper
 
-John the Ripper is an Open Source password security auditing and password recovery tool available for many operating systems.
+John the Ripper is an Open Source password security auditing and password recovery tool available for many operating systems.  
 [GitHub](https://github.com/openwall/john) / [Docs](https://openwall.info/wiki/john) / [Cheat Sheet](https://cheatsheet.haax.fr/passcracking-hashfiles/john_cheatsheet/)
