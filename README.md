@@ -84,7 +84,6 @@ Exploits:
 
 ### 📋 Regular expression
 
-Documentation:
 - [Docs](https://pubs.opengroup.org/onlinepubs/7908799/xbd/re.html)
 - [Generator](https://regex-generator.olafneumann.org)
 - [Sandbox](https://regexr.com/)
