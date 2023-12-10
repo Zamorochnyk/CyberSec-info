@@ -53,6 +53,7 @@ Threat them as a reference book, not serious academic learning material.
 Quick references for programming languages and other tools:
 - [Learn x in y](https://learnxinyminutes.com/)
 - [QuickRef](https://quickref.me/)
+- [GitHub](https://github.com/search?q=cheatsheet&type=repositories)
 
 ### 📀 Database
 Documentation:
@@ -131,6 +132,9 @@ Common tools:
 - [ired.team](https://www.ired.team/)
 - [RedTeam-Tools](https://github.com/A-poc/RedTeam-Tools)
 - [tmpout](https://github.com/tmpout/awesome-elf)
+- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/index.html)
+- [the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge)
+- [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
 
 ## 🏗️ Infrastructure
 
