@@ -290,7 +290,7 @@ Also can be used as the gateway to the internal docker network/vpn/etc.
 Commons:
 - start with `--ssl-insecure` to ignore certificate verification;
 - After the first run certificate will be created in `~/.mitmproxy`. Import them to the external client.  
-  (Check [About Certificates](https://docs.mitmproxy.org/stable/concepts-certificates/) for additional info.
+  (Check [About Certificates](https://docs.mitmproxy.org/stable/concepts-certificates/)) for additional info.
 - To transfer traffic from `BurpSuite` - set proxy as: `Burp -> Settings -> Network -> Connections -> Add proxy`.
   > (Same logic applies to any tool like ZAP, Metasploit, etc)
 - Use [mitmproxy2swagger](https://github.com/alufers/mitmproxy2swagger) to build api scheeme. Pairs well with [katana](#-katana).  
