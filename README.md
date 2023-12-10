@@ -87,7 +87,8 @@ Exploits:
 Documentation:
 - [Docs](https://pubs.opengroup.org/onlinepubs/7908799/xbd/re.html)
 - [Generator](https://regex-generator.olafneumann.org)
-- [Patterns&Sandbox](https://regexr.com/)
+- [Sandbox](https://regexr.com/)
+- [Database](https://regexlib.com/Default.aspx)
 - [Cheat Sheet](https://quickref.me/regex.html)
 
 ### 🌐 Network
