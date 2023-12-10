@@ -292,6 +292,7 @@ Commons:
 - After the first run certificate will be created in `~/.mitmproxy`. Import them to the external client (search instructions for your browser/tool)  
   Check [concepts-certificates](https://docs.mitmproxy.org/stable/concepts-certificates/) for additional info.
 - To transfer traffic from `BurpSuite` - set proxy inside `Burp`: `Burp -> Settings -> Network -> Connections -> Add proxy`.
+  > (Same logic applies to any tool like ZAP, Metasploit, etc)
 - Use [mitmproxy2swagger](https://github.com/alufers/mitmproxy2swagger) to build api scheeme. Pairs well with [katana](#-katana).  
 
 [GitHub](https://github.com/mitmproxy/mitmproxy) / [Docs](https://docs.mitmproxy.org/stable/) / [Cheat Sheet](https://quickref.me/mitmproxy.html)
