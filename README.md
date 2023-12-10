@@ -28,7 +28,7 @@ Be responsible and conscious.
 1. Start [mitmproxy](#-mitmproxy);
 1. Do some pentesting:
     - Use [nmap](#-nmap) for scanning;
-    - Use [metasploit](#-metasploit) for exploiting;
+    - [Search](#-cybersec-databases) for exploiting scripts/write your own;
     - Use [CyberChief](#-cyberchief) for any misc operations;
     - etc;
     - Install task-specific tool:
@@ -329,11 +329,6 @@ Check [CyberSec databases](#-cybersec-databases) for possible enums.
 Sqlmap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over of database servers.  
 [GitHub](https://github.com/sqlmapproject/sqlmap) / [Wiki](https://github.com/sqlmapproject/sqlmap/wiki/Features) / [Manual](https://manpages.org/sqlmap) / 
 [Cheat Sheet](https://cdn.comparitech.com/wp-content/uploads/2021/07/sqlmap-Cheat-Sheet.pdf)
-
-#### 📙 Metasploit 
-
-The Metasploit Project is a computer security project that provides information about security vulnerabilities and aids in penetration testing and IDS signature development.  
-[Wiki](https://wiki.archlinux.org/title/Metasploit_Framework) / [GitHub](https://github.com/rapid7/metasploit-framework) / [Docs](https://docs.metasploit.com/)
 
 #### 📙 Hydra
 

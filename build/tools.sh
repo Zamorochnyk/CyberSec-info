@@ -10,7 +10,6 @@ pacman --noconfirm --needed -Syyu \
 							commix \
 							hydra \
 							hashcat \
-							metasploit \
 							john \
 							katana-pd \
 							gobuster
