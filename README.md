@@ -1,64 +1,67 @@
 # Pentesting tools (WIP)
-📜 <b>ALL EXTERNAL RESOURCES BELONG TO THEIR RESPECTIVE OWNERS</b>
+📜 **ALL EXTERNAL RESOURCES BELONG TO THEIR RESPECTIVE OWNERS**
 
-🐳 Cli pentesting tools, packaged in docker images. <br>
-🔨 Use this as a template to build your toolkits. <br>
-♻️ It is meant to be a simple, disposable, "minimal-out-of-the-box" sandbox. <br>
-🔓 It is <b>not</b> meant to be secure, stable, "all-in-one" monolith. <br>
+🐳 Cli pentesting tools, packaged in docker images.  
+🔨 Use this as a template to build your toolkits.  
+♻️ It is meant to be a simple, disposable, "minimal-out-of-the-box" sandbox.  
+🔓 It is **not** meant to be secure, stable, "all-in-one" monolith.  
 
-> For more consistent experience - consider to build your images with [KaliLinux](https://hub.docker.com/r/kalilinux/kali-rolling) or [ParrotOs](https://hub.docker.com/r/parrotsec/core). <br>
+> For more consistent experience - consider to build your images with [KaliLinux](https://hub.docker.com/r/kalilinux/kali-rolling) or [ParrotOs](https://hub.docker.com/r/parrotsec/core).
 
-🚩 <br>
-<b>Warning: this tools can do real damage.<br>
-Even if you <i>can</i> do something, it does not mean that you <i>should</i>. <br>
-Be responsible and conscious.</b> <br>
+🚩  
+This tools can do real damage.  
+Even if you *can* do something, it does not mean that you *should*.  
+Be responsible and conscious.  
 🚩
 
-<details>
-<summary>🌊<b>Generic usage example</b></summary>
+🌊 Generic usage example:
 
-1. Start containers from the project directory: `"sudo docker compose up -d"` <br>
-(if you are facing slow download speed - try to adjust [reflector](https://wiki.archlinux.org/title/reflector))
-2. Open [CyberChief](#-cyberchief)
-3. Put data in the mounted directory
-4. Connect with [ssh](#-openssh): `"ssh -p 120(mapped port) root@localhost"`
-5. Open [tmux](#-tmux)
-6. Connect to [vpn](#-openvpn): `"openvpn /path/to/config"`
-7. Start [proxy](#-mitmproxy)
-8. <b>Do some pentesting</b>
+0. [Intall docker compose](https://docs.docker.com/compose/install/) if needed;
+1. Start containers from the project directory: `sudo docker compose up -d`;  
+   > (Note: if you are facing slow download speed - try to adjust [reflector](https://wiki.archlinux.org/title/reflector))
+1. Put data in the mounted directory;  
+   > (Example: `/transf/`, edit/add/remove in `docker-compose.yml`)
+1. Connect with [ssh](#-openssh): `ssh -p 120 root@localhost`;  
+   > (Note: 120 is example port from `docker-compose.yml`)
+1. Open [tmux](#-tmux) and create few windows/sessions/etc;
+1. Connect to [vpn](#-openvpn): `openvpn /path/to/config`;
+1. Start [mitmproxy](#-mitmproxy);
+1. Do some pentesting:
+    - Use [nmap](#-nmap) for scanning;
+    - Use [metasploit](#-metasploit) for exploiting;
+    - Use [CyberChief](#-cyberchief) for any misc operations;
+    - etc;
     - Install task-specific tool:
-      - [arch](#-arch-linux) packages `"pacman -S <package_name>"`
-      - [python](#-python) packages `"pipx install <pacakge_name>"`
-9. Exit from a container (by typing `"exit"` or by killing the connection/terminal)
-10. Get data from the mounted directory
-11. Remove containers: `"sudo docker compose down"`( add -v to clean <b>all</b> related volumes)
-12. [Clean docker data](#-docker) if needed
-
-</details>
+      - [Arch-linux](#-arch-linux) packages `pacman -S <package_name>`
+      - [Python](#-python) packages `pipx install <pacakge_name>`
+1. Exit from a container;  
+   > (Use `Ctrl + C` to kill foreground process)  
+   > (Type alot of `exit` or kill the connection/terminal)  
+   > (Note: if you are just closing connection/terminal - tmux session will remain in background)
+1. Get data from the mounted directory;  
+   > (Example: `/transf/`, edit/add/remove in `docker-compose.yml`)
+1. Remove containers: `"sudo docker compose down"`;  
+   > (add `-v` to clean **all** related volumes)
+1. [Clean docker data](https://docs.docker.com/config/pruning/) if needed.
 
 ## 🎖️ General
 
-🎓 This and further paragraphs serve as a small, generic knowledge database. <br> 
-Threat them as a reference book, not serious academic learning material.
+🎓 This and further paragraphs serve as a small, generic knowledge database.  
+Threat them as a reference book, not serious academic learning material.  
+> (Note: here are a lot of `Arch Linux` wiki/man pages, but they are very usable for other linux distros, just use corresponding packages/directories)
 
 Quick references for programming languages and other tools:
 - [Learn x in y](https://learnxinyminutes.com/)
 - [QuickRef](https://quickref.me/)
 
-### 📀 Data management
+### 📀 Database
+Documentation:
+- [Wiki](https://wiki.archlinux.org/title/Category:Database_management_systems)
+- [Models](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)
+- [Relational](https://www.digitalocean.com/community/tutorials/understanding-relational-databases)
+- [Non-relational](https://learn.microsoft.com/en-us/azure/architecture/data-guide/big-data/non-relational-data)
 
-<details>
-<summary>Documentation</summary>
-
-- [wiki](https://wiki.archlinux.org/title/Category:Database_management_systems)
-- [data store models](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)
-- [relational db docs](https://www.digitalocean.com/community/tutorials/understanding-relational-databases)
-- [non-relational db docs](https://learn.microsoft.com/en-us/azure/architecture/data-guide/big-data/non-relational-data)
-
-</details>
-
-Common dbs
-
+Common dbs:
 - [Oracle](https://en.wikibooks.org/wiki/Oracle_Database/SQL_Cheatsheet)
 - [MySql](https://www.mysqltutorial.org/mysql-cheat-sheet.aspx)
 - [PostgreSQL](https://www.postgresqltutorial.com/postgresql-cheat-sheet/)
@@ -68,47 +71,36 @@ Common dbs
 
 ### 💾 CyberSec databases
 
-<details>
-<summary>Passwords & Co</summary>
-    
+Passwords/Enums/etc:
 - [SecLists](https://github.com/danielmiessler/SecLists/tree/master)
-- [secrets-patterns-db](https://github.com/mazen160/secrets-patterns-db)
+- [Secrets-patterns-db](https://github.com/mazen160/secrets-patterns-db)
 
-</details>
-
-<details>
-<summary>Exploits</summary>
-
+Exploits:
 - [ExploitDB](https://www.exploit-db.com/)
 - [Rapid7](https://www.rapid7.com/db/)
 - [CVE](https://www.cve.org/)
 - [0day](https://0day.today/)
 - [cxsecurity](https://cxsecurity.com/)
 
-</details>
-
 ### 📋 Regular expression
 
-- [docs](https://pubs.opengroup.org/onlinepubs/7908799/xbd/re.html)
-- [generator](https://regex-generator.olafneumann.org)
-- [patterns&sandbox](https://regexr.com/)
-- [cheat sheet](https://quickref.me/regex.html)
+Documentation:
+- [Docs](https://pubs.opengroup.org/onlinepubs/7908799/xbd/re.html)
+- [Generator](https://regex-generator.olafneumann.org)
+- [Patterns&Sandbox](https://regexr.com/)
+- [Cheat Sheet](https://quickref.me/regex.html)
 
 ### 🌐 Network
-<details>
-<summary>Documentation</summary>
 
-- [network configuration](https://wiki.archlinux.org/title/Network_configuration)
-- [dns](https://wiki.archlinux.org/title/Domain_name_resolution)
-- [proxy](https://wiki.archlinux.org/title/Proxy_server)
-- [wpa](https://wiki.archlinux.org/title/Wpa_supplicant)
-- [ports](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
-- [network cheat sheet](https://www.geeksforgeeks.org/computer-network-cheat-sheet/)
+Documentation:
+- [Configuration](https://wiki.archlinux.org/title/Network_configuration)
+- [DNS](https://wiki.archlinux.org/title/Domain_name_resolution)
+- [Proxy](https://wiki.archlinux.org/title/Proxy_server)
+- [WPA](https://wiki.archlinux.org/title/Wpa_supplicant)
+- [Ports](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
+- [Cheat Sheet](https://www.geeksforgeeks.org/computer-network-cheat-sheet/)
 
-</details>
-
-Common tools
-
+Common tools:
 - [ping](https://man.archlinux.org/man/ping.8.en)
 - [traceroute](https://man.archlinux.org/man/core/traceroute/traceroute.8.en)
 - [netcat](https://man.archlinux.org/man/extra/openbsd-netcat/nc.1.en)
@@ -119,10 +111,10 @@ Common tools
 
 ### 🔒 Cryptography
 
-- [docs](https://www.fortinet.com/resources/cyberglossary/what-is-cryptography)
-- [theory cheat sheet](https://gist.github.com/dimosr/317629577c71c376946f8a31a4c2b069)
-- [commons cheat sheet](https://cheatography.com/ipsec/cheat-sheets/cryptography/)
-- [wiki](https://hashcat.net/wiki/)
+- [General](https://www.fortinet.com/resources/cyberglossary/what-is-cryptography)
+- [Theory](https://gist.github.com/dimosr/317629577c71c376946f8a31a4c2b069)
+- [Commons](https://cheatography.com/ipsec/cheat-sheets/cryptography/)
+- [Wiki](https://hashcat.net/wiki/)
 
 ### 👩‍💻 Where to practice
 
@@ -142,51 +134,34 @@ Common tools
 ## 🏗️ Infrastructure
 
 ### 📙 Docker
-Docker is a set of platform-as-a-service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. <br>
+Docker is a set of platform-as-a-service (PaaS) products that use OS-level virtualization to deliver software in packages called containers.
 
->Note: Please, use docker compose and do periodical [cleanups](https://docs.docker.com/config/pruning/). <br>
-
-<details>
-<summary>References</summary>
-
-- [docs](https://docs.docker.com/)
-- [docker compose installation](https://docs.docker.com/compose/install/)
-- [docker compose cli](https://docs.docker.com/compose/reference/)
-- [docker compose cheat sheet](https://devhints.io/docker-compose)
-- [docker cheat sheet](https://quickref.me/docker)
-
-</details>
+> Note: Please, use docker compose and do periodical [cleanups](https://docs.docker.com/config/pruning/). 
+- [Docs](https://docs.docker.com/)
+- [Installation](https://docs.docker.com/compose/install/)
+- [Commands](https://docs.docker.com/compose/reference/)
+- [Cheat Sheet (compose)](https://devhints.io/docker-compose)
+- [Cheat Sheet (docker)](https://quickref.me/docker)
 
 ### 📙 Bash
+
 Bash is a sh-compatible command language interpreter that executes commands read from the standard input or a file.
-
-<details>
-<summary>References</summary>
-
-- [wiki](https://wiki.archlinux.org/title/bash)
-- [man](https://man.archlinux.org/man/bash.1)
-- [cheat sheet](https://quickref.me/bash)
-
-</details>
+- [Wiki](https://wiki.archlinux.org/title/bash)
+- [Manual](https://man.archlinux.org/man/bash.1)
+- [Cheat Sheet](https://quickref.me/bash)
 
 ### 📙 Linux
 
 Linux is a family of open-source Unix-like operating systems based on the Linux kernel.
+Documentation:
+- [Docs](https://www.linux.org/)
+- [Administration](https://wiki.archlinux.org/title/Category:System_administration)
+- [Security](https://wiki.archlinux.org/title/Category:Security)
+- [Networking](https://wiki.archlinux.org/title/Category:Networking)
+- [Cheat Sheet (commands)](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/)
+- [Cheat Sheet (structure)](https://www.tecmint.com/linux-directory-structure-and-important-files-paths-explained/)
 
-<details>
-<summary>Documentation</summary>
-
-- [docs](https://www.linux.org/)
-- [system administration](https://wiki.archlinux.org/title/Category:System_administration)
-- [security](https://wiki.archlinux.org/title/Category:Security)
-- [networking](https://wiki.archlinux.org/title/Category:Networking)
-- [commands cheat sheet](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/)
-- [dir structure](https://www.tecmint.com/linux-directory-structure-and-important-files-paths-explained/)
-
-</details>
-
-Common tools
-    
+Common tools:
 - [chmod](https://quickref.me/chmod)
 - [awk](https://quickref.me/awk)
 - [cron](https://quickref.me/cron)
@@ -195,75 +170,46 @@ Common tools
 
 ### 📙 Arch Linux
 
-Arch Linux is minimal, an independently developed, x86-64 general-purpose Linux distribution that strives to provide the latest stable versions of most software by following a rolling-release model.<br>
-
-<details>
-<summary>References</summary>
-
-- [Arch Linux](https://archlinux.org/)
-- [docker image](https://hub.docker.com/_/archlinux/)
-- [packages](https://archlinux.org/packages/)
-- [wiki](https://wiki.archlinux.org/)
-- [man database](https://man.archlinux.org/)
-
-</details>
+Arch Linux is minimal, an independently developed, x86-64 general-purpose Linux distribution that strives to provide the latest stable versions of most software by following a rolling-release model.
+- [Docs](https://archlinux.org/)
+- [Container](https://hub.docker.com/_/archlinux/)
+- [Packages](https://archlinux.org/packages/)
+- [Wiki](https://wiki.archlinux.org/)
+- [Manuals](https://man.archlinux.org/)
 
 ### 📙 BlackArch Linux
 
 BlackArch is a penetration testing distribution based on Arch Linux that provides a large number of security tools.
-
-<details>
-<summary>References</summary>
-
-- [BlackArch Linux](https://blackarch.org/)
-- [guide](https://blackarch.org/guide.html)
-- [packages](https://blackarch.org/tools.html)
-- [github](https://github.com/BlackArch/blackarch)
-
-</details>
+- [Docs](https://blackarch.org/)
+- [Guide](https://blackarch.org/guide.html)
+- [Packages](https://blackarch.org/tools.html)
+- [GitHub](https://github.com/BlackArch/blackarch)
 
 ### 📙 PowerShell
+
 PowerShell is a task automation and configuration management program from Microsoft, consisting of a command-line shell and the associated scripting language.
-
-<details>
-<summary>References</summary>
-
-- [github](https://github.com/PowerShell/PowerShell)
-- [docs](https://learn.microsoft.com/en-us/powershell/)
-- [cheat sheet](https://www.stationx.net/powershell-cheat-sheet/)
-
-</details>
+- [GitHub](https://github.com/PowerShell/PowerShell)
+- [Docs](https://learn.microsoft.com/en-us/powershell/)
+- [Cheat Sheet](https://www.stationx.net/powershell-cheat-sheet/)
 
 ### 📙 Microsoft Windows
 
 Microsoft Windows is a group of several proprietary graphical operating system families developed and marketed by Microsoft.
-
-<details>
-<summary>References</summary>
-
-- [OS docs](https://learn.microsoft.com/en-us/windows/)
-- [Active Directory docs](https://learn.microsoft.com/en-us/troubleshoot/windows-server/identity/active-directory-overview)
-- [Server docs](https://learn.microsoft.com/en-us/windows-server/)
-- [cheat sheet](https://www.stationx.net/windows-command-line-cheat-sheet/)
-
-</details>
+- [OS](https://learn.microsoft.com/en-us/windows/)
+- [Active Directory](https://learn.microsoft.com/en-us/troubleshoot/windows-server/identity/active-directory-overview)
+- [Server](https://learn.microsoft.com/en-us/windows-server/)
+- [Cheat Sheet](https://www.stationx.net/windows-command-line-cheat-sheet/)
 
 ## 🧰 Tools
 
 ### 🧑‍🍳 CyberChief
 
-CyberChef is a simple, intuitive web app for carrying out all manner of "cyber" operations within a web browser. <br>
-For security reasons, please, use the local container version. <br>
-To connect - open the browser and type `localhost:8000(mapped port)`
+CyberChef is a simple, intuitive web app for carrying out all manner of "cyber" operations within a web browser.  
+For security reasons, please, use the local container version.  
+To connect - open the browser and type `localhost:8000`  
+> (Note: 8000 is example port from `docker-compose.yml`)
 
-<details>
-<summary>References</summary>
-
-- [Github](https://github.com/gchq/CyberChef)
-- [Web version](https://gchq.github.io/CyberChef/)
-- [Docker image](https://hub.docker.com/r/mpepping/cyberchef/)
-
-</details>
+[GitHub](https://github.com/gchq/CyberChef) / [Web](https://gchq.github.io/CyberChef/) / [Container](https://hub.docker.com/r/mpepping/cyberchef/)
 
 ### 🌱 Core
 
@@ -271,298 +217,135 @@ Essential tools.
 
 #### 📙 Git
 
-Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.
-
-<details>
-<summary>References</summary>
-
-- [wiki](https://wiki.archlinux.org/title/git)
-- [man](https://man.archlinux.org/man/git.1)
-- [cheat sheet](https://quickref.me/git)
-
-</details>
+Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.  
+[Wiki](https://wiki.archlinux.org/title/git) / [Manual](https://man.archlinux.org/man/git.1) / [Cheat Sheet](https://quickref.me/git)
 
 #### 📙 Curl
 
-Curl is a tool for transferring data from or to a server using URLs.
-<details>
-<summary>References</summary>
-
-- [wiki](https://wiki.archlinux.org/title/CURL)
-- [man](https://man.archlinux.org/man/curl.1)
-- [cheat sheet](https://quickref.me/curl)
-
-</details>
+Curl is a tool for transferring data from or to a server using URLs.  
+[Wiki](https://wiki.archlinux.org/title/CURL) / [Manual](https://man.archlinux.org/man/curl.1) / [Cheat Sheet](https://quickref.me/curl)
 
 #### 📙 Python
 
 Python is a high-level, general-purpose programming language.
->Note: To install/uninstall python-specific apps - use [pipx](https://pypa.github.io/pipx/)
+> Note: To install/uninstall python-specific apps - use [pipx](https://pypa.github.io/pipx/)
 
-<details>
-<summary>References</summary>
-
-- [wiki](https://wiki.archlinux.org/title/python)
-- [cheat sheet](https://github.com/gto76/python-cheatsheet)
-
-</details>
+[Wiki](https://wiki.archlinux.org/title/python) / [Cheat Sheet](https://github.com/gto76/python-cheatsheet)
 
 #### 📙 Openvpn
-OpenVPN is a virtual private network (VPN) system that implements techniques to create secure point-to-point or site-to-site connections in routed or bridged configurations and remote access facilities. It implements both client and server applications. 
-<details>
-<summary>References</summary>
-
-- [docs](https://community.openvpn.net/openvpn)
-- [server](https://wiki.archlinux.org/title/OpenVPN)
-- [client](https://man.archlinux.org/man/extra/openvpn/openvpn.8.en)
-
-</details>
+OpenVPN is a virtual private network (VPN) system that implements techniques to create secure point-to-point or site-to-site connections in routed or bridged configurations and remote access facilities. It implements both client and server applications.  
+[Docs](https://community.openvpn.net/openvpn) / [Server](https://wiki.archlinux.org/title/OpenVPN) / [Client](https://man.archlinux.org/man/extra/openvpn/openvpn.8.en)
 
 #### 📙 Tmux
 
-Tmux is a terminal multiplexer: it enables a number of terminals to be created, accessed, and controlled from a single screen. Tmux may be detached from a screen and continue running in the background, then later reattached.
-<details>
-<summary>References</summary>
-
-- [wiki](https://wiki.archlinux.org/title/tmux)
-- [man](https://man.archlinux.org/man/tmux.1)
-- [cheat sheet](https://quickref.me/tmux)
-
-</details>
+Tmux is a terminal multiplexer: it enables a number of terminals to be created, accessed, and controlled from a single screen. Tmux may be detached from a screen and continue running in the background, then later reattached.  
+[Wiki](https://wiki.archlinux.org/title/tmux) / [Manual](https://man.archlinux.org/man/tmux.1) / [Cheat Sheet](https://quickref.me/tmux)
 
 #### 📙 Nano
 
-GNU nano (or nano) is a text editor that aims to introduce a simple interface and intuitive command options to console-based text editing. 
-
-<details>
-<summary>References</summary>
-
-- [wiki](https://wiki.archlinux.org/title/nano)
-- [man](https://man.archlinux.org/man/nano.1)
-- [cheat sheet](https://www.nano-editor.org/dist/latest/cheatsheet.html)
-
-</details>
+GNU nano (or nano) is a text editor that aims to introduce a simple interface and intuitive command options to console-based text editing.  
+[Wiki](https://wiki.archlinux.org/title/nano) / [Manual](https://man.archlinux.org/man/nano.1) / [Cheat Sheet](https://www.nano-editor.org/dist/latest/cheatsheet.html)
 
 #### 📙 Openssh
 
-OpenSSH (OpenBSD Secure Shell) is a set of computer programs providing encrypted communication sessions over a computer network using the Secure Shell (SSH) protocol.
-
-<details>
-<summary>References</summary>
-
-- [wiki](https://wiki.archlinux.org/title/OpenSSH)
-- [man](https://man.archlinux.org/man/core/openssh/ssh.1.en)
-- [ssh_config](https://man.archlinux.org/man/ssh_config.5)
-- [cheat sheet](https://quickref.me/ssh.html)
-
-</details>
+OpenSSH (OpenBSD Secure Shell) is a set of computer programs providing encrypted communication sessions over a computer network using the Secure Shell (SSH) protocol.  
+[Wiki](https://wiki.archlinux.org/title/OpenSSH) / [Manual](https://man.archlinux.org/man/core/openssh/ssh.1.en) / [ssh_config](https://man.archlinux.org/man/ssh_config.5) / [Cheat Sheet](https://quickref.me/ssh.html)
 
 #### 📙 Openssl
 
-OpenSSL is an open-source implementation of the SSL and TLS protocols, designed to be as flexible as possible.
-
-<details>
-<summary>References</summary>
-
-- [wiki](https://wiki.archlinux.org/title/OpenSSL)
-- [man](https://man.archlinux.org/man/openssl.1ssl)
-- [cheat sheet](https://cheatography.com/albertx/cheat-sheets/openssl/)
-
-</details>
+OpenSSL is an open-source implementation of the SSL and TLS protocols, designed to be as flexible as possible.  
+[Wiki](https://wiki.archlinux.org/title/OpenSSL) / [Manual](https://man.archlinux.org/man/openssl.1ssl) / [Cheat Sheet](https://cheatography.com/albertx/cheat-sheets/openssl/)
 
 ### 👁️ Scanners
 
 #### 📙 Nmap
 
-Nmap (“Network Mapper”) is an open-source tool for network exploration and security auditing.
+Nmap (“Network Mapper”) is an open-source tool for network exploration and security auditing.  
 
-<details>
-<summary>References</summary>
-
-- [docs](https://nmap.org/docs.html)
-- [wiki](https://wiki.archlinux.org/title/nmap)
-- [scripts](https://nmap.org/nsedoc/scripts/)
-- [man](https://man.archlinux.org/man/nmap.1)
-- [vulscan addon](https://github.com/scipag/vulscan)
-- [cheat sheet](https://www.stationx.net/nmap-cheat-sheet/)
-
-</details>
+[Docs](https://nmap.org/docs.html) / [Wiki](https://wiki.archlinux.org/title/nmap) / [Scripts](https://nmap.org/nsedoc/scripts/) /
+[Manual](https://man.archlinux.org/man/nmap.1) / [Vulscan](https://github.com/scipag/vulscan) / [Cheat Sheet](https://www.stationx.net/nmap-cheat-sheet/)
 
 #### 📙 Masscan
 
 Masscan is an Internet-scale port scanner, useful for large-scale surveys of the Internet, or of internal networks.
+> 🚩  
+> Unless you are scanning a giant internal network, please, keep those --rates at ~1000-10000, **do not flood public networks**.  
+> Keep it sane.  
+> 🚩
 
->🚩 Warning: Unless you are scanning a giant internal network, please, keep those --rates at ~1000-10000, <b>do not flood public networks</b>. <br>
->Keep it sane.
-
-<details>
-<summary>References</summary>
-
-- [man](https://man.archlinux.org/man/masscan.8)
-- [cheat sheet](https://cheatsheet.haax.fr/network/port-scanning/masscan_cheatsheet/)
-
-</details>
+[Manual](https://man.archlinux.org/man/masscan.8) / [Cheat Sheet](https://cheatsheet.haax.fr/network/port-scanning/masscan_cheatsheet/)
 
 #### 📙 Mitmproxy
-Mitmproxy is an interactive, SSL/TLS-capable intercepting proxy with a console interface for HTTP/1, HTTP/2, and WebSockets.
+Mitmproxy is an interactive, SSL/TLS-capable intercepting proxy with a console interface for HTTP/1, HTTP/2, and WebSockets.  
 
-Intercepting proxy can be used with any client that allows proxy. <br>
-To connect: set proxy as `localhost:<insert mapped port from docker-compose>` (search instructions for your browser/tool) <br>
-Also can be used as the gateway to the internal docker network/vpn.<br>
+To connect: set proxy as `localhost:8081` (search instructions for your browser/tool)
+> (Note: 8081 is example port from `docker-compose.yml`)
+
+Also can be used as the gateway to the internal docker network/vpn/etc.  
 Commons:
 - start with `--ssl-insecure` to ignore certificate verification;
-- After the first run certificate will be created in `~/.mitmproxy`. Import them to the external client (search instructions for your browser/tool) <br>
-check [concepts-certificates](https://docs.mitmproxy.org/stable/concepts-certificates/) for additional info.
-- If you want to use BurpSuite with this - use `Burp -> Settings -> Network -> Connections -> Add proxy`. Boom, now you have the best of both worlds.
-- Use [mitmproxy2swagger](https://github.com/alufers/mitmproxy2swagger) to build api scheeme. Pairs well with [katana](#-katana)
+- After the first run certificate will be created in `~/.mitmproxy`. Import them to the external client (search instructions for your browser/tool)  
+  Check [concepts-certificates](https://docs.mitmproxy.org/stable/concepts-certificates/) for additional info.
+- If you want to use`BurpSuite` with this - set proxy inside `Burp`: `Burp -> Settings -> Network -> Connections -> Add proxy`.
+- Use [mitmproxy2swagger](https://github.com/alufers/mitmproxy2swagger) to build api scheeme. Pairs well with [katana](#-katana).  
 
-<details>
-<summary>References</summary>
-
-- [github](https://github.com/mitmproxy/mitmproxy)
-- [docs](https://docs.mitmproxy.org/stable/)
-- [cheat sheet](https://quickref.me/mitmproxy.html)
-
-</details>
+[GitHub](https://github.com/mitmproxy/mitmproxy) / [Docs](https://docs.mitmproxy.org/stable/) / [Cheat Sheet](https://quickref.me/mitmproxy.html)
 
 #### 📙 Nuclei
 
-Nuclei is used to send requests across targets based on a template, leading to zero false positives and providing fast scanning on a large number of hosts. 
-
-<details>
-<summary>References</summary>
-
-- [github](https://github.com/projectdiscovery/nuclei)
-- [templates](https://github.com/projectdiscovery/nuclei-templates)
-- [cheat sheet](https://cheatsheet.haax.fr/web-pentest/tools/nuclei/)
-
-</details>
+Nuclei is used to send requests across targets based on a template, leading to zero false positives and providing fast scanning on a large number of hosts.   
+[GitHub](https://github.com/projectdiscovery/nuclei) / [Templates](https://github.com/projectdiscovery/nuclei-templates) / [Cheat Sheet](https://cheatsheet.haax.fr/web-pentest/tools/nuclei/)
 
 #### 📙 Wapiti
 
-Wapiti allows you to audit the security of your web applications.
-It performs "black-box" scans, i.e. it does not study the source code of the application but will scans the webpages of the deployed webapp, looking for scripts and forms where it can inject data. 
-
-<details>
-<summary>References</summary>
-
-- [github](https://github.com/wapiti-scanner/wapiti)
-- [man](https://manpages.org/wapiti)
-
-</details>
+Wapiti performs "black-box" scans, i.e. it does not study the source code of the application but will scans the webpages of the deployed webapp, looking for scripts and forms where it can inject data.  
+[GitHub](https://github.com/wapiti-scanner/wapiti) / [Manual](https://manpages.org/wapiti)
 
 #### 📙 Dalfox
 
-DalFox is a powerful open-source tool that focuses on automation, making it ideal for quickly scanning for XSS flaws and analyzing parameters. Its advanced testing engine and niche features are designed to streamline the process of detecting and verifying vulnerabilities.
-
-<details>
-<summary>References</summary>
-
-- [github](https://github.com/hahwul/dalfox)
-- [docs](https://dalfox.hahwul.com/docs/home/)
-- [cheat sheet](https://www.blackhatethicalhacking.com/tools/dalfox/)
-
-</details>
+DalFox is a powerful open-source tool that focuses on automation, making it ideal for quickly scanning for XSS flaws and analyzing parameters. Its advanced testing engine and niche features are designed to streamline the process of detecting and verifying vulnerabilities.  
+[GiHhub](https://github.com/hahwul/dalfox) / [Docs](https://dalfox.hahwul.com/docs/home/) / [Cheat Sheet](https://www.blackhatethicalhacking.com/tools/dalfox/)
 
 #### 📙 Katana
 
-A next-generation crawling and spidering framework. 
-
-<details>
-<summary>References</summary>
-
-- [github](https://github.com/projectdiscovery/katana)
-
-</details>
+A next-generation crawling and spidering framework.  
+[GitHub](https://github.com/projectdiscovery/katana)
 
 #### 📙 Gobuster
 
-Directory/File, DNS, and VHost busting tool written in Go 
-
-<details>
-<summary>References</summary>
-
-- [github](https://github.com/OJ/gobuster)
-- [cheat sheet](https://3os.org/penetration-testing/cheatsheets/gobuster-cheatsheet/)
-
-</details>
+Directory/File, DNS, and VHost busting tool written in Go.
+Check [CyberSec databases](#-cybersec-databases) for possible enums.  
+[GitHub](https://github.com/OJ/gobuster) / [Cheat Sheet](https://3os.org/penetration-testing/cheatsheets/gobuster-cheatsheet/)
 
 ### 🗡️ Exploiters
 
 #### 📙 Sqlmap
 
-Sqlmap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over of database servers.
-
-<details>
-<summary>References</summary>
-
-- [github](https://github.com/sqlmapproject/sqlmap)
-- [wiki](https://github.com/sqlmapproject/sqlmap/wiki/Features)
-- [man](https://manpages.org/sqlmap)
-- [cheat sheet](https://cdn.comparitech.com/wp-content/uploads/2021/07/sqlmap-Cheat-Sheet.pdf)
-
-</details>
+Sqlmap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over of database servers.  
+[GitHub](https://github.com/sqlmapproject/sqlmap) / [Wiki](https://github.com/sqlmapproject/sqlmap/wiki/Features) / [Manual](https://manpages.org/sqlmap) / 
+[Cheat Sheet](https://cdn.comparitech.com/wp-content/uploads/2021/07/sqlmap-Cheat-Sheet.pdf)
 
 #### 📙 Metasploit 
 
-The Metasploit Project is a computer security project that provides information about security vulnerabilities and aids in penetration testing and IDS signature development.
-
-<details>
-<summary>References</summary>
-
-- [wiki](https://wiki.archlinux.org/title/Metasploit_Framework)
-- [github](https://github.com/rapid7/metasploit-framework)
-- [docs](https://docs.metasploit.com/)
-
-</details>
+The Metasploit Project is a computer security project that provides information about security vulnerabilities and aids in penetration testing and IDS signature development.  
+[Wiki](https://wiki.archlinux.org/title/Metasploit_Framework) / [GitHub](https://github.com/rapid7/metasploit-framework) / [Docs](https://docs.metasploit.com/)
 
 #### 📙 Hydra
 
-Hydra is a parallelized login cracker that supports numerous protocols to attack. New modules are easy to add, besides that, it is flexible and very fast.
-
-<details>
-<summary>References</summary>
-
-- [man](https://man.archlinux.org/man/extra/hydra/hydra.1.en)
-- [github](https://github.com/vanhauser-thc/thc-hydra)
-- [cheat sheet](https://haxez.org/wp-content/uploads/2022/06/HaXeZ_Hydra_Cheat_Sheet-1.pdf)
-
-</details>
+Hydra is a parallelized login cracker that supports numerous protocols to attack. New modules are easy to add, besides that, it is flexible and very fast.   
+[Manual](https://man.archlinux.org/man/extra/hydra/hydra.1.en) / [GitHub](https://github.com/vanhauser-thc/thc-hydra) / [Cheat Sheet](https://haxez.org/wp-content/uploads/2022/06/HaXeZ_Hydra_Cheat_Sheet-1.pdf)
 
 #### 📙 Commix
 
-Commix  is an open-source penetration testing tool, that automates the detection and exploitation of command injection vulnerabilities.
-
-<details>
-<summary>References</summary>
-
-- [github](https://github.com/commixproject/commix)
-- [docs](https://github.com/commixproject/commix/wiki/Usage)
-
-</details>
+Commix  is an open-source penetration testing tool, that automates the detection and exploitation of command injection vulnerabilities.  
+[GitHub](https://github.com/commixproject/commix) / [Docs](https://github.com/commixproject/commix/wiki/Usage)
 
 #### 📙 Hashcat
 
-Hashcat is the world's fastest and most advanced password recovery utility, supporting five unique modes of attack for over 300 highly optimized hashing algorithms. 
-
-<details>
-<summary>References</summary>
-
-- [docs](https://hashcat.net/hashcat/)
-- [github](https://github.com/hashcat/hashcat)
-- [cheat sheet](https://cheatsheet.haax.fr/passcracking-hashfiles/hashcat_cheatsheet/)
-
-</details>
+Hashcat is the world's fastest and most advanced password recovery utility, supporting five unique modes of attack for over 300 highly optimized hashing algorithms.  
+[Docs](https://hashcat.net/hashcat/) / [GitHub](https://github.com/hashcat/hashcat) / [Cheat Sheet](https://cheatsheet.haax.fr/passcracking-hashfiles/hashcat_cheatsheet/)
 
 #### 📙 John the Ripper
 
 John the Ripper is an Open Source password security auditing and password recovery tool available for many operating systems.
-
-<details>
-<summary>References</summary>
-
-- [github](https://github.com/openwall/john)
-- [docs](https://openwall.info/wiki/john)
-- [cheat sheet](https://cheatsheet.haax.fr/passcracking-hashfiles/john_cheatsheet/)
-
-</details>
+[GitHub](https://github.com/openwall/john) / [Docs](https://openwall.info/wiki/john) / [Cheat Sheet](https://cheatsheet.haax.fr/passcracking-hashfiles/john_cheatsheet/)
