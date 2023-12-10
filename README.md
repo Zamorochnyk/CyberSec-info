@@ -93,6 +93,7 @@ Documentation:
 ### 🌐 Network
 
 Documentation:
+- [Basics](https://www.geeksforgeeks.org/basics-computer-networking/)
 - [Configuration](https://wiki.archlinux.org/title/Network_configuration)
 - [DNS](https://wiki.archlinux.org/title/Domain_name_resolution)
 - [Proxy](https://wiki.archlinux.org/title/Proxy_server)
@@ -116,7 +117,7 @@ Common tools:
 - [Commons](https://cheatography.com/ipsec/cheat-sheets/cryptography/)
 - [Wiki](https://hashcat.net/wiki/)
 
-### 👩‍💻 Where to practice
+### 🥋 Where to practice
 
 - [OverTheWire](https://overthewire.org/wargames/)
 - [TryHackMe](https://tryhackme.com/)
@@ -286,7 +287,7 @@ Commons:
 - start with `--ssl-insecure` to ignore certificate verification;
 - After the first run certificate will be created in `~/.mitmproxy`. Import them to the external client (search instructions for your browser/tool)  
   Check [concepts-certificates](https://docs.mitmproxy.org/stable/concepts-certificates/) for additional info.
-- If you want to use`BurpSuite` with this - set proxy inside `Burp`: `Burp -> Settings -> Network -> Connections -> Add proxy`.
+- To transfer traffic from `BurpSuite` - set proxy inside `Burp`: `Burp -> Settings -> Network -> Connections -> Add proxy`.
 - Use [mitmproxy2swagger](https://github.com/alufers/mitmproxy2swagger) to build api scheeme. Pairs well with [katana](#-katana).  
 
 [GitHub](https://github.com/mitmproxy/mitmproxy) / [Docs](https://docs.mitmproxy.org/stable/) / [Cheat Sheet](https://quickref.me/mitmproxy.html)
