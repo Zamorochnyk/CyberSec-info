@@ -216,7 +216,7 @@ For security reasons, please, use the local container version.
 To connect - open the browser and type `localhost:8000`  
 > (Note: 8000 is example port from `docker-compose.yml`)
 
-[GitHub](https://github.com/gchq/CyberChef) / [Web](https://gchq.github.io/CyberChef/) / [Container](https://hub.docker.com/r/mpepping/cyberchef/)
+[GitHub](https://github.com/gchq/CyberChef) | [Web](https://gchq.github.io/CyberChef/) | [Container](https://hub.docker.com/r/mpepping/cyberchef/)
 
 ### 🌱 Core
 
@@ -225,43 +225,43 @@ Essential tools.
 #### 📙 Git
 
 Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.  
-[Wiki](https://wiki.archlinux.org/title/git) / [Manual](https://man.archlinux.org/man/git.1) / [Cheat Sheet](https://quickref.me/git)
+[Wiki](https://wiki.archlinux.org/title/git) | [Manual](https://man.archlinux.org/man/git.1) | [Cheat Sheet](https://quickref.me/git)
 
 #### 📙 Curl
 
 Curl is a tool for transferring data from or to a server using URLs.  
-[Wiki](https://wiki.archlinux.org/title/CURL) / [Manual](https://man.archlinux.org/man/curl.1) / [Cheat Sheet](https://quickref.me/curl)
+[Wiki](https://wiki.archlinux.org/title/CURL) | [Manual](https://man.archlinux.org/man/curl.1) | [Cheat Sheet](https://quickref.me/curl)
 
 #### 📙 Python
 
 Python is a high-level, general-purpose programming language.
 > Note: To install/uninstall python-specific apps - use [pipx](https://pypa.github.io/pipx/)
 
-[Wiki](https://wiki.archlinux.org/title/python) / [Cheat Sheet](https://github.com/gto76/python-cheatsheet)
+[Wiki](https://wiki.archlinux.org/title/python) | [Cheat Sheet](https://github.com/gto76/python-cheatsheet)
 
 #### 📙 Openvpn
 OpenVPN is a virtual private network (VPN) system that implements techniques to create secure point-to-point or site-to-site connections in routed or bridged configurations and remote access facilities. It implements both client and server applications.  
-[Docs](https://community.openvpn.net/openvpn) / [Server](https://wiki.archlinux.org/title/OpenVPN) / [Client](https://man.archlinux.org/man/extra/openvpn/openvpn.8.en)
+[Docs](https://community.openvpn.net/openvpn) | [Server](https://wiki.archlinux.org/title/OpenVPN) | [Client](https://man.archlinux.org/man/extra/openvpn/openvpn.8.en)
 
 #### 📙 Tmux
 
 Tmux is a terminal multiplexer: it enables a number of terminals to be created, accessed, and controlled from a single screen. Tmux may be detached from a screen and continue running in the background, then later reattached.  
-[Wiki](https://wiki.archlinux.org/title/tmux) / [Manual](https://man.archlinux.org/man/tmux.1) / [Cheat Sheet](https://quickref.me/tmux)
+[Wiki](https://wiki.archlinux.org/title/tmux) | [Manual](https://man.archlinux.org/man/tmux.1) | [Cheat Sheet](https://quickref.me/tmux)
 
 #### 📙 Nano
 
 GNU nano (or nano) is a text editor that aims to introduce a simple interface and intuitive command options to console-based text editing.  
-[Wiki](https://wiki.archlinux.org/title/nano) / [Manual](https://man.archlinux.org/man/nano.1) / [Cheat Sheet](https://www.nano-editor.org/dist/latest/cheatsheet.html)
+[Wiki](https://wiki.archlinux.org/title/nano) | [Manual](https://man.archlinux.org/man/nano.1) | [Cheat Sheet](https://www.nano-editor.org/dist/latest/cheatsheet.html)
 
 #### 📙 Openssh
 
 OpenSSH (OpenBSD Secure Shell) is a set of computer programs providing encrypted communication sessions over a computer network using the Secure Shell (SSH) protocol.  
-[Wiki](https://wiki.archlinux.org/title/OpenSSH) / [Manual](https://man.archlinux.org/man/core/openssh/ssh.1.en) / [ssh_config](https://man.archlinux.org/man/ssh_config.5) / [Cheat Sheet](https://quickref.me/ssh.html)
+[Wiki](https://wiki.archlinux.org/title/OpenSSH) | [Manual](https://man.archlinux.org/man/core/openssh/ssh.1.en) | [ssh_config](https://man.archlinux.org/man/ssh_config.5) | [Cheat Sheet](https://quickref.me/ssh.html)
 
 #### 📙 Openssl
 
 OpenSSL is an open-source implementation of the SSL and TLS protocols, designed to be as flexible as possible.  
-[Wiki](https://wiki.archlinux.org/title/OpenSSL) / [Manual](https://man.archlinux.org/man/openssl.1ssl) / [Cheat Sheet](https://cheatography.com/albertx/cheat-sheets/openssl/)
+[Wiki](https://wiki.archlinux.org/title/OpenSSL) | [Manual](https://man.archlinux.org/man/openssl.1ssl) | [Cheat Sheet](https://cheatography.com/albertx/cheat-sheets/openssl/)
 
 ### 👁️ Scanners
 
@@ -269,8 +269,8 @@ OpenSSL is an open-source implementation of the SSL and TLS protocols, designed 
 
 Nmap (“Network Mapper”) is an open-source tool for network exploration and security auditing.  
 
-[Docs](https://nmap.org/docs.html) / [Wiki](https://wiki.archlinux.org/title/nmap) / [Scripts](https://nmap.org/nsedoc/scripts/) /
-[Manual](https://man.archlinux.org/man/nmap.1) / [Vulscan](https://github.com/scipag/vulscan) / [Cheat Sheet](https://www.stationx.net/nmap-cheat-sheet/)
+[Docs](https://nmap.org/docs.html) | [Wiki](https://wiki.archlinux.org/title/nmap) | [Scripts](https://nmap.org/nsedoc/scripts/) | 
+[Manual](https://man.archlinux.org/man/nmap.1) | [Vulscan](https://github.com/scipag/vulscan) | [Cheat Sheet](https://www.stationx.net/nmap-cheat-sheet/)
 
 #### 📙 Masscan
 
@@ -280,7 +280,7 @@ Masscan is an Internet-scale port scanner, useful for large-scale surveys of the
 > Keep it sane.  
 > 🚩
 
-[Manual](https://man.archlinux.org/man/masscan.8) / [Cheat Sheet](https://cheatsheet.haax.fr/network/port-scanning/masscan_cheatsheet/)
+[Manual](https://man.archlinux.org/man/masscan.8) | [Cheat Sheet](https://cheatsheet.haax.fr/network/port-scanning/masscan_cheatsheet/)
 
 #### 📙 Mitmproxy
 Mitmproxy is an interactive, SSL/TLS-capable intercepting proxy with a console interface for HTTP/1, HTTP/2, and WebSockets.  
@@ -297,22 +297,22 @@ Commons:
   > (Same logic applies to any tool like ZAP, Metasploit, etc)
 - Use [mitmproxy2swagger](https://github.com/alufers/mitmproxy2swagger) to build api scheeme. Pairs well with [katana](#-katana).  
 
-[GitHub](https://github.com/mitmproxy/mitmproxy) / [Docs](https://docs.mitmproxy.org/stable/) / [Cheat Sheet](https://quickref.me/mitmproxy.html)
+[GitHub](https://github.com/mitmproxy/mitmproxy) | [Docs](https://docs.mitmproxy.org/stable/) | [Cheat Sheet](https://quickref.me/mitmproxy.html)
 
 #### 📙 Nuclei
 
 Nuclei is used to send requests across targets based on a template, leading to zero false positives and providing fast scanning on a large number of hosts.   
-[GitHub](https://github.com/projectdiscovery/nuclei) / [Templates](https://github.com/projectdiscovery/nuclei-templates) / [Cheat Sheet](https://cheatsheet.haax.fr/web-pentest/tools/nuclei/)
+[GitHub](https://github.com/projectdiscovery/nuclei) | [Templates](https://github.com/projectdiscovery/nuclei-templates) | [Cheat Sheet](https://cheatsheet.haax.fr/web-pentest/tools/nuclei/)
 
 #### 📙 Wapiti
 
 Wapiti performs "black-box" scans, i.e. it does not study the source code of the application but will scans the webpages of the deployed webapp, looking for scripts and forms where it can inject data.  
-[GitHub](https://github.com/wapiti-scanner/wapiti) / [Manual](https://manpages.org/wapiti)
+[GitHub](https://github.com/wapiti-scanner/wapiti) | [Manual](https://manpages.org/wapiti)
 
 #### 📙 Dalfox
 
 DalFox is a powerful open-source tool that focuses on automation, making it ideal for quickly scanning for XSS flaws and analyzing parameters. Its advanced testing engine and niche features are designed to streamline the process of detecting and verifying vulnerabilities.  
-[GiHhub](https://github.com/hahwul/dalfox) / [Docs](https://dalfox.hahwul.com/docs/home/) / [Cheat Sheet](https://www.blackhatethicalhacking.com/tools/dalfox/)
+[GiHhub](https://github.com/hahwul/dalfox) | [Docs](https://dalfox.hahwul.com/docs/home/) | [Cheat Sheet](https://www.blackhatethicalhacking.com/tools/dalfox/)
 
 #### 📙 Katana
 
@@ -323,32 +323,32 @@ A next-generation crawling and spidering framework.
 
 Directory/File, DNS, and VHost busting tool written in Go.
 Check [CyberSec databases](#-cybersec-databases) for possible enums.  
-[GitHub](https://github.com/OJ/gobuster) / [Cheat Sheet](https://3os.org/penetration-testing/cheatsheets/gobuster-cheatsheet/)
+[GitHub](https://github.com/OJ/gobuster) | [Cheat Sheet](https://3os.org/penetration-testing/cheatsheets/gobuster-cheatsheet/)
 
 ### 🗡️ Exploiters
 
 #### 📙 Sqlmap
 
 Sqlmap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over of database servers.  
-[GitHub](https://github.com/sqlmapproject/sqlmap) / [Wiki](https://github.com/sqlmapproject/sqlmap/wiki/Features) / [Manual](https://manpages.org/sqlmap) / 
+[GitHub](https://github.com/sqlmapproject/sqlmap) | [Wiki](https://github.com/sqlmapproject/sqlmap/wiki/Features) | [Manual](https://manpages.org/sqlmap) | 
 [Cheat Sheet](https://cdn.comparitech.com/wp-content/uploads/2021/07/sqlmap-Cheat-Sheet.pdf)
 
 #### 📙 Hydra
 
 Hydra is a parallelized login cracker that supports numerous protocols to attack. New modules are easy to add, besides that, it is flexible and very fast.   
-[Manual](https://man.archlinux.org/man/extra/hydra/hydra.1.en) / [GitHub](https://github.com/vanhauser-thc/thc-hydra) / [Cheat Sheet](https://haxez.org/wp-content/uploads/2022/06/HaXeZ_Hydra_Cheat_Sheet-1.pdf)
+[Manual](https://man.archlinux.org/man/extra/hydra/hydra.1.en) | [GitHub](https://github.com/vanhauser-thc/thc-hydra) | [Cheat Sheet](https://haxez.org/wp-content/uploads/2022/06/HaXeZ_Hydra_Cheat_Sheet-1.pdf)
 
 #### 📙 Commix
 
 Commix  is an open-source penetration testing tool, that automates the detection and exploitation of command injection vulnerabilities.  
-[GitHub](https://github.com/commixproject/commix) / [Docs](https://github.com/commixproject/commix/wiki/Usage)
+[GitHub](https://github.com/commixproject/commix) | [Docs](https://github.com/commixproject/commix/wiki/Usage)
 
 #### 📙 Hashcat
 
 Hashcat is the world's fastest and most advanced password recovery utility, supporting five unique modes of attack for over 300 highly optimized hashing algorithms.  
-[Docs](https://hashcat.net/hashcat/) / [GitHub](https://github.com/hashcat/hashcat) / [Cheat Sheet](https://cheatsheet.haax.fr/passcracking-hashfiles/hashcat_cheatsheet/)
+[Docs](https://hashcat.net/hashcat/) | [GitHub](https://github.com/hashcat/hashcat) | [Cheat Sheet](https://cheatsheet.haax.fr/passcracking-hashfiles/hashcat_cheatsheet/)
 
 #### 📙 John the Ripper
 
 John the Ripper is an Open Source password security auditing and password recovery tool available for many operating systems.  
-[GitHub](https://github.com/openwall/john) / [Docs](https://openwall.info/wiki/john) / [Cheat Sheet](https://cheatsheet.haax.fr/passcracking-hashfiles/john_cheatsheet/)
+[GitHub](https://github.com/openwall/john) | [Docs](https://openwall.info/wiki/john) | [Cheat Sheet](https://cheatsheet.haax.fr/passcracking-hashfiles/john_cheatsheet/)
