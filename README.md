@@ -48,6 +48,7 @@ Be responsible and conscious.
 
 🎓 This and further paragraphs serve as a small, generic knowledge database.  
 Threat them as a reference book, not serious academic learning material.  
+For structured learning path check this fantastic [roadmap.sh](https://roadmap.sh/roadmaps)
 > (Note: here are a lot of `Arch Linux` wiki/man pages, but they are very usable for other linux distros, just use corresponding packages/directories)
 
 Quick references for programming languages and other tools:
