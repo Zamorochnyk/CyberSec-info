@@ -4,7 +4,8 @@ trap 'exit 1' ERR
 
 # Set up BlackArch
 curl -O https://blackarch.org/strap.sh
-echo 5ea40d49ecd14c2e024deecf90605426db97ea0c strap.sh | sha1sum -c
+CHECKSUM_URL=https://raw.githubusercontent.com/BlackArch/blackarch-site/c4b48afa242964a3a5e77ba3a81df336af8a9253/checksums/strap
+curl $CHECKSUM_URL | sha1sum -c
 chmod +x strap.sh
 ./strap.sh
 sed -i 's/#[multilib]/[multilib]/' /etc/pacman.conf
