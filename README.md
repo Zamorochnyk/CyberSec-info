@@ -53,76 +53,42 @@ Threat them as a reference book, not serious academic learning material.
 For structured learning path check this fantastic [roadmap.sh](https://roadmap.sh/roadmaps)
 > (Note: here are a lot of `Arch Linux` wiki/man pages, but they are very usable for other linux distros, just use corresponding packages/directories)
 
-[Learn x in y](https://learnxinyminutes.com/) | [quickref.me](https://quickref.me/) | [devhints.io](https://devhints.io/) | 
-[GitHub](https://github.com/search?q=cheatsheet&type=repositories)
-
-### 💾 Database (db)
-[Wiki](https://wiki.archlinux.org/title/Category:Database_management_systems) | [Models](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview) | 
-[Relational](https://www.digitalocean.com/community/tutorials/understanding-relational-databases) | [Non-relational](https://learn.microsoft.com/en-us/azure/architecture/data-guide/big-data/non-relational-data)
-
-[Oracle](https://en.wikibooks.org/wiki/Oracle_Database/SQL_Cheatsheet) | [MySql](https://www.mysqltutorial.org/mysql-cheat-sheet.aspx) | 
-[PostgreSQL](https://www.postgresqltutorial.com/postgresql-cheat-sheet/) | [MongoDB](https://www.mongodb.com/developer/products/mongodb/cheat-sheet/) | 
-[Redis](https://developer.redis.com/howtos/quick-start/cheat-sheet/) | [SqlLite](https://www.sqlitetutorial.net/sqlite-cheat-sheet/)
-
-### 📂 Passwords/Exploits/Etc
-
-[SecLists](https://github.com/danielmiessler/SecLists/tree/master) | [Patterns](https://github.com/mazen160/secrets-patterns-db) | 
-[Passwords](https://weakpass.com/) | [Exploits/info sources](https://github.com/fastfire/deepdarkCTI)
-
-
-### 📝 Regular expression (regex)
-
-[Docs](https://pubs.opengroup.org/onlinepubs/7908799/xbd/re.html) | [Generator](https://regex-generator.olafneumann.org) | [Sandbox](https://regexr.com/) | [Database](https://regexlib.com/Default.aspx) | 
-[Cheat Sheet](https://quickref.me/regex.html)
-
-### 🌐 Network
-
-[Basics](https://www.geeksforgeeks.org/basics-computer-networking/) | [Configuration](https://wiki.archlinux.org/title/Network_configuration) | [DNS](https://wiki.archlinux.org/title/Domain_name_resolution) | [Proxy](https://wiki.archlinux.org/title/Proxy_server) | [WPA](https://wiki.archlinux.org/title/Wpa_supplicant) | [Ports](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers) | [Cheat Sheet](https://www.geeksforgeeks.org/computer-network-cheat-sheet/) | [Common Linux commands](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/#networking) | [Common Windows commands](https://www.geeksforgeeks.org/networking-commands-for-troubleshooting-windows/)
-
-### 🔒 Cryptography
-
-[Basics](https://www.fortinet.com/resources/cyberglossary/what-is-cryptography) | [Advanced](https://wiki.owasp.org/index.php/Guide_to_Cryptography) | [SSL/TLS](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html) | [Creation](https://gist.github.com/dimosr/317629577c71c376946f8a31a4c2b069) | [Wiki](https://hashcat.net/wiki/) 
-### 🥷 Where to practice
-
-[OverTheWire](https://overthewire.org/wargames/) | [TryHackMe](https://tryhackme.com/) | [HackTheBox](https://www.hackthebox.com/) | [HBH](https://hbh.sh/home) | [DefendTheWeb](https://defendtheweb.net/)
-
-### 🤝 Awesome additional resources
-
-[Offensive Security Cheatsheet](https://cheatsheet.haax.fr/resources/general_infosec/) | [ired.team](https://www.ired.team/) | [RedTeam-Tools](https://github.com/A-poc/RedTeam-Tools) | [tmpout](https://github.com/tmpout/awesome-elf) | [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/index.html) | [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
+| Topic | Links |
+|---|---|
+| Quick cheat sheets | [Learn x in y](https://learnxinyminutes.com/) <br> [quickref.me](https://quickref.me/) <br> [devhints.io](https://devhints.io/) <br> [GitHub](https://github.com/search?q=cheatsheet&type=repositories) |
+| 💾 Database (Theory) | [Wiki](https://wiki.archlinux.org/title/Category:Database_management_systems) <br> [Models](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview) <br> [Relational](https://www.digitalocean.com/community/tutorials/understanding-relational-databases) <br> [Non-relational](https://learn.microsoft.com/en-us/azure/architecture/data-guide/big-data/non-relational-data) |
+| 💾 Database (Cheat Sheet) | [Oracle](https://en.wikibooks.org/wiki/Oracle_Database/SQL_Cheatsheet) <br> [MySql](https://www.mysqltutorial.org/mysql-cheat-sheet.aspx) <br> [PostgreSQL](https://www.postgresqltutorial.com/postgresql-cheat-sheet/) <br> [MongoDB](https://www.mongodb.com/developer/products/mongodb/cheat-sheet/) <br> [Redis](https://developer.redis.com/howtos/quick-start/cheat-sheet/) <br> [SqlLite](https://www.sqlitetutorial.net/sqlite-cheat-sheet/) |
+| 📂 Passwords/Exploits/Etc | [All in one](https://github.com/danielmiessler/SecLists/tree/master) <br> [Patterns](https://github.com/mazen160/secrets-patterns-db) <br> [Passwords](https://weakpass.com/) <br> [Exploits](https://github.com/fastfire/deepdarkCTI/blob/main/exploits.md) |
+| 📝 Regular expression (regex) | [Docs](https://pubs.opengroup.org/onlinepubs/7908799/xbd/re.html) <br> [Generator](https://regex-generator.olafneumann.org) <br> [Sandbox](https://regexr.com/) <br>[Database](https://regexlib.com/Default.aspx) <br> [Cheat Sheet](https://quickref.me/regex.html) |
+| 🌐 Network |[Basics](https://www.geeksforgeeks.org/basics-computer-networking/) <br> [Configuration](https://wiki.archlinux.org/title/Network_configuration) <br> [DNS](https://wiki.archlinux.org/title/Domain_name_resolution) <br> [Proxy](https://wiki.archlinux.org/title/Proxy_server) <br> [WPA](https://wiki.archlinux.org/title/Wpa_supplicant) <br> [Ports](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers) <br> [Cheat Sheet](https://www.geeksforgeeks.org/computer-network-cheat-sheet/) <br> [Common Linux commands](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/#networking) <br> [Common Windows commands](https://www.geeksforgeeks.org/networking-commands-for-troubleshooting-windows/) |
+| 🔒 Cryptography | [Basics](https://www.fortinet.com/resources/cyberglossary/what-is-cryptography) <br> [Advanced](https://wiki.owasp.org/index.php/Guide_to_Cryptography) <br> [SSL/TLS](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html) <br> [Creation](https://gist.github.com/dimosr/317629577c71c376946f8a31a4c2b069) <br> [Wiki](https://hashcat.net/wiki/)  |
+| 🥷 Where to practice | [OverTheWire](https://overthewire.org/wargames/)  <br> [TryHackMe](https://tryhackme.com/) <br> [HackTheBox](https://www.hackthebox.com/) <br> [HBH](https://hbh.sh/home) <br> [Wiki](https://hashcat.net/wiki/) <br> [DefendTheWeb](https://defendtheweb.net/) |
+| 🤝 Awesome additional resources | [Offensive Security Cheatsheet](https://cheatsheet.haax.fr/resources/general_infosec/)  <br> [ired.team](https://www.ired.team/) <br> [RedTeam-Tools](https://github.com/A-poc/RedTeam-Tools) <br> [tmpout](https://github.com/tmpout/awesome-elf) <br> [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/index.html) <br> [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) <br> [deepdarkCTI](https://github.com/fastfire/deepdarkCTI) |
 
 ## 🏗️ Infrastructure
+### 📗 General
+| Topic | Links |
+|---|---|
+| 📘 Docker | [Docs](https://docs.docker.com/) <br> [Installation](https://docs.docker.com/compose/install/) <br> [Commands](https://docs.docker.com/compose/reference/) <br>  [Compose cheat sheet](https://devhints.io/docker-compose) <br> [Docker cheat sheet](https://quickref.me/docker) <br>  [Cleanups](https://docs.docker.com/config/pruning/) |
 
-### 📗 Docker
-
-[Docs](https://docs.docker.com/) | [Installation](https://docs.docker.com/compose/install/) | [Commands](https://docs.docker.com/compose/reference/) | [Compose cheat sheet](https://devhints.io/docker-compose) | [Docker cheat sheet](https://quickref.me/docker) | [Cleanups](https://docs.docker.com/config/pruning/)
-
-
-### 📗 Python
-
-[Wiki](https://wiki.archlinux.org/title/python) | [Cheat Sheet](https://github.com/gto76/python-cheatsheet) | [pipx](https://pypa.github.io/pipx/) | [Packages](https://pypi.org/)
+### 📗 Scripting
+| Topic | Links |
+|---|---|
+| 📘 Python |[Wiki](https://wiki.archlinux.org/title/python) <br> [Cheat Sheet](https://github.com/gto76/python-cheatsheet) <br> [pipx](https://pypa.github.io/pipx/) <br> [Packages](https://pypi.org/) |
+| 📘 Bash | [Wiki](https://wiki.archlinux.org/title/bash) <br> [Manual](https://man.archlinux.org/man/bash.1) <br> [Cheat Sheet](https://quickref.me/bash) |
+| 📘 PowerShell |[GitHub](https://github.com/PowerShell/PowerShell) <br> [Docs](https://learn.microsoft.com/en-us/powershell/) <br> [Cheat Sheet](https://www.stationx.net/powershell-cheat-sheet/) |
 
 ### 📗 Linux
-
-[All in one guides](https://linuxjourney.com/) | [Administration](https://wiki.archlinux.org/title/Category:System_administration) | [Security](https://wiki.archlinux.org/title/Category:Security) | [Networking](https://wiki.archlinux.org/title/Category:Networking) | [Commands cheat sheet](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/) | [Dir cheat sheet](https://www.tecmint.com/linux-directory-structure-and-important-files-paths-explained/)
-
-#### 📘 Bash
-
-[Wiki](https://wiki.archlinux.org/title/bash) | [Manual](https://man.archlinux.org/man/bash.1) | [Cheat Sheet](https://quickref.me/bash)
-
-#### 📘 Arch Linux
-
-[Docs](https://archlinux.org/) | [Container](https://hub.docker.com/_/archlinux/) | [Packages](https://archlinux.org/packages/) | [Wiki](https://wiki.archlinux.org/) | [Manuals](https://man.archlinux.org/)
-
-#### 📘 BlackArch Linux
-
-[Docs](https://blackarch.org/) | [Guide](https://blackarch.org/guide.html) | [Packages](https://blackarch.org/tools.html) | [GitHub](https://github.com/BlackArch/blackarch)
+| Topic | Links |
+|---|---|
+| 📘 General | [All in one guides](https://linuxjourney.com/) <br> [Administration](https://wiki.archlinux.org/title/Category:System_administration) <br> [Security](https://wiki.archlinux.org/title/Category:Security) <br> [Networking](https://wiki.archlinux.org/title/Category:Networking) <br> [Commands cheat sheet](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/) <br> [Dir cheat sheet](https://www.tecmint.com/linux-directory-structure-and-important-files-paths-explained/) |
+| 📘 Arch Linux | [Docs](https://archlinux.org/) <br> [Container](https://hub.docker.com/_/archlinux/) <br> [Packages](https://archlinux.org/packages/) <br> [Wiki](https://wiki.archlinux.org/) <br> [Manuals](https://man.archlinux.org/) |
+| 📘 BlackArch Linux | [Docs](https://blackarch.org/) <br> [Guide](https://blackarch.org/guide.html) <br> [Packages](https://blackarch.org/tools.html) <br> [GitHub](https://github.com/BlackArch/blackarch) |
 
 ### 📗 Microsoft Windows
-
-[OS](https://learn.microsoft.com/en-us/windows/) | [Active Directory](https://learn.microsoft.com/en-us/troubleshoot/windows-server/identity/active-directory-overview) | [Server](https://learn.microsoft.com/en-us/windows-server/) | [Commands cheat sheet](https://www.stationx.net/windows-command-line-cheat-sheet/)
-
-#### 📘 PowerShell
-[GitHub](https://github.com/PowerShell/PowerShell) | [Docs](https://learn.microsoft.com/en-us/powershell/) | [Cheat Sheet](https://www.stationx.net/powershell-cheat-sheet/)
+| Topic | Links |
+|---|---|
+| 📘 General | [OS](https://learn.microsoft.com/en-us/windows/) <br> [Active Directory](https://learn.microsoft.com/en-us/troubleshoot/windows-server/identity/active-directory-overview) <br> [Server](https://learn.microsoft.com/en-us/windows-server/) <br> [Commands cheat sheet](https://www.stationx.net/windows-command-line-cheat-sheet/) |
 
 ## 🧰 Tools
 
