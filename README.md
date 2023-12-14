@@ -12,9 +12,11 @@
 Even if you *can* do something, it does not mean that you *should*.  
 Be responsible and conscious. ⚠️
 
-⚙️ Generic usage example:
+<details>
 
-0. [Intall docker compose](https://docs.docker.com/compose/install/) if needed;
+<summary>⚙️ Generic usage</summary>
+
+1. [Intall docker compose](https://docs.docker.com/compose/install/) if needed;
 1. Start containers from the project directory: `sudo docker compose up -d`;  
    > (Note: if you are facing slow download speed - try to adjust [reflector](https://wiki.archlinux.org/title/reflector))
 1. Put data in the mounted directory;  
@@ -41,6 +43,8 @@ Be responsible and conscious. ⚠️
 1. Remove containers: `"sudo docker compose down"`;  
    > (add `-v` to clean **all** related volumes)
 1. [Clean docker data](https://docs.docker.com/config/pruning/) if needed.
+
+</details>
 
 ## 🍪 General
 
