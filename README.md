@@ -55,7 +55,7 @@ For structured learning path check this fantastic [roadmap.sh](https://roadmap.s
 
 | Topic | Links |
 |---|---|
-| Quick cheat sheets | [Learn x in y](https://learnxinyminutes.com/) <br> [quickref.me](https://quickref.me/) <br> [devhints.io](https://devhints.io/) <br> [GitHub](https://github.com/search?q=cheatsheet&type=repositories) |
+| 🌩️ Quick cheat sheets | [Learn x in y](https://learnxinyminutes.com/) <br> [quickref.me](https://quickref.me/) <br> [devhints.io](https://devhints.io/) <br> [GitHub](https://github.com/search?q=cheatsheet&type=repositories) |
 | 💾 Database (Theory) | [Wiki](https://wiki.archlinux.org/title/Category:Database_management_systems) <br> [Models](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview) <br> [Relational](https://www.digitalocean.com/community/tutorials/understanding-relational-databases) <br> [Non-relational](https://learn.microsoft.com/en-us/azure/architecture/data-guide/big-data/non-relational-data) |
 | 💾 Database (Cheat Sheet) | [Oracle](https://en.wikibooks.org/wiki/Oracle_Database/SQL_Cheatsheet) <br> [MySql](https://www.mysqltutorial.org/mysql-cheat-sheet.aspx) <br> [PostgreSQL](https://www.postgresqltutorial.com/postgresql-cheat-sheet/) <br> [MongoDB](https://www.mongodb.com/developer/products/mongodb/cheat-sheet/) <br> [Redis](https://developer.redis.com/howtos/quick-start/cheat-sheet/) <br> [SqlLite](https://www.sqlitetutorial.net/sqlite-cheat-sheet/) |
 | 📂 Passwords/Exploits/Etc | [All in one](https://github.com/danielmiessler/SecLists/tree/master) <br> [Patterns](https://github.com/mazen160/secrets-patterns-db) <br> [Passwords](https://weakpass.com/) <br> [Exploits](https://github.com/fastfire/deepdarkCTI/blob/main/exploits.md) |
