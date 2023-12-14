@@ -92,6 +92,11 @@ For structured learning path check this fantastic [roadmap.sh](https://roadmap.s
 
 [Docs](https://docs.docker.com/) | [Installation](https://docs.docker.com/compose/install/) | [Commands](https://docs.docker.com/compose/reference/) | [Compose cheat sheet](https://devhints.io/docker-compose) | [Docker cheat sheet](https://quickref.me/docker) | [Cleanups](https://docs.docker.com/config/pruning/)
 
+
+### 📗 Python
+
+[Wiki](https://wiki.archlinux.org/title/python) | [Cheat Sheet](https://github.com/gto76/python-cheatsheet) | [pipx](https://pypa.github.io/pipx/) | [Packages](https://pypi.org/)
+
 ### 📗 Linux
 
 [All in one guides](https://linuxjourney.com/) | [Administration](https://wiki.archlinux.org/title/Category:System_administration) | [Security](https://wiki.archlinux.org/title/Category:Security) | [Networking](https://wiki.archlinux.org/title/Category:Networking) | [Commands cheat sheet](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/) | [Dir cheat sheet](https://www.tecmint.com/linux-directory-structure-and-important-files-paths-explained/)
@@ -130,10 +135,6 @@ To connect - open the browser and type `localhost:8000`
 #### 📘 Git
 
 [Wiki](https://wiki.archlinux.org/title/git) | [Manual](https://man.archlinux.org/man/git.1) | [Cheat Sheet](https://quickref.me/git)
-
-#### 📘 Python
-
-[Wiki](https://wiki.archlinux.org/title/python) | [Cheat Sheet](https://github.com/gto76/python-cheatsheet) | [pipx](https://pypa.github.io/pipx/)
 
 #### 📘 Openvpn
 
