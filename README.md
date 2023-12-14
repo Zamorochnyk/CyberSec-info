@@ -75,7 +75,7 @@ For structured learning path check this fantastic [roadmap.sh](https://roadmap.s
 
 ### 🌐 Network
 
-[Basics](https://www.geeksforgeeks.org/basics-computer-networking/) | [Configuration](https://wiki.archlinux.org/title/Network_configuration) | [DNS](https://wiki.archlinux.org/title/Domain_name_resolution) | [Proxy](https://wiki.archlinux.org/title/Proxy_server) | [WPA](https://wiki.archlinux.org/title/Wpa_supplicant) | [Ports](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers) | [Cheat Sheet](https://www.geeksforgeeks.org/computer-network-cheat-sheet/) | [Common Linux commands](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/#networking) | [Common Linux commands](https://www.geeksforgeeks.org/networking-commands-for-troubleshooting-windows/)
+[Basics](https://www.geeksforgeeks.org/basics-computer-networking/) | [Configuration](https://wiki.archlinux.org/title/Network_configuration) | [DNS](https://wiki.archlinux.org/title/Domain_name_resolution) | [Proxy](https://wiki.archlinux.org/title/Proxy_server) | [WPA](https://wiki.archlinux.org/title/Wpa_supplicant) | [Ports](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers) | [Cheat Sheet](https://www.geeksforgeeks.org/computer-network-cheat-sheet/) | [Common Linux commands](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/#networking) | [Common Windows commands](https://www.geeksforgeeks.org/networking-commands-for-troubleshooting-windows/)
 
 ### 🔒 Cryptography
 
