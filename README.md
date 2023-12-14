@@ -8,11 +8,9 @@
 
 > For more consistent experience - consider to build your images with [KaliLinux](https://hub.docker.com/r/kalilinux/kali-rolling) or [ParrotOs](https://hub.docker.com/r/parrotsec/core).
 
-⚠️  
-This tools can do real damage.  
+⚠️ This tools can do real damage.  
 Even if you *can* do something, it does not mean that you *should*.  
-Be responsible and conscious.  
-⚠️
+Be responsible and conscious. ⚠️
 
 ⚙️ Generic usage example:
 
