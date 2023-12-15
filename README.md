@@ -118,7 +118,7 @@ For additional tools/tricks check [RedTeam-Tools](https://github.com/A-poc/RedTe
 | 📘 Mitmproxy | [GitHub](https://github.com/mitmproxy/mitmproxy) <br> [Docs](https://docs.mitmproxy.org/stable/) <br> [Cheat Sheet](https://quickref.me/mitmproxy.html) <br> [mitmproxy2swagger](https://github.com/alufers/mitmproxy2swagger) | To connect: set proxy as `localhost:8081` (defaults) |
 | 📘 Nuclei | [GitHub](https://github.com/projectdiscovery/nuclei) <br> [Templates](https://github.com/projectdiscovery/nuclei-templates) <br> [Cheat Sheet](https://cheatsheet.haax.fr/web-pentest/tools/nuclei/) |
 | 📘 Dalfox | [GiHhub](https://github.com/hahwul/dalfox) <br> [Docs](https://dalfox.hahwul.com/docs/home/) <br> [Cheat Sheet](https://www.blackhatethicalhacking.com/tools/dalfox/) |
-| 📘 Katana | [GitHub](https://github.com/projectdiscovery/katana) |
+| 📘 Katana | [GitHub](https://github.com/projectdiscovery/katana) | Pairs well with `mitmproxy2swagger` |
 | 📘 Gobuster | [GitHub](https://github.com/OJ/gobuster) <br> [Cheat Sheet](https://3os.org/penetration-testing/cheatsheets/gobuster-cheatsheet/) |
 
 ### ⚔️ Exploiting
