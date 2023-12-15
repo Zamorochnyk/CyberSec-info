@@ -102,7 +102,7 @@ Threat them as a reference book, not serious academic learning material.
 
 | Tool | Links | Note |
 |---|---|---|
-| 👨‍🍳 CyberChief | [GitHub](https://github.com/gchq/CyberChef) <br> [Web](https://gchq.github.io/CyberChef/) <br> [Server](https://learn.microsoft.com/en-us/windows-server/) <br> [Container](https://hub.docker.com/r/mpepping/cyberchef/) | To connect - open the browser and type `localhost:8000` (default) |
+| 👨‍🍳 CyberChief | [GitHub](https://github.com/gchq/CyberChef) <br> [Web](https://gchq.github.io/CyberChef/) <br> [Container](https://hub.docker.com/r/mpepping/cyberchef/) | To connect - open the browser and type `localhost:8000` (default) |
 
 ### 🌱 Core
 
