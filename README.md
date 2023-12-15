@@ -6,11 +6,11 @@
 ♻️ It is meant to be a simple, disposable, "minimal-out-of-the-box" sandbox.  
 🔓 It is **not** meant to be secure, stable, "all-in-one" monolith.  
 
-> For more consistent experience - consider to build your images with [KaliLinux](https://hub.docker.com/r/kalilinux/kali-rolling) or [ParrotOs](https://hub.docker.com/r/parrotsec/core).
-
-⚠️ These tools can do real damage.  
+⚠️⚠️⚠️  
+These tools/knowledge can do real damage.  
 Even if you *can* do something, it does not mean that you *should*.  
-Be responsible and conscious. ⚠️
+Be responsible and conscious.  
+⚠️⚠️⚠️
 
 <details>
 
@@ -43,14 +43,7 @@ Be responsible and conscious. ⚠️
 ## 🎓 General
 
 This and further paragraphs serve as a small, generic knowledge database.  
-> Threat them as a reference book, not serious academic learning material.
-
-For a structured learning path check [roadmap.sh](https://roadmap.sh/roadmaps).  
-For methodology check [HackTrics](https://book.hacktricks.xyz/welcome/readme).  
-For additional resources check [Offensive Security Cheatsheet](https://cheatsheet.haax.fr/).  
-For additional security knowledge check [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/index.html).  
-For additional information sources check [deepdarkCTI](https://github.com/fastfire/deepdarkCTI).  
-For additional tools/tricks check [RedTeam-Tools](https://github.com/A-poc/RedTeam-Tools).  
+Threat them as a reference book, not serious academic learning material.
 
 > (Note: here are a lot of `Arch Linux` wiki/man pages, but they are very usable for other Linux distros, just use corresponding packages/directories)
 
@@ -64,7 +57,19 @@ For additional tools/tricks check [RedTeam-Tools](https://github.com/A-poc/RedTe
 | 🌐 Network |[Basics](https://www.geeksforgeeks.org/basics-computer-networking/) <br> [Configuration](https://wiki.archlinux.org/title/Network_configuration) <br> [DNS](https://wiki.archlinux.org/title/Domain_name_resolution) <br> [Proxy](https://wiki.archlinux.org/title/Proxy_server) <br> [WPA](https://wiki.archlinux.org/title/Wpa_supplicant) <br> [Ports](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers) <br> [Cheat Sheet](https://www.geeksforgeeks.org/computer-network-cheat-sheet/) <br> [Common Linux commands](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/#networking) <br> [Common Windows commands](https://www.geeksforgeeks.org/networking-commands-for-troubleshooting-windows/) |
 | 🔒 Cryptography | [Basics](https://www.fortinet.com/resources/cyberglossary/what-is-cryptography) <br> [Advanced](https://wiki.owasp.org/index.php/Guide_to_Cryptography) <br> [SSL/TLS](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html) <br> [Creation](https://gist.github.com/dimosr/317629577c71c376946f8a31a4c2b069) <br> [Wiki](https://hashcat.net/wiki/)  |
 | 🥷 Where to practice | [OverTheWire](https://overthewire.org/wargames/)  <br> [TryHackMe](https://tryhackme.com/) <br> [HackTheBox](https://www.hackthebox.com/) <br> [HBH](https://hbh.sh/home) <br> [DefendTheWeb](https://defendtheweb.net/) |
-| 🤝 Awesome additional resources | [ired.team](https://www.ired.team/) <br> [tmpout](https://github.com/tmpout/awesome-elf) <br> [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) |
+
+## 🤝 Awesome additional resources
+| Resource | Description |
+|---|---|
+| [roadmap.sh](https://roadmap.sh/roadmaps) | Structured learning paths |
+| [HackTrics](https://book.hacktricks.xyz/welcome/readme) | Methodology and instruments |
+| [Offensive Security Cheatsheet](https://cheatsheet.haax.fr/) | Methodology/instruments and more |
+| [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/index.html) | CyberSec knowledge cheat sheets |
+| [deepdarkCTI](https://github.com/fastfire/deepdarkCTI) | CyberSec information sources |  
+| [RedTeam-Tools](https://github.com/A-poc/RedTeam-Tools) | Tools/tricks |
+| [ired.team](https://www.ired.team/) | Advanced tricks |
+| [tmpout](https://github.com/tmpout/awesome-elf) | bin/virus/etc |
+| [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)| Methodology/tricks |
 
 ## 🏗️ Infrastructure
 ### 📗 General
