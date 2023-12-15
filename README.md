@@ -24,17 +24,17 @@ Be responsible and conscious. ⚠️
    > (Example: `/transf/`, edit/add/remove in `docker-compose.yml`)
 1. Connect with `ssh`: `ssh -p 120 root@localhost`;  
    > (Note: 120 is an example port from `docker-compose.yml`)
-1. Open [tmux](#-tmux) and create few windows/sessions/etc;
-1. Connect to [vpn](#-openvpn): `openvpn /path/to/config`;
-1. Start [mitmproxy](#-mitmproxy);
+1. Open `tmux` and create a few windows/sessions/etc;
+1. Connect to VPN: `openvpn /path/to/config`;
+1. Start `mitmproxy`;
 1. Do some pen-testing:
-    - Use [nmap](#-nmap) for scanning;
-    - [Search](#-cybersec-databases) for exploiting scripts/write your own;
-    - Use [CyberChief](#-cyberchief) for any misc operations;
+    - Use `nmap` for scanning;
+    - Search for exploiting scripts/write your own;
+    - Use `CyberChief` for any misc operations;
     - etc;
     - Install task-specific tool:
-      - [Arch-linux](#-arch-linux) packages `pacman -S <package_name>`
-      - [Python](#-python) packages `pipx install <pacakge_name>`
+      - Arch Linux packages `pacman -S <package_name>`
+      - Python packages `pipx install <pacakge_name>`
 1. Exit from a container;  
    > (Use `Ctrl + C` to kill foreground process)  
    > (Type a lot of `exit` or kill the connection/terminal)  
@@ -51,13 +51,13 @@ Be responsible and conscious. ⚠️
 
 This and further paragraphs serve as a small, generic knowledge database.  
 Threat them as a reference book, not serious academic learning material.  
-For structured learning path check [roadmap.sh](https://roadmap.sh/roadmaps).  
+For a structured learning path check [roadmap.sh](https://roadmap.sh/roadmaps).  
 For additional resources check [Offensive Security Cheatsheet](https://cheatsheet.haax.fr/).  
 For additional security knowledge check [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/index.html).  
 For additional information sources check [deepdarkCTI](https://github.com/fastfire/deepdarkCTI).  
 For additional tools/tricks check [RedTeam-Tools](https://github.com/A-poc/RedTeam-Tools).  
 
-> (Note: here are a lot of `Arch Linux` wiki/man pages, but they are very usable for other linux distros, just use corresponding packages/directories)
+> (Note: here are a lot of `Arch Linux` wiki/man pages, but they are very usable for other Linux distros, just use corresponding packages/directories)
 
 | Topic | Links |
 |---|---|
