@@ -20,7 +20,6 @@ Be responsible and conscious.
 1. Adjust `docker-compose.yml` and installation scripts.
 1. Start containers from the project directory: `sudo docker compose up -d`;  
    > (Note: if you are facing slow download speed - try to adjust [reflector](https://wiki.archlinux.org/title/reflector))
-1. Put data in the mounted dirs;  
 1. Connect with `ssh`: `ssh -p 120 root@localhost` (default);  
 1. Open `tmux` and create a few windows/sessions/etc;
 1. Connect to VPN: `openvpn /path/to/config`;
@@ -29,11 +28,11 @@ Be responsible and conscious.
     - Use `nmap` for scanning;
     - Search for exploiting scripts/write your own;
     - Use `CyberChief` for any misc operations;
-    - etc;
+    - Move data between host and container (default dir: `transf`)
     - Install task-specific tool:
       - Arch Linux packages `pacman -S <package_name>`
       - Python packages `pipx install <package_name>`
-1. Get data from the mounted dirs;  
+    - etc;
 1. Remove containers: `"sudo docker compose down"`;  
    > (add `-v` to clean **all** related volumes)
 1. [Clean docker data](https://docs.docker.com/config/pruning/) if needed.
