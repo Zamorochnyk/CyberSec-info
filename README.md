@@ -1,14 +1,14 @@
 # Pentesting tools (WIP)
 📃 **ALL EXTERNAL RESOURCES BELONG TO THEIR RESPECTIVE OWNERS**
 
-🐳 Cli pentesting tools, packaged in docker images.  
+🐳 Cli pen-testing tools, packaged in docker images.  
 🔨 Use this as a template to build your toolkits.  
 ♻️ It is meant to be a simple, disposable, "minimal-out-of-the-box" sandbox.  
 🔓 It is **not** meant to be secure, stable, "all-in-one" monolith.  
 
 > For more consistent experience - consider to build your images with [KaliLinux](https://hub.docker.com/r/kalilinux/kali-rolling) or [ParrotOs](https://hub.docker.com/r/parrotsec/core).
 
-⚠️ This tools can do real damage.  
+⚠️ These tools can do real damage.  
 Even if you *can* do something, it does not mean that you *should*.  
 Be responsible and conscious. ⚠️
 
@@ -17,16 +17,17 @@ Be responsible and conscious. ⚠️
 <summary>⚙️ Generic usage</summary>
 
 1. [Intall docker compose](https://docs.docker.com/compose/install/) if needed;
+1. Adjust `docker-compose.yml` and installation scripts.
 1. Start containers from the project directory: `sudo docker compose up -d`;  
    > (Note: if you are facing slow download speed - try to adjust [reflector](https://wiki.archlinux.org/title/reflector))
 1. Put data in the mounted directory;  
    > (Example: `/transf/`, edit/add/remove in `docker-compose.yml`)
-1. Connect with [ssh](#-openssh): `ssh -p 120 root@localhost`;  
-   > (Note: 120 is example port from `docker-compose.yml`)
+1. Connect with `ssh`: `ssh -p 120 root@localhost`;  
+   > (Note: 120 is an example port from `docker-compose.yml`)
 1. Open [tmux](#-tmux) and create few windows/sessions/etc;
 1. Connect to [vpn](#-openvpn): `openvpn /path/to/config`;
 1. Start [mitmproxy](#-mitmproxy);
-1. Do some pentesting:
+1. Do some pen-testing:
     - Use [nmap](#-nmap) for scanning;
     - [Search](#-cybersec-databases) for exploiting scripts/write your own;
     - Use [CyberChief](#-cyberchief) for any misc operations;
@@ -36,8 +37,8 @@ Be responsible and conscious. ⚠️
       - [Python](#-python) packages `pipx install <pacakge_name>`
 1. Exit from a container;  
    > (Use `Ctrl + C` to kill foreground process)  
-   > (Type alot of `exit` or kill the connection/terminal)  
-   > (Note: if you are just closing connection/terminal - tmux session will remain in background)
+   > (Type a lot of `exit` or kill the connection/terminal)  
+   > (Note: if you are just closing connection/terminal - tmux session will remain in the background)
 1. Get data from the mounted directory;  
    > (Example: `/transf/`, edit/add/remove in `docker-compose.yml`)
 1. Remove containers: `"sudo docker compose down"`;  
@@ -46,11 +47,16 @@ Be responsible and conscious. ⚠️
 
 </details>
 
-## 🍪 General
+## 🎓 General
 
-🎓 This and further paragraphs serve as a small, generic knowledge database.  
+This and further paragraphs serve as a small, generic knowledge database.  
 Threat them as a reference book, not serious academic learning material.  
-For structured learning path check this fantastic [roadmap.sh](https://roadmap.sh/roadmaps)
+For structured learning path check [roadmap.sh](https://roadmap.sh/roadmaps).  
+For additional resources check [Offensive Security Cheatsheet](https://cheatsheet.haax.fr/).  
+For additional security knowledge check [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/index.html).  
+For additional information sources check [deepdarkCTI](https://github.com/fastfire/deepdarkCTI).  
+For additional tools/tricks check [RedTeam-Tools](https://github.com/A-poc/RedTeam-Tools).  
+
 > (Note: here are a lot of `Arch Linux` wiki/man pages, but they are very usable for other linux distros, just use corresponding packages/directories)
 
 | Topic | Links |
@@ -63,7 +69,7 @@ For structured learning path check this fantastic [roadmap.sh](https://roadmap.s
 | 🌐 Network |[Basics](https://www.geeksforgeeks.org/basics-computer-networking/) <br> [Configuration](https://wiki.archlinux.org/title/Network_configuration) <br> [DNS](https://wiki.archlinux.org/title/Domain_name_resolution) <br> [Proxy](https://wiki.archlinux.org/title/Proxy_server) <br> [WPA](https://wiki.archlinux.org/title/Wpa_supplicant) <br> [Ports](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers) <br> [Cheat Sheet](https://www.geeksforgeeks.org/computer-network-cheat-sheet/) <br> [Common Linux commands](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/#networking) <br> [Common Windows commands](https://www.geeksforgeeks.org/networking-commands-for-troubleshooting-windows/) |
 | 🔒 Cryptography | [Basics](https://www.fortinet.com/resources/cyberglossary/what-is-cryptography) <br> [Advanced](https://wiki.owasp.org/index.php/Guide_to_Cryptography) <br> [SSL/TLS](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html) <br> [Creation](https://gist.github.com/dimosr/317629577c71c376946f8a31a4c2b069) <br> [Wiki](https://hashcat.net/wiki/)  |
 | 🥷 Where to practice | [OverTheWire](https://overthewire.org/wargames/)  <br> [TryHackMe](https://tryhackme.com/) <br> [HackTheBox](https://www.hackthebox.com/) <br> [HBH](https://hbh.sh/home) <br> [DefendTheWeb](https://defendtheweb.net/) |
-| 🤝 Awesome additional resources | [Offensive Security Cheatsheet](https://cheatsheet.haax.fr/resources/general_infosec/)  <br> [ired.team](https://www.ired.team/) <br> [RedTeam-Tools](https://github.com/A-poc/RedTeam-Tools) <br> [tmpout](https://github.com/tmpout/awesome-elf) <br> [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/index.html) <br> [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) <br> [deepdarkCTI](https://github.com/fastfire/deepdarkCTI) |
+| 🤝 Awesome additional resources | [ired.team](https://www.ired.team/) <br> [tmpout](https://github.com/tmpout/awesome-elf) <br> [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) |
 
 ## 🏗️ Infrastructure
 ### 📗 General
@@ -109,7 +115,7 @@ For structured learning path check this fantastic [roadmap.sh](https://roadmap.s
 | 📘 Openssh | [Wiki](https://wiki.archlinux.org/title/OpenSSH) <br> [Manual](https://man.archlinux.org/man/core/openssh/ssh.1.en) <br> [ssh_config](https://man.archlinux.org/man/ssh_config.5) <br> [Cheat Sheet](https://quickref.me/ssh.html) |
 | 📘 Openssl | [Wiki](https://wiki.archlinux.org/title/OpenSSL) <br> [Manual](https://man.archlinux.org/man/openssl.1ssl) <br> [Cheat Sheet](https://cheatography.com/albertx/cheat-sheets/openssl/) |
 
-### 👁️ Scanners
+### 👁️ Intelligence
 
 | Tool | Links | Note |
 |---|---|---|
@@ -117,12 +123,11 @@ For structured learning path check this fantastic [roadmap.sh](https://roadmap.s
 | 📘 Masscan | [Manual](https://man.archlinux.org/man/masscan.8) <br> [Cheat Sheet](https://cheatsheet.haax.fr/network/port-scanning/masscan_cheatsheet/) | ⚠️Unless you are scanning a giant internal network, please, keep those --rates at ~1000-10000, **do not flood public networks**⚠️ |
 | 📘 Mitmproxy | [GitHub](https://github.com/mitmproxy/mitmproxy) <br> [Docs](https://docs.mitmproxy.org/stable/) <br> [Cheat Sheet](https://quickref.me/mitmproxy.html) <br> [mitmproxy2swagger](https://github.com/alufers/mitmproxy2swagger) | To connect: set proxy as `localhost:8081` (defaults) |
 | 📘 Nuclei | [GitHub](https://github.com/projectdiscovery/nuclei) <br> [Templates](https://github.com/projectdiscovery/nuclei-templates) <br> [Cheat Sheet](https://cheatsheet.haax.fr/web-pentest/tools/nuclei/) |
-| 📘 Wapiti | [GitHub](https://github.com/wapiti-scanner/wapiti) <br> [Manual](https://manpages.org/wapiti) |
 | 📘 Dalfox | [GiHhub](https://github.com/hahwul/dalfox) <br> [Docs](https://dalfox.hahwul.com/docs/home/) <br> [Cheat Sheet](https://www.blackhatethicalhacking.com/tools/dalfox/) |
 | 📘 Katana | [GitHub](https://github.com/projectdiscovery/katana) |
 | 📘 Gobuster | [GitHub](https://github.com/OJ/gobuster) <br> [Cheat Sheet](https://3os.org/penetration-testing/cheatsheets/gobuster-cheatsheet/) |
 
-### ⚔️ Exploiters
+### ⚔️ Exploiting
 
 | Tool | Links | Note |
 |---|---|---|
