@@ -46,6 +46,7 @@ This and further paragraphs serve as a small, generic knowledge database.
 > Threat them as a reference book, not serious academic learning material.
 
 For a structured learning path check [roadmap.sh](https://roadmap.sh/roadmaps).  
+For methodology check [HackTrics](https://book.hacktricks.xyz/welcome/readme).  
 For additional resources check [Offensive Security Cheatsheet](https://cheatsheet.haax.fr/).  
 For additional security knowledge check [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/index.html).  
 For additional information sources check [deepdarkCTI](https://github.com/fastfire/deepdarkCTI).  
@@ -75,7 +76,7 @@ For additional tools/tricks check [RedTeam-Tools](https://github.com/A-poc/RedTe
 | Topic | Links |
 |---|---|
 | 📘 Python |[Wiki](https://wiki.archlinux.org/title/python) <br> [Cheat Sheet](https://github.com/gto76/python-cheatsheet) <br> [pipx](https://pypa.github.io/pipx/) <br> [Packages](https://pypi.org/) |
-| 📘 Bash | [Wiki](https://wiki.archlinux.org/title/bash) <br> [Manual](https://man.archlinux.org/man/bash.1) <br> [Cheat Sheet](https://quickref.me/bash) |
+| 📘 Bash | [Wiki](https://wiki.archlinux.org/title/bash) <br> [Manual](https://man.archlinux.org/man/bash.1) <br> [Cheat Sheet](https://quickref.me/bash) <br> [Command explanation](https://explainshell.com/) |
 | 📘 PowerShell |[GitHub](https://github.com/PowerShell/PowerShell) <br> [Docs](https://learn.microsoft.com/en-us/powershell/) <br> [Cheat Sheet](https://www.stationx.net/powershell-cheat-sheet/) |
 
 ### 📗 Linux
