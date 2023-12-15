@@ -14,9 +14,9 @@ pacman --noconfirm --needed -Syyu \
 							katana-pd \
 							gobuster
 
-pipx install wapiti3
 pipx install mitmproxy2swagger
 
+#vulscan
 git clone https://github.com/scipag/vulscan /usr/share/nmap/scripts/vulscan
 chmod +x /usr/share/nmap/scripts/vulscan/update.sh
 /usr/share/nmap/scripts/vulscan/update.sh
