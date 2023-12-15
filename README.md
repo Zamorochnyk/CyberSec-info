@@ -43,7 +43,8 @@ Be responsible and conscious. ⚠️
 ## 🎓 General
 
 This and further paragraphs serve as a small, generic knowledge database.  
-Threat them as a reference book, not serious academic learning material.  
+> Threat them as a reference book, not serious academic learning material.
+
 For a structured learning path check [roadmap.sh](https://roadmap.sh/roadmaps).  
 For additional resources check [Offensive Security Cheatsheet](https://cheatsheet.haax.fr/).  
 For additional security knowledge check [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/index.html).  
@@ -113,7 +114,7 @@ For additional tools/tricks check [RedTeam-Tools](https://github.com/A-poc/RedTe
 | Tool | Links | Note |
 |---|---|---|
 | 📘 Nmap | [Docs](https://nmap.org/docs.html) <br> [Wiki](https://wiki.archlinux.org/title/nmap) <br> [Scripts](https://nmap.org/nsedoc/scripts/) <br> [Manual](https://man.archlinux.org/man/nmap.1) <br> [Vulscan](https://github.com/scipag/vulscan) <br> [Cheat Sheet](https://www.stationx.net/nmap-cheat-sheet/) |
-| 📘 Masscan | [Manual](https://man.archlinux.org/man/masscan.8) <br> [Cheat Sheet](https://cheatsheet.haax.fr/network/port-scanning/masscan_cheatsheet/) | ⚠️Unless you are scanning a giant internal network, please, keep those --rates at ~1000-10000, **do not flood public networks**⚠️ |
+| 📘 Masscan | [Manual](https://man.archlinux.org/man/masscan.8) <br> [Cheat Sheet](https://cheatsheet.haax.fr/network/port-scanning/masscan_cheatsheet/) | ⚠️Unless you are scanning a giant internal network, please, keep those --rates as low as possible, **do not flood public networks**⚠️ |
 | 📘 Mitmproxy | [GitHub](https://github.com/mitmproxy/mitmproxy) <br> [Docs](https://docs.mitmproxy.org/stable/) <br> [Cheat Sheet](https://quickref.me/mitmproxy.html) <br> [mitmproxy2swagger](https://github.com/alufers/mitmproxy2swagger) | To connect: set proxy as `localhost:8081` (defaults) |
 | 📘 Nuclei | [GitHub](https://github.com/projectdiscovery/nuclei) <br> [Templates](https://github.com/projectdiscovery/nuclei-templates) <br> [Cheat Sheet](https://cheatsheet.haax.fr/web-pentest/tools/nuclei/) |
 | 📘 Dalfox | [GiHhub](https://github.com/hahwul/dalfox) <br> [Docs](https://dalfox.hahwul.com/docs/home/) <br> [Cheat Sheet](https://www.blackhatethicalhacking.com/tools/dalfox/) |
