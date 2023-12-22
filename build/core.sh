@@ -1,35 +1,24 @@
 #!/bin/sh
-trap 'exit 1' ERR
-
-
-# Set up BlackArch
-curl -O https://blackarch.org/strap.sh
-CHECKSUM_URL=https://raw.githubusercontent.com/BlackArch/blackarch-site/c4b48afa242964a3a5e77ba3a81df336af8a9253/checksums/strap
-curl $CHECKSUM_URL | sha1sum -c
-chmod +x strap.sh
-./strap.sh
-sed -i 's/#[multilib]/[multilib]/' /etc/pacman.conf
-
-pacman --noconfirm -Sy reflector rsync
-reflector --score 100 --sort rate --threads 10 --connection-timeout 1 --download-timeout 1 \
-									--protocol http,https --save /etc/pacman.d/mirrorlist
-pacman --noconfirm -R reflector rsync
+apt update -y
+apt upgrade 
 
 # Install core tools
-pacman --noconfirm --needed -Syyu \
-							git \
-							wget \
-							openbsd-netcat \
-							whois \
-							traceroute \
-							bind \
-							python-pip \
-							python-pipx \
-							python-setuptools \
-							openvpn \
-							tmux \
-							nano \
-							openssh
+apt install -y --no-install-recommends --no-install-suggests \
+													git \
+													wget \
+													curl \
+													netcat-openbsd \
+													whois \
+													traceroute \
+													dnsutils \
+													python3-requests \
+													pipx \
+													openvpn \
+													tmux \
+													nano \
+													openssh-client \
+													openssh-server \
+													locales
 
 # Misc tools config
 pipx ensurepath
@@ -40,5 +29,6 @@ sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && locale-gen
 printf "export LANG='en_US.UTF-8'" >> /root/.bashrc
 
 # Set up root login
+mkdir /run/sshd
 sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 echo "root:$PASS" | chpasswd && ssh-keygen -A
