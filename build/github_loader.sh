@@ -30,4 +30,4 @@ fi
 chmod +x $BIN_DIR/$NAME*
 
 cd ..
-rm -d unpack_tmp
+rm -r unpack_tmp
