@@ -1,26 +1,24 @@
-#!/bin/sh
-ARCH='linux_amd64'
-apt install -y --no-install-recommends --no-install-suggests \
-													nmap \
-													masscan \
-													mitmproxy \
-													sqlmap \
-													hydra \
-													hashcat \
-													john \
-													gobuster
+#!/bin/bash
+set -e
 
-python3.11 /root/githubloader.py projectdiscovery/nuclei $ARCH /usr/bin
-python3.11 /root/githubloader.py hahwul/dalfox $ARCH /usr/bin
-python3.11 /root/githubloader.py projectdiscovery/katana $ARCH /usr/bin
+apt install -y \
+			nmap \
+			masscan \
+			sqlmap \
+			hydra \
+			hashcat \
+			john \
+			gobuster \
+			nuclei \
+			commix
 
-git clone https://github.com/commixproject/commix.git commix
-pipx install ./commix/
-rm -rf ./commix
+#/usr/bin, add second argument to change
+github_loader.sh hahwul/dalfox
+github_loader.sh projectdiscovery/katana
 
 pipx install mitmproxy2swagger
 
 #vulscan
-git clone https://github.com/scipag/vulscan /usr/share/nmap/scripts/vulscan
+git clone https://github.com/scipag/vulscan.git /usr/share/nmap/scripts/vulscan
 chmod +x /usr/share/nmap/scripts/vulscan/update.sh
 /usr/share/nmap/scripts/vulscan/update.sh

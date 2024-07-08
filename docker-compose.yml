@@ -1,17 +1,23 @@
-version: '3.9'
-
 services:
   cyber-chef:
     restart: no
     image: mpepping/cyberchef:latest
     ports:
       - 8000:8000
+  
+  mitmproxy:
+    restart: no
+    image: mitmproxy/mitmproxy:latest
+    volumes:
+      - ./mitmproxy:/home/mitmproxy/.mitmproxy 
+    ports:
+      - 8090:8080 # mapped default
+    tty: true
+    stdin_open: true
      
   pentest-tools:
     build:
       context: ./build
-      args: 
-      - PASS=hack
     restart: no
     sysctls:
       - net.ipv6.conf.all.disable_ipv6=0
@@ -21,11 +27,10 @@ services:
     devices:
       - /dev/net/tun
     dns:
-      - 94.140.14.14
       - 1.1.1.1
+      - 1.0.0.1
     volumes:
-      - ./transf:/transf
+      - ./transf:/transf # to transfer data
+      - ./mitmproxy:/mitmproxy # for ca-certs
     ports:
-      - 120:22
-      - 8081:8080 # default for mitmproxy
       - 9990-9999:9990-9999 # Misc ports for whatever
