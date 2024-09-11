@@ -1,21 +1,27 @@
 services:
   cyber-chef:
     restart: no
+    container_name: cyberchef
     image: mpepping/cyberchef:latest
     ports:
       - 8000:8000
   
   mitmproxy:
-    restart: no
     image: mitmproxy/mitmproxy:latest
+    container_name: mitmproxy
     volumes:
-      - ./mitmproxy:/home/mitmproxy/.mitmproxy 
+      - ./mitmproxy:/home/mitmproxy/.mitmproxy # for ca-certs
     ports:
-      - 8090:8080 # mapped default
-    tty: true
-    stdin_open: true
-     
-  pentest-tools:
+      - 8082:8080 # default mitmdump
+      - 8083:8081 # default mitmweb
+    command:
+      - mitmweb
+      - --web-host
+      - 0.0.0.0
+      - --ssl-insecure
+
+  pentest:
+    container_name: pentest
     build:
       context: ./build
     restart: no
@@ -31,6 +37,8 @@ services:
       - 1.0.0.1
     volumes:
       - ./transf:/transf # to transfer data
-      - ./mitmproxy:/mitmproxy # for ca-certs
+      - ./mitmproxy:/mitmproxy
     ports:
       - 9990-9999:9990-9999 # Misc ports for whatever
+    tty: true
+    stdin_open: true

@@ -19,19 +19,21 @@ Be responsible and conscious.
 1. [Install docker compose](https://docs.docker.com/compose/install/) if needed;
 1. Adjust `docker-compose.yml` and installation scripts.
 1. Start containers from the project directory: `sudo docker compose up -d`;  
-1. Connect with `ssh`: `ssh -p 120 root@localhost` (compose default);  
-1. Open `tmux` and create a few windows/sessions/etc;
+1. Connect with `sudo docker attach pentest` (compose default);  
 1. Connect to VPN: `openvpn /path/to/config`;
-1. Start `mitmproxy`;
 1. Do some pen-testing. Example:
     - Use `nmap/nuclei/etc` for scanning;
     - Search for exploiting scripts/write your own;
     - Use `CyberChief` for any misc operations;
+    - Use `mitmproxy` to capture requests/respones (check corresponding topic at tools) <br> Example (default compose):
+      - http_proxy=http://mitmproxy:8080/ curl http://example.com/
+      - https_proxy=http://mitmproxy:8080/ curl -k https://example.com/
+      - Uncomment coresponding lines in `core.sh`/add them manually to always use `mitmproxy`
     - Move data between host and container (default dir `transf`)
     - Install task-specific tool:
-      - Debian packages `apt install <package_name>`
+      - Void packages `xbps-install <package_name>`
       - Python packages `pipx install <package_name>`
-      - Get latest bin from GitHub `python3 githubloader.py <user/repo> <pattern to find> <dir to install>`
+      - Get latest bin from GitHub `github_loader.sh <user/repo> <dir to install>`
     - etc;
 1. Remove containers: `"sudo docker compose down"`;  
    > (add `-v` to clean related volumes)
@@ -60,10 +62,6 @@ A: There are several ways to solve it:
 **Q: How to fix the changed key error?**  
 A: Use `ssh-keygen -R [localhost]:120 -f ~/.ssh/known_hosts` (defaults) or remove the host entry manually.
 
-**Q: How to resolve mitmproxy issues?**  
-A: 
-
- 
 **Q: How to use on not amd64 architecture?**  
 A: Change the Dockerfile to grab the corresponding Docker image and change the installation scripts to grab the corresponding binaries/packages (if any)
 
@@ -126,20 +124,21 @@ Threat them as a reference book, not serious academic learning material.
 | Topic | Links |
 |---|---|
 | 📘 General | [All in one guides](https://linuxjourney.com/) <br> [Administration](https://wiki.archlinux.org/title/Category:System_administration) <br> [Security](https://wiki.archlinux.org/title/Category:Security) <br> [Networking](https://wiki.archlinux.org/title/Category:Networking) <br> [Commands cheat sheet](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/) <br> [Filesystem Hierarchy](https://en.m.wikipedia.org/wiki/Filesystem_Hierarchy_Standard) |
-| 📘 Debian | [Docs](https://www.debian.org/doc/) <br> [Container](https://hub.docker.com/_/debian) <br> [Packages](https://www.debian.org/distrib/packages) <br> [Wiki](https://wiki.debian.org/) <br> [Manuals](https://manpages.debian.org/) |
+| 📘 Void | [Docs](https://docs.voidlinux.org/) <br> [Container](https://voidlinux.org/download/#containers) <br> [Packages](https://voidlinux.org/download/#containers) |
 
 ### 📗 Microsoft Windows
 | Topic | Links |
 |---|---|
 | 📘 General | [OS](https://learn.microsoft.com/en-us/windows/) <br> [Active Directory](https://learn.microsoft.com/en-us/troubleshoot/windows-server/identity/active-directory-overview) <br> [Server](https://learn.microsoft.com/en-us/windows-server/) <br> [Commands cheat sheet](https://www.stationx.net/windows-command-line-cheat-sheet/) |
 
-## 🧰 Tools
+## 🧰 Used tools
 
-### 👽 Separate
+### 👽 External (Separate container)
 
 | Tool | Links | Note |
 |---|---|---|
-| 👨‍🍳 CyberChief | [GitHub](https://github.com/gchq/CyberChef) <br> [Web](https://gchq.github.io/CyberChef/) <br> [Container](https://hub.docker.com/r/mpepping/cyberchef/) | To connect - open the browser and type `localhost:8000` (default) |
+| 👨‍🍳 CyberChief | [GitHub](https://github.com/gchq/CyberChef) <br> [Web](https://gchq.github.io/CyberChef/) <br> [Container](https://hub.docker.com/r/mpepping/cyberchef/) | To connect - open the browser and type `localhost:8000` (compose defaults) |
+| 📘 mitmproxy | [GitHub](https://github.com/mitmproxy/mitmproxy) <br> [Docs](https://docs.mitmproxy.org/stable/) <br> [Cheat Sheet](https://quickref.me/mitmproxy.html) <br> [mitmproxy2swagger](https://github.com/alufers/mitmproxy2swagger) | Connect to proxy: set proxy as `localhost:8082` (compose defaults) <br> Connect for web interface: open in browser `localhost:8083` (compose defaults)  <br> After the first run certificate [will be created](https://docs.mitmproxy.org/stable/concepts-certificates/) in `mitmproxy` folder. Import them to the external client. |
 
 ### 🌱 Core
 
@@ -147,11 +146,9 @@ Threat them as a reference book, not serious academic learning material.
 |---|---|---|
 | 📘 git | [Wiki](https://wiki.archlinux.org/title/git) <br> [Manual](https://man.archlinux.org/man/git.1) <br> [Cheat Sheet](https://quickref.me/git) |
 | 📘 openvpn | [Docs](https://community.openvpn.net/openvpn) <br> [Server](https://wiki.archlinux.org/title/OpenVPN) <br> [Client](https://man.archlinux.org/man/extra/openvpn/openvpn.8.en) |
-| 📘 tmux | [Wiki](https://wiki.archlinux.org/title/tmux) <br> [Manual](https://man.archlinux.org/man/tmux.1) <br> [Cheat Sheet](https://quickref.me/tmux) |
 | 📘 nano | [Wiki](https://wiki.archlinux.org/title/nano) <br> [Manual](https://man.archlinux.org/man/nano.1) <br> [Cheat Sheet](https://www.nano-editor.org/dist/latest/cheatsheet.html) |
-| 📘 openssh | [Wiki](https://wiki.archlinux.org/title/OpenSSH) <br> [Manual](https://man.archlinux.org/man/core/openssh/ssh.1.en) <br> [ssh_config](https://man.archlinux.org/man/ssh_config.5) <br> [Cheat Sheet](https://quickref.me/ssh.html) |
-| 📘 openssl | [Wiki](https://wiki.archlinux.org/title/OpenSSL) <br> [Manual](https://man.archlinux.org/man/openssl.1ssl) <br> [Cheat Sheet](https://cheatography.com/albertx/cheat-sheets/openssl/) |
 | 📘 drill | [Docs](https://www.nlnetlabs.nl/projects/ldns/about/) <br> [Manual](https://man.archlinux.org/man/drill.1) |
+| 📘 curl | [Wiki](https://wiki.archlinux.org/title/CURL) <br> [Manual](https://man.archlinux.org/man/curl.1) <br> [Cheat Sheet](https://quickref.me/curl) |
 
 ### 👁️ Intelligence
 
@@ -159,7 +156,6 @@ Threat them as a reference book, not serious academic learning material.
 |---|---|---|
 | 📘 nmap | [Docs](https://nmap.org/docs.html) <br> [Wiki](https://wiki.archlinux.org/title/nmap) <br> [Scripts](https://nmap.org/nsedoc/scripts/) <br> [Manual](https://man.archlinux.org/man/nmap.1) <br> [Vulscan](https://github.com/scipag/vulscan) <br> [Cheat Sheet](https://www.stationx.net/nmap-cheat-sheet/) | Very powerful, so please, carefully read documentation and description of the scripts |
 | 📘 masscan | [Manual](https://man.archlinux.org/man/masscan.8) <br> [Cheat Sheet](https://cheatsheet.haax.fr/network/port-scanning/masscan_cheatsheet/) | ⚠️Unless you are scanning a giant internal network, please, keep those --rate as low as possible (10000 at max), **do not flood/melt network infrastructure**⚠️ |
-| 📘 mitmproxy | [GitHub](https://github.com/mitmproxy/mitmproxy) <br> [Docs](https://docs.mitmproxy.org/stable/) <br> [Cheat Sheet](https://quickref.me/mitmproxy.html) <br> [mitmproxy2swagger](https://github.com/alufers/mitmproxy2swagger) | To connect: set proxy as `localhost:8081` (compose defaults) <br> Start with `--ssl-insecure` to ignore certificate verification; <br> After the first run certificate [will be created](https://docs.mitmproxy.org/stable/concepts-certificates/) in ~/.mitmproxy. Import them to the external client. |
 | 📘 nuclei | [GitHub](https://github.com/projectdiscovery/nuclei) <br> [Templates](https://github.com/projectdiscovery/nuclei-templates) <br> [Cheat Sheet](https://cheatsheet.haax.fr/web-pentest/tools/nuclei/) |
 | 📘 dalfox | [GiHhub](https://github.com/hahwul/dalfox) <br> [Docs](https://dalfox.hahwul.com/docs/home/) <br> [Cheat Sheet](https://www.blackhatethicalhacking.com/tools/dalfox/) |
 | 📘 katana | [GitHub](https://github.com/projectdiscovery/katana) | Pairs well with `mitmproxy2swagger` |
