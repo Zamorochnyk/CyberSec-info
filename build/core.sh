@@ -23,6 +23,12 @@ pipx ensurepath
 # Set up locales
 echo "en_US.UTF-8 UTF-8" >> /etc/default/libc-locales
 xbps-reconfigure -f glibc-locales
+
 echo "PS1='\w\$ '" >> ~/.bashrc
+
+# Set up tor
+sed -i 's/User tor/User root/' /etc/tor/torrc
+sed -i 's/#RunAsDaemon/RunAsDaemon/' /etc/tor/torrc 
+
 #echo "export http_proxy=http://mitmproxy:8080/" >> ~/.bashrc
 #echo "export https_proxy=http://mitmproxy:8080/" >> ~/.bashrc

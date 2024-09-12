@@ -22,16 +22,18 @@ Be responsible and conscious.
 1. Connect with `sudo docker attach pentest` (compose default);  
 1. Anonymization (check corresponding topics):
    - Connect to VPN: `openvpn /path/to/config`;
-   - Start `tor` with `tor --runasdaemon 1`;
-   - Use `proxychains` before every command;
+   - Start `tor` (minimal config in `core.sh`, see `/etc/tor/torrc` for more);
+   - Use setup proxies in the end of `/etc/proxychains.conf` and use `proxychains` before every command;
 1. Do some pen-testing. Example:
     - Use `nmap/nuclei/etc` for scanning;
     - Search for exploiting scripts/write your own;
     - Use `CyberChief` for any misc operations;
-    - Use `mitmproxy` to capture requests/respones (check corresponding topic at tools) <br> Example (default compose):
+    - Use `mitmproxy` to capture requests/respones (check corresponding topic at tools)  
+    Example (default compose):
       - http_proxy=http://mitmproxy:8080/ curl http://example.com/;
       - https_proxy=http://mitmproxy:8080/ curl -k https://example.com/;
-      - Uncomment coresponding lines in `core.sh`/add them manually to always use `mitmproxy`;
+      - Uncomment coresponding lines in `core.sh`/add them manually to always use `mitmproxy`  
+        or add it as first proxy in `proxychains` config;
     - Move data between host and container (default dir `transf`);
     - Install task-specific tool:
       - Void packages `xbps-install <package_name>`;
@@ -61,9 +63,6 @@ A: There are several ways to solve it:
 - Install from another external repo (Example: `pipx`);
 - Grab and install binary from GitHub/other sources (check installation scripts for example);
 - Compile or do some misc installation manually.
-
-**Q: How to fix the changed key error?**  
-A: Use `ssh-keygen -R [localhost]:120 -f ~/.ssh/known_hosts` (defaults) or remove the host entry manually.
 
 **Q: How to use on not amd64 architecture?**  
 A: Change the Dockerfile to grab the corresponding Docker image and change the installation scripts to grab the corresponding binaries/packages (if any)
