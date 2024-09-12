@@ -20,20 +20,23 @@ Be responsible and conscious.
 1. Adjust `docker-compose.yml` and installation scripts.
 1. Start containers from the project directory: `sudo docker compose up -d`;  
 1. Connect with `sudo docker attach pentest` (compose default);  
-1. Connect to VPN: `openvpn /path/to/config`;
+1. Anonymization (check corresponding topics):
+   - Connect to VPN: `openvpn /path/to/config`;
+   - Start `tor` with `tor --runasdaemon 1`;
+   - Use `proxychains` before every command;
 1. Do some pen-testing. Example:
     - Use `nmap/nuclei/etc` for scanning;
     - Search for exploiting scripts/write your own;
     - Use `CyberChief` for any misc operations;
     - Use `mitmproxy` to capture requests/respones (check corresponding topic at tools) <br> Example (default compose):
-      - http_proxy=http://mitmproxy:8080/ curl http://example.com/
-      - https_proxy=http://mitmproxy:8080/ curl -k https://example.com/
-      - Uncomment coresponding lines in `core.sh`/add them manually to always use `mitmproxy`
-    - Move data between host and container (default dir `transf`)
+      - http_proxy=http://mitmproxy:8080/ curl http://example.com/;
+      - https_proxy=http://mitmproxy:8080/ curl -k https://example.com/;
+      - Uncomment coresponding lines in `core.sh`/add them manually to always use `mitmproxy`;
+    - Move data between host and container (default dir `transf`);
     - Install task-specific tool:
-      - Void packages `xbps-install <package_name>`
-      - Python packages `pipx install <package_name>`
-      - Get latest bin from GitHub `github_loader.sh <user/repo> <dir to install>`
+      - Void packages `xbps-install <package_name>`;
+      - Python packages `pipx install <package_name>`;
+      - Get latest bin from GitHub `github_loader.sh <user/repo> <dir to install>`;
     - etc;
 1. Remove containers: `"sudo docker compose down"`;  
    > (add `-v` to clean related volumes)

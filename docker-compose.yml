@@ -40,5 +40,6 @@ services:
       - ./mitmproxy:/mitmproxy
     ports:
       - 9990-9999:9990-9999 # Misc ports for whatever
+      - 9050:9050 # Tor
     tty: true
     stdin_open: true

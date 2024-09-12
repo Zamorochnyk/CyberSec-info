@@ -14,7 +14,9 @@ xbps-install -y \
 	python3-pipx \
 	nano \
 	ncurses-term \
-	glibc-locales
+	glibc-locales \
+	proxychains-ng \
+	tor
 
 pipx ensurepath
 
