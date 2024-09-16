@@ -14,16 +14,11 @@ xbps-install -y \
 	python3-pipx \
 	nano \
 	ncurses-term \
-	glibc-locales \
 	proxychains-ng \
-	tor
+	tor \
+	mtm
 
 pipx ensurepath
-
-# Set up locales
-echo "en_US.UTF-8 UTF-8" >> /etc/default/libc-locales
-xbps-reconfigure -f glibc-locales
-
 echo "PS1='\w\$ '" >> ~/.bashrc
 
 # Set up tor
