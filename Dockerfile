@@ -1,32 +1,38 @@
 FROM ghcr.io/void-linux/void-glibc-busybox
 COPY --chmod=777 ./scripts/* /bin
-RUN xbps-install -Su -y \
-    void-repo-nonfree \
-    bash \
-    bash-completion \
-    curl \
-    unzip \
-    ldns \
-    openvpn \
-    git \
-    python3-pipx \
-    nano \
-    ncurses-term \
-    nmap \
-    proxychains-ng \
-    tor \
-    mtm \
-    masscan \
-    sqlmap \
-    thc-hydra \
-    hashcat \
-    john \
-    gobuster
 
+# Two transaction because how repo works
+# Base packages
+RUN xbps-install -Su -y void-repo-nonfree \
+                        bash \
+                        bash-completion \
+                        curl \
+                        unzip \
+                        ldns \
+                        openvpn \
+                        git \
+                        python3-pipx \
+                        micro \
+                        ncurses-term \
+                        mtm
+
+# Tools here
+RUN xbps-install -Su -y nmap \
+                        proxychains-ng \
+                        tor \
+                        masscan \
+                        sqlmap \
+                        thc-hydra \
+                        hashcat \
+                        john \
+                        gobuster
+
+# Config
 RUN echo "PS1='\w\$ '" >> ~/.bashrc
 RUN sed -i 's/User tor/User root/' /etc/tor/torrc && \
     sed -i 's/#RunAsDaemon/RunAsDaemon/' /etc/tor/torrc
 
+# Out of repo installations
 RUN pipx ensurepath
 RUN pipx install mitmproxy2swagger
 
