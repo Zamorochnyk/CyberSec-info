@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 mkdir /tmp/unpack_tmp
 cd /tmp/unpack_tmp
 

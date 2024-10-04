@@ -22,7 +22,7 @@ Be responsible and conscious.
 1. Connect with `sudo docker attach pentest` (compose default);  
 1. Anonymization (check corresponding topics):
    - Connect to VPN: `openvpn /path/to/config`;
-   - Start `tor` (minimal config in `core.sh`, see `/etc/tor/torrc` for more);
+   - Start `tor` (minimal config in `Dockerfile`, see `/etc/tor/torrc` for more);
    - Use setup proxies in the end of `/etc/proxychains.conf` and use `proxychains` before every command;
 1. Do some pen-testing. Example:
     - Use `nmap/nuclei/etc` for scanning;
@@ -83,7 +83,7 @@ Threat them as a reference book, not serious academic learning material.
 | 📂 Passwords/Exploits/Etc | [SecLists](https://github.com/danielmiessler/SecLists/tree/master) <br> [Patterns](https://github.com/mazen160/secrets-patterns-db) <br> [Passwords](https://weakpass.com/) <br> [Vulnerabilities](https://github.com/edoardottt/awesome-hacker-search-engines#vulnerabilities) <br> [Exploits](https://github.com/edoardottt/awesome-hacker-search-engines#exploits) |
 | 📝 Regular expression (regex) | [Docs](https://pubs.opengroup.org/onlinepubs/7908799/xbd/re.html) <br> [Generator](https://regex-generator.olafneumann.org) <br> [Sandbox](https://regexr.com/) <br> [Database](https://ihateregex.io) <br> [Cheat Sheet](https://quickref.me/regex.html) |
 | 🌐 Network |[Basics](https://www.geeksforgeeks.org/basics-computer-networking/) <br> [Configuration](https://wiki.archlinux.org/title/Network_configuration) <br> [DNS](https://wiki.archlinux.org/title/Domain_name_resolution) <br> [Proxy](https://wiki.archlinux.org/title/Proxy_server) <br> [WPA](https://wiki.archlinux.org/title/Wpa_supplicant) <br> [Ports](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers) <br> [Cheat Sheet](https://www.geeksforgeeks.org/computer-network-cheat-sheet/) <br> [Common Linux commands](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/#networking) <br> [Common Windows commands](https://www.geeksforgeeks.org/networking-commands-for-troubleshooting-windows/) <br> [Autonomous Internet System](https://en.wikipedia.org/wiki/Autonomous_system_(Internet)) <br> [RIPEStat](https://stat.ripe.net/docs/02.data-api/) |
-| 🔒 Cryptography | [Basics](https://www.fortinet.com/resources/cyberglossary/what-is-cryptography) <br> [Advanced](https://wiki.owasp.org/index.php/Guide_to_Cryptography) <br> [SSL/TLS](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html) |
+| 🔒 Cryptography | [Basics](https://www.fortinet.com/resources/cyberglossary/what-is-cryptography) <br> [Advanced](https://wiki.owasp.org/index.php/Guide_to_Cryptography) <br> [SSL/TLS](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html) |
 | 👻 Anonymization | [Tor](https://www.torproject.org/) <br> [I2P](https://geti2p.net/en/) <br> [proxychains](https://github.com/haad/proxychains) |
 
 💾 Database

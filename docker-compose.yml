@@ -23,7 +23,7 @@ services:
   pentest:
     container_name: pentest
     build:
-      context: ./build
+      context: .
     restart: no
     sysctls:
       - net.ipv6.conf.all.disable_ipv6=0
