@@ -148,7 +148,6 @@ Threat them as a reference book, not serious academic learning material.
 |---|---|---|
 | 📘 git | [Wiki](https://wiki.archlinux.org/title/git) <br> [Manual](https://man.archlinux.org/man/git.1) <br> [Cheat Sheet](https://quickref.me/git) |
 | 📘 openvpn | [Docs](https://community.openvpn.net/openvpn) <br> [Server](https://wiki.archlinux.org/title/OpenVPN) <br> [Client](https://man.archlinux.org/man/extra/openvpn/openvpn.8.en) |
-| 📘 nano | [Wiki](https://wiki.archlinux.org/title/nano) <br> [Manual](https://man.archlinux.org/man/nano.1) <br> [Cheat Sheet](https://www.nano-editor.org/dist/latest/cheatsheet.html) |
 | 📘 drill | [Docs](https://www.nlnetlabs.nl/projects/ldns/about/) <br> [Manual](https://man.archlinux.org/man/drill.1) |
 | 📘 curl | [Wiki](https://wiki.archlinux.org/title/CURL) <br> [Manual](https://man.archlinux.org/man/curl.1) <br> [Cheat Sheet](https://quickref.me/curl) |
 

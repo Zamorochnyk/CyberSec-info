@@ -16,7 +16,7 @@ RUN xbps-install -Su -y void-repo-nonfree \
                         ncurses-term \
                         mtm
 
-# Tools here
+# Tools
 RUN xbps-install -Su -y nmap \
                         proxychains-ng \
                         tor \
@@ -26,11 +26,6 @@ RUN xbps-install -Su -y nmap \
                         hashcat \
                         john \
                         gobuster
-
-# Config
-RUN echo "PS1='\w\$ '" >> ~/.bashrc
-RUN sed -i 's/User tor/User root/' /etc/tor/torrc && \
-    sed -i 's/#RunAsDaemon/RunAsDaemon/' /etc/tor/torrc
 
 # Out of repo installations
 RUN pipx ensurepath
@@ -48,5 +43,10 @@ RUN git clone --depth 1 https://github.com/scipag/vulscan.git /usr/share/nmap/sc
     cd /usr/share/nmap/scripts/vulscan && \
     chmod +x ./update.sh && \
     ./update.sh
+
+# Config
+RUN echo "PS1='\w\$ '" >> ~/.bashrc
+RUN sed -i 's/User tor/User root/' /etc/tor/torrc && \
+    sed -i 's/#RunAsDaemon/RunAsDaemon/' /etc/tor/torrc
 
 ENTRYPOINT ["/bin/bash"]
