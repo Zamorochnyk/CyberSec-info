@@ -48,7 +48,7 @@ RUN git clone --depth 1 https://github.com/scipag/vulscan.git /usr/share/nmap/sc
 RUN echo "PS1='\w\$ '" >> ~/.bashrc && \
     echo "export LC_ALL=C.utf8" >> ~/.bashrc
 
-    RUN sed -i 's/User tor/User root/' /etc/tor/torrc && \
+RUN sed -i 's/User tor/User root/' /etc/tor/torrc && \
     sed -i 's/#RunAsDaemon/RunAsDaemon/' /etc/tor/torrc
 
 ENTRYPOINT ["/bin/bash"]
