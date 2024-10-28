@@ -1,0 +1,82 @@
+#!/bin/bash
+
+help() {
+    cat << EOF
+    Checks proxy list against target
+    Usage: proxytest [flags...] <file>
+
+    File format:
+      Needed: <protocol>, <proxy>, <port>,
+      Optional: <username>, <password>
+    
+    Flags:
+      -h    Show this help
+      -t    Set connect timeout in seconds.
+            Default: 2
+      -w    Set target to test against.
+            Default: www.example.com
+      -d    Set delimiter.
+            Default: ,
+EOF
+exit 0
+}
+
+export target='www.example.com'
+export timeout=2
+export delimiter=','
+
+check_proxy() {
+  args=($@)
+  protocol=${args[0]}
+  proxy=${args[1]}
+  port=${args[2]}
+  if [ ${#args[@]} -eq 5 ]; then
+    auth="--proxy-user ${args[3]}:${args[4]}"
+  fi
+  
+  RETURN_CODE=`curl $auth \
+                  --silent \
+                  --head \
+                  --connect-timeout $timeout \
+                  --output /dev/null \
+                  --write-out "%{http_code}" \
+                  --proxy $protocol://$proxy:$port \
+                  $target`
+  
+  if [ "$RETURN_CODE" -eq 200 ]; then
+    echo "$protocol,$proxy,$port" | sed "s/,/$delimiter/g"
+  fi
+}
+export -f check_proxy
+
+OPTSTRING="t:w:d:h"
+
+while getopts ${OPTSTRING} opt; do
+  case ${opt} in
+    h)
+      help
+      ;;
+    t)
+      timeout=${OPTARG}
+      ;;
+    w)
+      target=${OPTARG}
+      ;;
+    d) 
+      delimiter=${OPTARG}
+      ;;
+    ?)
+      echo "Invalid option: -${OPTARG}, use -h to show help"
+      exit 1
+      ;;
+  esac
+done
+shift $((OPTIND-1))
+
+while IFS= read -r line
+do
+  while IFS=${delimiter} read -r -a array
+  do
+     sem -j 100 check_proxy ${array[@]}
+  done <<< $line
+done < $1

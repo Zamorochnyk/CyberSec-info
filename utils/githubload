@@ -1,8 +1,4 @@
-#!/bin/sh
-mkdir /tmp/unpack_tmp
-cd /tmp/unpack_tmp
-
-set -e
+#!/bin/bash
 URL=https://api.github.com/repos/$1/releases/latest
 
 NAME=$(echo "$1" | cut -d "/" -f2 )
@@ -28,6 +24,3 @@ then
 fi
 
 chmod +x $BIN_DIR/$NAME*
-
-cd ..
-rm -r unpack_tmp

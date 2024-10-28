@@ -1,5 +1,5 @@
 FROM ghcr.io/void-linux/void-glibc-busybox
-COPY --chmod=777 ./scripts/* /bin
+COPY --chmod=777 ./utils/* /usr/bin
 
 # Two transaction because how repo works
 # Base packages
@@ -7,7 +7,7 @@ RUN xbps-install -Su -y void-repo-nonfree \
                         bash \
                         bash-completion \
                         curl \
-                        unzip \
+                        parallel \
                         ldns \
                         openvpn \
                         git \

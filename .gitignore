@@ -3,6 +3,6 @@
 !docker-compose.yml
 !README.md
 !LICENSE
-!/scripts/
-!/scripts/*
+!/utils/
+!/utils/*
 !Dockerfile
