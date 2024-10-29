@@ -1,36 +1,40 @@
 #!/bin/bash
+trap "kill 0" SIGINT SIGQUIT
 
 help() {
     cat << EOF
-Checks proxy list against target
+Checks proxy list against target with HEAD request
 Usage: proxytest [flags...] <file>
 
-File format:
-  Needed: <protocol>,<proxy>,<port>,
-  Optional: <username>,<password>
-  
+File format: protocol,proxy,port,username,password
+username and password are optional
+
 Flags:
   -h    Show this help
 
   -t    Set connect timeout in seconds.
-        Default: 2
+        Default: 1
 
   -w    Set target to test against.
-        Default: www.example.com
+        Default: https://www.example.com
 
   -d    Set delimiter.
         Default: ,
 
   -j    Set number of parallel jobs.
-        Default: 50
+        Default: 8
+  
+  -u    Set User-Agent.
+        Default: 'Mozilla/5.0 (X11; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0'
 EOF
 exit 0
 }
 
-export target='www.example.com'
-export timeout=2
+export timeout=1
+export target='https://www.example.com'
 export delimiter=','
-export n_processes=50
+export n_processes=8
+export user_agent='Mozilla/5.0 (X11; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0'
 
 check_proxy() {
   args=($@)
@@ -45,18 +49,18 @@ check_proxy() {
                   --silent \
                   --head \
                   --connect-timeout $timeout \
+                  --header "User-Agent: ${user_agent}" \
                   --output /dev/null \
                   --write-out "%{http_code}" \
                   --proxy $protocol://$proxy:$port \
                   $target`
-  
   if [ "$RETURN_CODE" -eq 200 ]; then
-    echo "$protocol,$proxy,$port" | sed "s/,/$delimiter/g"
+    echo ${args[@]} | sed "s/ /$delimiter/g"
   fi
 }
 export -f check_proxy
 
-OPTSTRING="j:t:w:d:h"
+OPTSTRING="ht:w:d:j:u:"
 
 while getopts ${OPTSTRING} opt; do
   case ${opt} in
@@ -75,6 +79,9 @@ while getopts ${OPTSTRING} opt; do
     j) 
       n_processes=${OPTARG}
       ;;
+    u) 
+      user_agent=${OPTARG}
+      ;;
     ?)
       echo "Invalid option: -${OPTARG}, use -h to show help"
       exit 1
@@ -87,6 +94,13 @@ while IFS= read -r line
 do
   while IFS=${delimiter} read -r -a array
   do
-     sem -j $n_processes check_proxy ${array[@]}
-  done <<< $line
+    if [ ${#array[@]} -eq 3 ] || \
+       [ ${#array[@]} -eq 5 ]
+    then
+      sem -j ${n_processes} check_proxy ${array[@]}
+    else
+      echo "${line} - wrong format, use -h to show help"
+      continue
+    fi
+  done <<< ${line}
 done < $1
