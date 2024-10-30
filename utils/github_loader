@@ -1,0 +1,87 @@
+#!/bin/bash
+set -e
+
+help() {
+    cat << EOF
+
+Downloads and unpacks latest release from github
+Usage: github_loader [flags...] <username>/<reponame>
+
+Flags:
+
+  -h    Show this help
+
+  -f    Set files_to_extract to extract.
+        Default: extracts all files_to_extract.
+        Format: file1,file2,file3
+
+  -d    Set output dir. (archive will also be downloaded there)
+        Default: pwd output.
+
+  -p    Set pattern to search in releases.
+        Must be unique.
+        Default: linux_amd64.
+
+  -s    Do not delete archive file.
+        Default: archive is deleted after unpacking.
+
+EOF
+exit 0
+}
+
+if [ "$#" == 0 ]; then
+  help
+  exit 1
+fi
+
+extract () {
+    case $1 in
+        *.tar.bz2)   tar xjf $1 $2  ;;
+        *.tar.gz)    tar xzf $1 $2  ;;
+        *.gz)        gunzip  $1 $2  ;;
+        *.tar)       tar xf  $1 $2  ;;
+        *.tbz2)      tar xjf $1 $2  ;;
+        *.tgz)       tar xzf $1 $2  ;;
+        *.zip)       unzip   $1 $2; echo $3 ;;
+        *)           echo "'$1' is not specified" ;;
+    esac
+}
+
+pattern='linux_amd64'
+files_to_extract=''
+result_dir=$(pwd)
+is_save=false
+
+OPTSTRING="hf:d:p:s"
+while getopts ${OPTSTRING} opt; do
+  case ${opt} in
+    h)
+      help ;;
+    f)
+      files_to_extract=$(echo ${OPTARG} | sed "s/,/ /g") ;;
+    d)
+      result_dir=${OPTARG} ;;
+    p)
+      pattern=${OPTARG} ;;
+    s)
+      is_save=true ;;
+    ?)
+      echo "Invalid option: -${OPTARG}, use -h to show help"
+      exit 1
+      ;;
+  esac
+done
+shift $((OPTIND-1))
+
+BASE_URL="https://api.github.com/repos/$1/releases/latest"
+cd $result_dir
+
+DOWNLOAD_URL=$(curl -s $BASE_URL | \
+              grep -o "https.*$pattern.*[^\"]")
+REMOTE_FILE_NAME=$(basename "$DOWNLOAD_URL")
+curl -L -O "$DOWNLOAD_URL"
+extract "$REMOTE_FILE_NAME" "$files_to_extract"
+
+if [ $is_save != true ]; then
+    rm "$REMOTE_FILE_NAME"
+fi

@@ -7,6 +7,7 @@ RUN xbps-install -Su -y void-repo-nonfree \
                         bash \
                         bash-completion \
                         curl \
+                        unzip \
                         parallel \
                         ldns \
                         openvpn \
@@ -31,9 +32,12 @@ RUN xbps-install -Su -y nmap \
 RUN pipx ensurepath
 RUN pipx install mitmproxy2swagger
 
-RUN github_loader projectdiscovery/nuclei
-RUN github_loader hahwul/dalfox
-RUN github_loader projectdiscovery/katana
+RUN github_loader -f nuclei -d /usr/bin projectdiscovery/nuclei
+RUN github_loader -f dalfox -d /usr/bin hahwul/dalfox
+RUN github_loader -f katana -d /usr/bin projectdiscovery/katana
+RUN chmod +x /usr/bin/nuclei \
+             /usr/bin/dalfox \
+             /usr/bin/katana
 
 RUN git clone --depth 1 https://github.com/commixproject/commix.git && \
     chmod +x ./commix/commix.py && \

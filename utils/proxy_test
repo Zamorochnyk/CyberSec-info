@@ -1,10 +1,12 @@
 #!/bin/bash
+set -e
 trap "kill 0" SIGINT SIGQUIT
 
 help() {
     cat << EOF
+
 Checks proxy list against target with HEAD request
-Usage: proxytest [flags...] <file>
+Usage: proxy_test [flags...] <file>
 
 File format: protocol,proxy,port,username,password
 username and password are optional
@@ -26,9 +28,15 @@ Flags:
   
   -u    Set User-Agent.
         Default: 'Mozilla/5.0 (X11; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0'
+
 EOF
 exit 0
 }
+
+if [ "$#" == 0 ]; then
+  help
+  exit 1
+fi
 
 export timeout=1
 export target='https://www.example.com'
@@ -45,7 +53,7 @@ check_proxy() {
     auth="--proxy-user ${args[3]}:${args[4]}"
   fi
   
-  RETURN_CODE=`curl $auth \
+  RETURN_CODE=$(curl $auth \
                   --silent \
                   --head \
                   --connect-timeout $timeout \
@@ -53,7 +61,7 @@ check_proxy() {
                   --output /dev/null \
                   --write-out "%{http_code}" \
                   --proxy $protocol://$proxy:$port \
-                  $target`
+                  $target)
   if [ "$RETURN_CODE" -eq 200 ]; then
     echo ${args[@]} | sed "s/ /$delimiter/g"
   fi
@@ -61,27 +69,20 @@ check_proxy() {
 export -f check_proxy
 
 OPTSTRING="ht:w:d:j:u:"
-
 while getopts ${OPTSTRING} opt; do
   case ${opt} in
     h)
-      help
-      ;;
+      help ;;
     t)
-      timeout=${OPTARG}
-      ;;
+      timeout=${OPTARG} ;;
     w)
-      target=${OPTARG}
-      ;;
+      target=${OPTARG} ;;
     d) 
-      delimiter=${OPTARG}
-      ;;
+      delimiter=${OPTARG} ;;
     j) 
-      n_processes=${OPTARG}
-      ;;
+      n_processes=${OPTARG} ;;
     u) 
-      user_agent=${OPTARG}
-      ;;
+      user_agent=${OPTARG} ;;
     ?)
       echo "Invalid option: -${OPTARG}, use -h to show help"
       exit 1
@@ -104,3 +105,5 @@ do
     fi
   done <<< ${line}
 done < $1
+
+set +e
