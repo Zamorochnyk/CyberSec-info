@@ -1,13 +1,12 @@
 #!/bin/bash
-set -e
 
 help() {
     cat << EOF
 
 Downloads and unpacks latest release from github
-Usage: github_loader [flags...] <username>/<reponame>
+Usage: github_loader [opts...] <username>/<reponame>
 
-Flags:
+Options:
 
   -h    Show this help
 
@@ -55,18 +54,13 @@ is_save=false
 OPTSTRING="hf:d:p:s"
 while getopts ${OPTSTRING} opt; do
   case ${opt} in
-    h)
-      help ;;
-    f)
-      files_to_extract=$(echo ${OPTARG} | sed "s/,/ /g") ;;
-    d)
-      result_dir=${OPTARG} ;;
-    p)
-      pattern=${OPTARG} ;;
-    s)
-      is_save=true ;;
+    h)   help ;;
+    f)   files_to_extract=$(echo ${OPTARG} | sed "s/,/ /g") ;;
+    d)   result_dir=${OPTARG} ;;
+    p)   pattern=${OPTARG} ;;
+    s)   is_save=true ;;
     ?)
-      echo "Invalid option: -${OPTARG}, use -h to show help"
+      echo "Invalid option, use -h to show help"
       exit 1
       ;;
   esac

@@ -1,17 +1,17 @@
 #!/bin/bash
-set -e
 trap "kill 0" SIGINT SIGQUIT
 
 help() {
     cat << EOF
 
 Checks proxy list against target with HEAD request
-Usage: proxy_test [flags...] <file>
+Usage: proxy_test [opts...] <file>
 
 File format: protocol,proxy,port,username,password
 username and password are optional
 
-Flags:
+Options:
+
   -h    Show this help
 
   -t    Set connect timeout in seconds.
@@ -28,6 +28,11 @@ Flags:
   
   -u    Set User-Agent.
         Default: 'Mozilla/5.0 (X11; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0'
+  
+  -k    Ignore tls certificate check on proxy. 
+        Usefull if exit node is (tor/i2p/etc).
+        Do not use othewise.
+        Default: enabled
 
 EOF
 exit 0
@@ -43,6 +48,7 @@ export target='https://www.example.com'
 export delimiter=','
 export n_processes=8
 export user_agent='Mozilla/5.0 (X11; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0'
+export ignore_cert=''
 
 check_proxy() {
   args=($@)
@@ -54,6 +60,7 @@ check_proxy() {
   fi
   
   RETURN_CODE=$(curl $auth \
+                  $ignore_cert \
                   --silent \
                   --head \
                   --connect-timeout $timeout \
@@ -68,23 +75,18 @@ check_proxy() {
 }
 export -f check_proxy
 
-OPTSTRING="ht:w:d:j:u:"
+OPTSTRING="ht:w:d:j:u:k"
 while getopts ${OPTSTRING} opt; do
   case ${opt} in
-    h)
-      help ;;
-    t)
-      timeout=${OPTARG} ;;
-    w)
-      target=${OPTARG} ;;
-    d) 
-      delimiter=${OPTARG} ;;
-    j) 
-      n_processes=${OPTARG} ;;
-    u) 
-      user_agent=${OPTARG} ;;
+    h)   help ;;
+    t)   timeout=${OPTARG} ;;
+    w)   target=${OPTARG} ;;
+    d)   delimiter=${OPTARG} ;;
+    j)   n_processes=${OPTARG} ;;
+    u)   user_agent=${OPTARG} ;;
+    k)   ignore_cert='--insecure' ;;
     ?)
-      echo "Invalid option: -${OPTARG}, use -h to show help"
+      echo "Invalid option, use -h to show help"
       exit 1
       ;;
   esac
@@ -105,5 +107,3 @@ do
     fi
   done <<< ${line}
 done < $1
-
-set +e
