@@ -55,4 +55,8 @@ RUN echo "PS1='\w\$ '" >> ~/.bashrc && \
 RUN sed -i 's/User tor/User root/' /etc/tor/torrc && \
     sed -i 's/#RunAsDaemon/RunAsDaemon/' /etc/tor/torrc
 
+# Mute citation for parallel, but please citate
+RUN mkdir ~/.parallel && \ 
+    touch ~/.parallel/will-cite
+
 ENTRYPOINT ["/bin/bash"]
