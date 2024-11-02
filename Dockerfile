@@ -11,6 +11,7 @@ RUN xbps-install -Su -y void-repo-nonfree \
                         parallel \
                         ldns \
                         openvpn \
+                        tor \
                         git \
                         python3-pipx \
                         micro \
@@ -20,7 +21,6 @@ RUN xbps-install -Su -y void-repo-nonfree \
 # Tools
 RUN xbps-install -Su -y nmap \
                         proxychains-ng \
-                        tor \
                         masscan \
                         sqlmap \
                         thc-hydra \
@@ -55,7 +55,7 @@ RUN echo "PS1='\w\$ '" >> ~/.bashrc && \
 RUN sed -i 's/User tor/User root/' /etc/tor/torrc && \
     sed -i 's/#RunAsDaemon/RunAsDaemon/' /etc/tor/torrc
 
-# Mute citation for parallel, but please citate
+# Mute citation message for parallel, but please citate
 RUN mkdir ~/.parallel && \ 
     touch ~/.parallel/will-cite
 
