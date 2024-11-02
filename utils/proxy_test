@@ -103,7 +103,6 @@ do
       sem -j ${n_processes} check_proxy ${array[@]}
     else
       echo "${line} - wrong format, use -h to show help"
-      continue
     fi
   done <<< ${line}
 done < $1
