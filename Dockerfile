@@ -8,7 +8,6 @@ RUN xbps-install -Su -y void-repo-nonfree \
                         bash-completion \
                         curl \
                         unzip \
-                        parallel \
                         ldns \
                         openvpn \
                         tor \
@@ -54,9 +53,5 @@ RUN echo "PS1='\w\$ '" >> ~/.bashrc && \
 
 RUN sed -i 's/User tor/User root/' /etc/tor/torrc && \
     sed -i 's/#RunAsDaemon/RunAsDaemon/' /etc/tor/torrc
-
-# Mute citation message for parallel, but please citate
-RUN mkdir ~/.parallel && \ 
-    touch ~/.parallel/will-cite
 
 ENTRYPOINT ["/bin/bash"]

@@ -2,13 +2,14 @@
 trap "kill 0" SIGINT SIGQUIT
 
 help() {
-    cat << EOF
+cat << EOF
 
-Checks proxy list against target with HEAD request
+Crude check of proxy list against target with HEAD request.
+
 Usage: proxy_test [opts...] <file>
 
-File format: protocol,proxy,port,username,password
-username and password are optional
+File line format: protocol:proxy:port:username:password
+Line example:     socks5h:127.0.0.1:8080:optional:optional
 
 Options:
 
@@ -18,20 +19,18 @@ Options:
         Default: 1
 
   -w    Set target to test against.
-        Default: https://www.example.com
+        Default: https://example.com
 
   -d    Set delimiter.
-        Default: ,
+        Default: ':'
 
   -j    Set number of parallel jobs.
-        Default: 8
+        Default: 20
   
   -u    Set User-Agent.
         Default: 'Mozilla/5.0 (X11; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0'
   
-  -k    Ignore tls certificate check on proxy. 
-        Usefull if exit node is (tor/i2p/etc).
-        Do not use othewise.
+  -k    Ignore tls certificate check on proxy.
         Default: enabled
 
 EOF
@@ -44,9 +43,9 @@ if [ "$#" == 0 ]; then
 fi
 
 export timeout=1
-export target='https://www.example.com'
-export delimiter=','
-export n_processes=8
+export target='https://example.com'
+export delimiter=':'
+export n_processes=20
 export user_agent='Mozilla/5.0 (X11; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0'
 export ignore_cert=''
 
@@ -69,11 +68,19 @@ check_proxy() {
                   --write-out "%{http_code}" \
                   --proxy $protocol://$proxy:$port \
                   $target)
+
   if [ "$RETURN_CODE" -eq 200 ]; then
     echo ${args[@]} | sed "s/ /$delimiter/g"
   fi
 }
 export -f check_proxy
+
+# Ugly, but hey, no overhead!
+semaphore(){
+  while [ $(jobs -p -r | wc -l) -ge $n_processes ]; do
+    sleep 1 
+  done
+}
 
 OPTSTRING="ht:w:d:j:u:k"
 while getopts ${OPTSTRING} opt; do
@@ -100,9 +107,12 @@ do
     if [ ${#array[@]} -eq 3 ] || \
        [ ${#array[@]} -eq 5 ]
     then
-      sem -j ${n_processes} check_proxy ${array[@]}
+      semaphore
+      check_proxy ${array[@]} &
     else
       echo "${line} - wrong format, use -h to show help"
     fi
   done <<< ${line}
 done < $1
+
+wait
