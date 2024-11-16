@@ -4,7 +4,7 @@ services:
     container_name: cyberchef
     image: mpepping/cyberchef:latest
     ports:
-      - 8000:8000
+      - 127.0.0.1:8000:8000
   
   mitmproxy:
     image: mitmproxy/mitmproxy:latest
@@ -12,13 +12,19 @@ services:
     volumes:
       - ./mitmproxy:/home/mitmproxy/.mitmproxy # for ca-certs
     ports:
-      - 8082:8080 # default mitmdump
-      - 8083:8081 # default mitmweb
+      - 127.0.0.1:8082:8080 # default mitmdump
+      - 127.0.0.1:8083:8081 # default mitmweb
     command:
       - mitmweb
       - --web-host
       - 0.0.0.0
       - --ssl-insecure
+  
+  tor:
+    image: peterdavehello/tor-socks-proxy:latest
+    container_name: tor
+    ports:
+      - 127.0.0.1:9150:9150
 
   pentest:
     container_name: pentest
@@ -40,6 +46,5 @@ services:
       - ./mitmproxy:/mitmproxy
     ports:
       - 9990-9999:9990-9999 # Misc ports for whatever
-      - 9050:9050 # Tor
     tty: true
     stdin_open: true

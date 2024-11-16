@@ -10,7 +10,6 @@ RUN xbps-install -Su -y void-repo-nonfree \
                         unzip \
                         ldns \
                         openvpn \
-                        tor \
                         git \
                         python3-pipx \
                         micro \
@@ -48,10 +47,11 @@ RUN git clone --depth 1 https://github.com/scipag/vulscan.git /usr/share/nmap/sc
     ./update.sh
 
 # Config
-RUN echo "PS1='\w\$ '" >> ~/.bashrc && \
-    echo "export LC_ALL=C.utf8" >> ~/.bashrc
+RUN echo "PS1='\w\$ '" >> ~/.bashrc; \
+    echo 'export LC_ALL=C.utf8' >> ~/.bashrc; \
+    echo 'alias anon="proxychains4 -q"' >> ~/.bashrc
 
-RUN sed -i 's/User tor/User root/' /etc/tor/torrc && \
-    sed -i 's/#RunAsDaemon/RunAsDaemon/' /etc/tor/torrc
+# Default tor for docker-compose
+RUN echo 'sed -i "s/.*127.0.0.1.*/socks5 $(drill -Q tor) 9150/" /etc/proxychains.conf' >> ~/.bashrc
 
 ENTRYPOINT ["/bin/bash"]
