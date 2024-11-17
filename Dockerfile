@@ -52,6 +52,6 @@ RUN echo "PS1='\w\$ '" >> ~/.bashrc; \
     echo 'alias anon="proxychains4 -q"' >> ~/.bashrc
 
 # Default tor for docker-compose
-RUN echo 'sed -i "s/.*127.0.0.1.*/socks5 $(drill -Q tor) 9150/" /etc/proxychains.conf' >> ~/.bashrc
+RUN echo 'sed -i "s/socks4.*127.0.0.1.*9050/socks5 $(drill -Q tor) 9150/" /etc/proxychains.conf' >> ~/.bashrc
 
 ENTRYPOINT ["/bin/bash"]
