@@ -156,7 +156,6 @@ Threat them as a reference book, not serious academic learning material.
 | Tool | Links | Note |
 |---|---|---|
 | 📘 nmap | [Docs](https://nmap.org/docs.html) <br> [Wiki](https://wiki.archlinux.org/title/nmap) <br> [Scripts](https://nmap.org/nsedoc/scripts/) <br> [Manual](https://man.archlinux.org/man/nmap.1) <br> [Vulscan](https://github.com/scipag/vulscan) <br> [Cheat Sheet](https://www.stationx.net/nmap-cheat-sheet/) | Very powerful, so please, carefully read documentation and description of the scripts |
-| 📘 masscan | [Manual](https://man.archlinux.org/man/masscan.8) <br> [Cheat Sheet](https://cheatsheet.haax.fr/network/port-scanning/masscan_cheatsheet/) | ⚠️Unless you are scanning a giant internal network, please, keep those --rate as low as possible (10000 at max), **do not flood/melt network infrastructure**⚠️ |
 | 📘 nuclei | [GitHub](https://github.com/projectdiscovery/nuclei) <br> [Templates](https://github.com/projectdiscovery/nuclei-templates) <br> [Cheat Sheet](https://cheatsheet.haax.fr/web-pentest/tools/nuclei/) |
 | 📘 dalfox | [GiHhub](https://github.com/hahwul/dalfox) <br> [Docs](https://dalfox.hahwul.com/docs/home/) <br> [Cheat Sheet](https://www.blackhatethicalhacking.com/tools/dalfox/) |
 | 📘 katana | [GitHub](https://github.com/projectdiscovery/katana) | Pairs well with `mitmproxy2swagger` |

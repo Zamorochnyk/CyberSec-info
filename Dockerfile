@@ -19,7 +19,6 @@ RUN xbps-install -Su -y void-repo-nonfree \
 # Tools
 RUN xbps-install -Su -y nmap \
                         proxychains-ng \
-                        masscan \
                         sqlmap \
                         thc-hydra \
                         hashcat \
