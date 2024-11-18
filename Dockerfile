@@ -48,7 +48,7 @@ RUN git clone --depth 1 https://github.com/scipag/vulscan.git /usr/share/nmap/sc
 
 # Config
 RUN ln -fs /bin/bash /bin/sh
-RUN echo "PS1='\w\$ '" >> ~/.bashrc; \
+RUN echo "PS1='[\u@\h \W]\$ '" >> ~/.bashrc; \
     echo "export LC_ALL=C.utf8"  >> ~/.bashrc; \
     echo "alias anon='proxychains4 -q'" >> ~/.bashrc; \
     echo 'sed -i "s/socks4.*127.0.0.1.*9050/socks5 $(drill -Q tor) 9150/" /etc/proxychains.conf'  >> ~/.bashrc; \
