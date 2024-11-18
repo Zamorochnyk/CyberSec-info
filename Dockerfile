@@ -54,4 +54,4 @@ RUN echo "PS1='[\u@\h \W]\$ '" >> ~/.bashrc; \
     echo 'sed -i "s/socks4.*127.0.0.1.*9050/socks5 $(drill -Q tor) 9150/" /etc/proxychains.conf'  >> ~/.bashrc; \
     echo "source ~/.bashrc" >> ~/.profile
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/bash", "-c", "tmux"]
