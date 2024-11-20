@@ -1,5 +1,4 @@
 FROM ghcr.io/void-linux/void-glibc-busybox
-COPY --chmod=777 ./utils/* /usr/bin
 
 # Two transaction because how repo works
 # Base packages
@@ -18,7 +17,6 @@ RUN xbps-install -Su -y void-repo-nonfree \
 
 # Tools
 RUN xbps-install -Su -y nmap \
-                        proxychains-ng \
                         sqlmap \
                         thc-hydra \
                         hashcat \
@@ -29,12 +27,16 @@ RUN xbps-install -Su -y nmap \
 RUN pipx ensurepath
 RUN pipx install mitmproxy2swagger
 
-RUN github_loader -f nuclei -d /usr/bin projectdiscovery/nuclei
-RUN github_loader -f dalfox -d /usr/bin hahwul/dalfox
-RUN github_loader -f katana -d /usr/bin projectdiscovery/katana
-RUN chmod +x /usr/bin/nuclei \
-             /usr/bin/dalfox \
-             /usr/bin/katana
+COPY --chmod=777 ./utils/* /usr/bin
+
+RUN github_loader -f nuclei -d /usr/bin projectdiscovery/nuclei && \
+    chmod +x /usr/bin/nuclei
+
+RUN github_loader -f dalfox -d /usr/bin hahwul/dalfox && \
+    chmod +x /usr/bin/dalfox
+
+RUN github_loader -f katana -d /usr/bin projectdiscovery/katana && \
+    chmod +x /usr/bin/katana
 
 RUN git clone --depth 1 https://github.com/commixproject/commix.git && \
     chmod +x ./commix/commix.py && \

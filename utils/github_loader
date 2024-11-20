@@ -4,21 +4,24 @@ help() {
 cat << EOF
 
 Downloads and unpacks latest release from github.
+In case of several pattern matches first entry is used.
+
 Usage: github_loader [opts...] <username>/<reponame>
 
 Options:
 
   -h    Show this help
 
-  -f    Set files to extract.
+  -f    Files to extract.
         Default: extracts all files.
         Format: file1,file2,file3
 
-  -d    Set output dir. (archive also will be downloaded there)
+  -d    Output dir. (archive also will be downloaded there)
         Default: current dir.
 
-  -p    Set pattern to search. Must be unique.
-        Default: linux_amd64.
+  -p    Pattern to search (grep -o)
+        " symbols removed by script
+        Default: https.*linux_amd64.*
 
   -s    Do not delete archive after unpacking.
 
@@ -35,16 +38,16 @@ extract () {
     case $1 in
         *.tar.bz2)   tar xjf $1 $2  ;;
         *.tar.gz)    tar xzf $1 $2  ;;
-        *.gz)        gunzip  $1 $2  ;;
         *.tar)       tar xf  $1 $2  ;;
         *.tbz2)      tar xjf $1 $2  ;;
         *.tgz)       tar xzf $1 $2  ;;
+        *.gz)        gunzip  $1 $2  ;;
         *.zip)       unzip   $1 $2  ;;
-        *)           echo "'$1' is not specified"; exit 1 ;;
+        *)           echo "'$1' archive format is not specified"; exit 1 ;;
     esac
 }
 
-pattern='linux_amd64'
+pattern='https.*linux_amd64.*'
 files_to_extract=''
 result_dir=$(pwd)
 is_save=false
@@ -52,11 +55,11 @@ is_save=false
 OPTSTRING="hf:d:p:s"
 while getopts ${OPTSTRING} opt; do
   case ${opt} in
-    h)   help ;;
-    f)   files_to_extract=$(echo ${OPTARG} | sed "s/,/ /g") ;;
-    d)   result_dir=${OPTARG} ;;
-    p)   pattern=${OPTARG} ;;
-    s)   is_save=true ;;
+    h)  help ;;
+    f)  files_to_extract=$(echo ${OPTARG} | sed "s/,/ /g") ;;
+    d)  result_dir=${OPTARG} ;;
+    p)  pattern=${OPTARG} ;;
+    s)  is_save=true ;;
     ?)
       echo "Invalid option, use -h to show help"
       exit 1
@@ -65,13 +68,16 @@ while getopts ${OPTSTRING} opt; do
 done
 shift $((OPTIND-1))
 
-BASE_URL="https://api.github.com/repos/$1/releases/latest"
+base_url="https://api.github.com/repos/$1/releases/latest"
 cd $result_dir
 
-DOWNLOAD_URL=$(curl -s $BASE_URL | \
-              grep -o "https.*$pattern.*[^\"]")
-REMOTE_FILE_NAME=$(basename "$DOWNLOAD_URL")
-curl -L -O "$DOWNLOAD_URL"
+download_url=$(curl -s $base_url         | \
+               echo $(grep -o $pattern)  | \
+               cut -d ' ' -f 1           | \
+               tr -d "\"")
+
+REMOTE_FILE_NAME=$(basename "$download_url")
+curl -L -O "$download_url"
 extract "$REMOTE_FILE_NAME" "$files_to_extract"
 
 if [ $is_save != true ]; then
