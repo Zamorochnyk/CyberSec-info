@@ -2,18 +2,19 @@ FROM ghcr.io/void-linux/void-glibc-busybox
 
 # Two transaction because how repo works
 # Base packages
-RUN xbps-install -Su -y void-repo-nonfree \
-                        bash \
-                        bash-completion \
-                        curl \
-                        unzip \
-                        ldns \
-                        openvpn \
-                        git \
-                        python3-pipx \
-                        micro \
-                        ncurses-term \
-                        tmux
+RUN xbps-install -Su -y -u xbps \
+                            void-repo-nonfree \
+                            bash \
+                            bash-completion \
+                            curl \
+                            unzip \
+                            ldns \
+                            openvpn \
+                            git \
+                            python3-pipx \
+                            micro \
+                            ncurses-term \
+                            tmux
 
 # Tools
 RUN xbps-install -Su -y nmap \
@@ -21,7 +22,8 @@ RUN xbps-install -Su -y nmap \
                         thc-hydra \
                         hashcat \
                         john \
-                        gobuster
+                        gobuster \
+                        proxychains-ng
 
 # Out of repo installations
 RUN pipx ensurepath
@@ -32,7 +34,8 @@ COPY --chmod=777 ./utils/* /usr/bin
 RUN github_loader -f nuclei -d /usr/bin projectdiscovery/nuclei && \
     chmod +x /usr/bin/nuclei
 
-RUN github_loader -f dalfox -d /usr/bin hahwul/dalfox && \
+RUN github_loader -f dalfox-linux-amd64 -d /usr/bin  -p "https.*linux-amd64.*" hahwul/dalfox && \
+    mv /usr/bin/dalfox-linux-amd64 /usr/bin/dalfox && \
     chmod +x /usr/bin/dalfox
 
 RUN github_loader -f katana -d /usr/bin projectdiscovery/katana && \
