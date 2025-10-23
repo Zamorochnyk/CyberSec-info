@@ -29,7 +29,7 @@ RUN xbps-install -Su -y nmap \
 RUN pipx ensurepath
 RUN pipx install mitmproxy2swagger
 
-COPY --chmod=777 ./utils/* /usr/bin
+COPY --chmod=700 ./utils/* /usr/bin
 
 RUN github_loader -f nuclei -d /usr/bin projectdiscovery/nuclei && \
     chmod +x /usr/bin/nuclei

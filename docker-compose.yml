@@ -24,7 +24,7 @@ services:
     image: peterdavehello/tor-socks-proxy:latest
     container_name: tor
     ports:
-      - 127.0.0.1:9050:9150
+      - 127.0.0.1:9051:9150
 
   pentest:
     container_name: pentest
@@ -45,6 +45,6 @@ services:
       - ./transf:/transf # to transfer data
       - ./mitmproxy:/mitmproxy
     ports:
-      - 9990-9999:9990-9999 # Misc ports for whatever
+      - 127.0.0.1:9990-9999:9990-9999 # Misc ports for whatever
     tty: true
     stdin_open: true
