@@ -216,7 +216,6 @@ General:
 - [GitHub](https://github.com/mitmproxy/mitmproxy)
 - [Docs](https://docs.mitmproxy.org/stable/)
 - [Cheat Sheet](https://quickref.me/mitmproxy.html)
-- [mitmproxy2swagger](https://github.com/alufers/mitmproxy2swagger)
 > Connect to proxy: set proxy as `localhost:8082` (compose defaults)
 > Connect for web interface: open in browser `localhost:8083` (compose defaults) 
 > After the first run certificate [will be created](https://docs.mitmproxy.org/stable/concepts-certificates/) in `mitmproxy` folder. Import them to the external client.

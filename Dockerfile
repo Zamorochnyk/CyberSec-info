@@ -14,7 +14,12 @@ RUN xbps-install -Su -y -u xbps \
                             python3-pipx \
                             micro \
                             ncurses-term \
-                            tmux
+                            tmux \
+                            inetutils \
+                            unzip \
+                            tar \
+                            openssh \
+                            iana-etc
 
 # Tools
 RUN xbps-install -Su -y nmap \
@@ -27,11 +32,10 @@ RUN xbps-install -Su -y nmap \
 
 # Out of repo installations
 RUN pipx ensurepath
-RUN pipx install mitmproxy2swagger
 
 COPY --chmod=700 ./utils/* /usr/bin
 
-RUN github_loader -f nuclei -d /usr/bin projectdiscovery/nuclei && \
+RUN github_loader -f nuclei -d /usr/bin -p "https.*linux_amd64.*" projectdiscovery/nuclei && \
     chmod +x /usr/bin/nuclei
 
 RUN github_loader -f dalfox-linux-amd64 -d /usr/bin  -p "https.*linux-amd64.*" hahwul/dalfox && \
